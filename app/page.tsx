@@ -28,12 +28,13 @@ export default function HomePage() {
           </RevealOnScroll>
           
           <MasonryGallery 
-            images={weddings.flatMap(w => w.images.slice(0, 2)).map(img => ({
+            images={weddings.flatMap(w => w.images.slice(0, 2).map(img => ({
                url: img.url,
                width: 800,
                height: 1200,
-               alt: "Cinematic Wedding Moment"
-            }))}
+               alt: img.alt || "Cinematic Wedding Moment",
+               href: `/weddings/${w.slug}`
+            })))}
           />
 
           <div className="mt-20 text-center">
