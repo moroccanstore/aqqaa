@@ -1,0 +1,43 @@
+# dependencies
+node_modules/
+**/node_modules/
+.pnp
+.pnp.js
+
+# testing
+coverage/
+
+# next.js
+.next/
+out/
+
+# strapi
+strapi-cms/node_modules/
+strapi-cms/.tmp/
+strapi-cms/dist/
+strapi-cms/.strapi/
+
+# webapp (static backups/rips)
+webapp/
+
+# production
+build/
+
+# misc
+.DS_Store
+*.pem
+*.log
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# artifact files (from gemini)
+.gemini/
+node_modules

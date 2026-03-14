@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --gold: #d4af37;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair tracking-normal normal-case;
+  }
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+/* Custom transitions */
+.transition-luxury {
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Liquid Fill Effect */
+.btn-liquid {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.5s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-liquid::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -25%;
+  width: 150%;
+  height: 300%;
+  background: var(--gold);
+  border-radius: 40%;
+  z-index: -1;
+  transition: top 0.7s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.7s ease;
+  transform: rotate(0deg);
+}
+
+.btn-liquid:hover {
+  color: #000 !important;
+}
+
+.btn-liquid:hover::before {
+  top: -100%;
+  animation: liquid-wave 5s linear infinite;
+}
+
+@keyframes liquid-wave {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+::selection {
+  background: var(--gold);
+  color: #000;
+}
