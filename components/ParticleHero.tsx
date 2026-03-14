@@ -168,11 +168,9 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
         </div>
       </div>
       
-      {/* Luxury Accents */}
+      {/* Luxury Accents (Remaining framing for hero content) */}
       {showAccents && (
         <>
-          <div className="absolute top-12 left-12 w-32 h-[1px] z-10" style={{ backgroundColor: accentColor }}></div>
-          <div className="absolute top-12 left-12 w-[1px] h-32 z-10" style={{ backgroundColor: accentColor }}></div>
           <div className="absolute bottom-12 right-12 w-32 h-[1px] z-10" style={{ backgroundColor: accentColor }}></div>
           <div className="absolute bottom-12 right-12 w-[1px] h-32 z-10" style={{ backgroundColor: accentColor }}></div>
         </>

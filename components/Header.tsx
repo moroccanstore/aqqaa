@@ -46,15 +46,21 @@ export const Header = () => {
       )}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        {/* Logo */}
-        <Link href="/" className="group flex flex-col items-center md:items-start group">
-          <h1 className="text-white text-2xl md:text-3xl font-serif tracking-[0.4em] uppercase leading-none transition-transform group-hover:scale-[1.02] duration-500">
-            Said <span className="text-gold">Aqqa</span>
-          </h1>
-          <span className="text-[8px] md:text-[10px] text-white/40 tracking-[0.8em] uppercase mt-1 font-light group-hover:text-gold/60 transition-colors duration-500">
-            Photography & Visuals
-          </span>
-        </Link>
+        {/* Logo with framed lines */}
+        <div className="relative group">
+          {/* Top-Left Accent Lines */}
+          <div className="absolute -top-4 -left-4 w-12 h-[1px] bg-gold/20 transition-all duration-700 group-hover:w-20 group-hover:bg-gold/40" />
+          <div className="absolute -top-4 -left-4 w-[1px] h-12 bg-gold/20 transition-all duration-700 group-hover:h-20 group-hover:bg-gold/40" />
+          
+          <Link href="/" className="flex flex-col items-center md:items-start">
+            <h1 className="text-white text-2xl md:text-3xl font-serif tracking-[0.4em] uppercase leading-none transition-transform group-hover:scale-[1.02] duration-500">
+              Said <span className="text-gold">Aqqa</span>
+            </h1>
+            <span className="text-[8px] md:text-[10px] text-white/40 tracking-[0.8em] uppercase mt-1 font-light group-hover:text-gold/60 transition-colors duration-500">
+              Photography & Visuals
+            </span>
+          </Link>
+        </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-12">
