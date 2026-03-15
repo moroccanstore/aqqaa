@@ -29,7 +29,7 @@ export const TrustFactors = () => {
         {/* First track */}
         <div className="flex space-x-20 animate-marquee whitespace-nowrap py-4">
           {trustImages.map((src, i) => (
-            <div key={`trust-1-${i}`} className="relative w-32 h-16 md:w-40 md:h-20 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+            <div key={`trust-1-${i}`} className="relative w-32 h-16 md:w-40 md:h-20 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
               <Image
                 src={src}
                 alt="Trust logo"

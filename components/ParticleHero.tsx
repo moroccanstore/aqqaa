@@ -1,17 +1,9 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import * as THREE from "three";
+import Image from "next/image";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 
-interface ParticleHeroProps {
-  title?: string;
-  subtitle?: string;
-}
-
-/**
- * ParticleHero: A stunning Three.js WebGL particle experience.
- */
 interface ParticleHeroProps {
   title?: string;
   subtitle?: string;
@@ -24,9 +16,6 @@ interface ParticleHeroProps {
   className?: string;
 }
 
-/**
- * ParticleHero: A highly configurable cinematic WebGL particle experience.
- */
 export const ParticleHero: React.FC<ParticleHeroProps> = ({
   title = "Said Aqqa",
   subtitle = "Photography & Visual Storytelling",
@@ -43,44 +32,80 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
   const mouse = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    if (!threeRef.current) return;
+    let isMounted = true;
+    let renderer: any = null;
+    let scene: any = null;
+    let animationId: number;
 
-    const container = threeRef.current;
-    
-    // Config
-    const particleCount = 2000;
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    container.appendChild(renderer.domElement);
+    const initThree = async () => {
+      // Dynamic import to avoid blocking main thread on initial load
+      const THREE = await import("three");
+      
+      if (!isMounted || !threeRef.current) return;
 
-    camera.position.z = 5;
+      const container = threeRef.current;
+      const width = container.clientWidth || window.innerWidth;
+      const height = container.clientHeight || window.innerHeight;
+      
+      const particleCount = window.innerWidth < 768 ? 800 : 2000;
+      scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+      renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true, powerPreference: "high-performance" });
+      
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
 
-    // Particles
-    const geometry = new THREE.BufferGeometry();
-    const posArray = new Float32Array(particleCount * 3);
+      camera.position.z = 5;
 
-    for (let i = 0; i < particleCount * 3; i++) {
-      posArray[i] = (Math.random() - 0.5) * 10;
-    }
+      const geometry = new THREE.BufferGeometry();
+      const posArray = new Float32Array(particleCount * 3);
 
-    geometry.setAttribute("position", new THREE.BufferAttribute(posArray, 3));
+      for (let i = 0; i < particleCount * 3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 10;
+      }
 
-    const material = new THREE.PointsMaterial({
-      size: 0.005,
-      color: particleColor,
-      transparent: true,
-      opacity: 0.8,
-      blending: THREE.AdditiveBlending,
-    });
+      geometry.setAttribute("position", new THREE.BufferAttribute(posArray, 3));
 
-    const particlesMesh = new THREE.Points(geometry, material);
-    scene.add(particlesMesh);
+      const material = new THREE.PointsMaterial({
+        size: 0.005,
+        color: particleColor,
+        transparent: true,
+        opacity: 0.8,
+        blending: THREE.AdditiveBlending,
+      });
 
-    // Interaction
+      const particlesMesh = new THREE.Points(geometry, material);
+      scene.add(particlesMesh);
+
+      const animate = () => {
+        animationId = requestAnimationFrame(animate);
+
+        particlesMesh.rotation.y += 0.001;
+        particlesMesh.rotation.x += 0.001;
+
+        particlesMesh.position.x += (mouse.current.x * 0.5 - particlesMesh.position.x) * 0.05;
+        particlesMesh.position.y += (mouse.current.y * 0.5 - particlesMesh.position.y) * 0.05;
+
+        renderer.render(scene, camera);
+      };
+
+      animate();
+
+      const handleResize = () => {
+        if (!container) return;
+        const w = container.clientWidth;
+        const h = container.clientHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+      };
+
+      window.addEventListener("resize", handleResize);
+    };
+
+    initThree();
+
     const handleMouseMove = (event: MouseEvent) => {
       mouse.current.x = (event.clientX / window.innerWidth) * 2 - 1;
       mouse.current.y = -(event.clientY / window.innerHeight) * 2 + 1;
@@ -88,35 +113,13 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
 
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Animation
-    const animate = () => {
-      requestAnimationFrame(animate);
-
-      particlesMesh.rotation.y += 0.001;
-      particlesMesh.rotation.x += 0.001;
-
-      // Mouse reaction
-      particlesMesh.position.x += (mouse.current.x * 0.5 - particlesMesh.position.x) * 0.05;
-      particlesMesh.position.y += (mouse.current.y * 0.5 - particlesMesh.position.y) * 0.05;
-
-      renderer.render(scene, camera);
-    };
-
-    animate();
-
-    const handleResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    };
-
-    window.addEventListener("resize", handleResize);
-
     return () => {
+      isMounted = false;
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("resize", handleResize);
-      if (container.contains(renderer.domElement)) {
-        container.removeChild(renderer.domElement);
+      cancelAnimationFrame(animationId);
+      if (renderer && renderer.domElement && threeRef.current?.contains(renderer.domElement)) {
+        threeRef.current.removeChild(renderer.domElement);
+        renderer.dispose();
       }
     };
   }, [particleColor]);
@@ -129,25 +132,23 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
 
   return (
     <section ref={containerRef} className={`relative w-full ${heightClasses[height]} bg-black flex items-center justify-center overflow-hidden ${className}`}>
-      {/* Cinematic Background Image Layer */}
-      <div 
-        className="absolute inset-0 z-0 opacity-40 transition-transform duration-1000 ease-out scale-110"
-        style={{
-          backgroundImage: `url("${getCloudinaryUrl(backgroundImage, { width: 1920 })}")`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          transform: `translate(${mouse.current.x * 20}px, ${mouse.current.y * 20}px) scale(1.1)`
-        }}
-      />
+      {/* Optimized Background Image Layer for LCP */}
+      <div className="absolute inset-0 z-0 opacity-40 scale-110">
+        <Image 
+          src={getCloudinaryUrl(backgroundImage, { width: 1920, quality: "auto" })}
+          alt="Said Aqqa Photography Hero"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+      </div>
       
       {/* Three.js Particle Layer */}
       <div ref={threeRef} className="absolute inset-0 z-[2] opacity-60 pointer-events-none" />
 
       {/* Refined Luxury Gradients */}
-      {/* Top darkness for header/logo visibility */}
       <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-black/80 to-transparent z-[1]" />
-      
-      {/* Bottom "high-key" fade to match premium reference image */}
       <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-zinc-200/10 via-transparent to-transparent z-[1]" />
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white/5 to-transparent z-[1]" />
 
@@ -168,7 +169,6 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
         </div>
       </div>
       
-      {/* Luxury Accents (Remaining framing for hero content) */}
       {showAccents && (
         <>
           <div className="absolute bottom-12 right-12 w-32 h-[1px] z-10" style={{ backgroundColor: accentColor }}></div>
@@ -176,7 +176,6 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
         </>
       )}
       
-      {/* Scroll Indicator */}
       {showScrollIndicator && height === "full" && (
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center space-y-4">
           <span className="text-[8px] text-white/40 tracking-[0.5em] uppercase vertical-rl">Scroll</span>

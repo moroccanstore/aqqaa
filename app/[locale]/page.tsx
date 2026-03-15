@@ -74,7 +74,7 @@ export default function HomePage() {
               <RevealOnScroll>
                  <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase">{t("theArtist")}</h2>
                  <h3 className="text-4xl md:text-6xl font-serif leading-tight">Said Aqqa</h3>
-                 <p className="text-zinc-400 font-light leading-relaxed text-lg max-w-lg">
+                 <p className="text-zinc-300 font-light leading-relaxed text-lg max-w-lg">
                     {t("artistDescription")}
                  </p>
                  <Link href="/about" className="text-gold text-xs tracking-[0.3em] uppercase flex items-center hover:translate-x-2 transition-transform duration-500">
@@ -100,11 +100,11 @@ export default function HomePage() {
                   className="bg-white/[0.02] border border-white/[0.05] p-10 hover:border-gold/30 transition-colors"
                   delay={index * 0.1}
                 >
-                   <p className="text-zinc-400 font-light italic leading-relaxed mb-8 text-sm">
+                   <p className="text-zinc-300 font-light italic leading-relaxed mb-8 text-sm">
                       "{testimonial.text}"
                    </p>
                    <div>
-                      <h5 className="text-white text-xs tracking-widest uppercase font-medium">{testimonial.name}</h5>
+                      <h4 className="text-white text-xs tracking-widest uppercase font-medium">{testimonial.name}</h4>
                       <p className="text-gold text-[10px] tracking-[0.2em] uppercase mt-1">{t("verifiedExperience")}</p>
                    </div>
                 </RevealOnScroll>
