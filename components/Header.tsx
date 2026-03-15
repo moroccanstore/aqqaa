@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/navigation";
+import { useTranslations } from "next-intl";
 import { Menu, X, Instagram, Youtube, Facebook } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -11,17 +11,19 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Weddings", href: "/weddings" },
-  { name: "Videos", href: "/videos" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "About", href: "/about" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "Contact", href: "/contact" },
-];
-
 export const Header = () => {
+  const t = useTranslations("Header");
+  
+  const navLinks = [
+    { name: t("home"), href: "/" },
+    { name: t("weddings"), href: "/weddings" },
+    { name: t("videos"), href: "/videos" },
+    { name: t("portfolio"), href: "/portfolio" },
+    { name: t("about"), href: "/about" },
+    { name: t("pricing"), href: "/pricing" },
+    { name: t("contact"), href: "/contact" },
+  ];
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -57,7 +59,7 @@ export const Header = () => {
               Said <span className="text-gold">Aqqa</span>
             </h1>
             <span className="text-[8px] md:text-[10px] text-white/40 tracking-[0.8em] uppercase mt-1 font-light group-hover:text-gold/60 transition-colors duration-500">
-              Photography & Visuals
+              {t("photographyVisuals")}
             </span>
           </Link>
         </div>

@@ -1,0 +1,33 @@
+{
+  "Header": {
+    "home": "Home",
+    "weddings": "Weddings",
+    "videos": "Videos",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "photographyVisuals": "Photography & Visuals"
+  },
+  "Footer": {
+    "description": "Capturing the soul of moments through luxury wedding and lifestyle photography. Based in Helsinki & Espoo, serving clients worldwide.",
+    "explore": "Explore",
+    "priceList": "Price List",
+    "contact": "Contact",
+    "rights": "Said Aqqa Photography. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "HomePage": {
+    "portfolioOptions": "Portfolio",
+    "selectedWorks": "Selected Works",
+    "allWeddings": "All Weddings",
+    "theArtist": "The Artist",
+    "artistDescription": "With over a decade of experience capturing the most intimate moments across Finland and beyond, my philosophy is simple: search for the light that reflects the soul.",
+    "myPhilosophy": "My Philosophy",
+    "kindWords": "Kind Words",
+    "clientFeedback": "Client Feedback",
+    "verifiedExperience": "Verified Experience",
+    "marquee": "Book Your Story • Now Booking 2024/2025 • Destination Wedding • Luxury Photography •"
+  }
+}

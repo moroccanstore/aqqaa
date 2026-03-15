@@ -1,8 +1,11 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 import { Instagram, Youtube, Facebook, Mail, MapPin, Phone } from "lucide-react";
 
 export const Footer = () => {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="bg-zinc-950 text-white pt-24 pb-12 border-t border-white/5">
       <div className="container mx-auto px-6">
@@ -14,8 +17,7 @@ export const Footer = () => {
               Said <span className="text-gold">Aqqa</span>
             </h2>
             <p className="text-zinc-500 font-light max-w-sm leading-relaxed mb-8">
-              Capturing the soul of moments through luxury wedding and lifestyle photography. 
-              Based in Helsinki & Espoo, serving clients worldwide.
+              {t("description")}
             </p>
             <div className="flex space-x-6 text-zinc-400">
               <a href="https://instagram.com/saidaqqaweddings" className="hover:text-gold transition-colors"><Instagram size={20} /></a>
@@ -26,18 +28,18 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-[10px] tracking-[0.3em] uppercase text-gold mb-8">Explore</h4>
+            <h4 className="text-[10px] tracking-[0.3em] uppercase text-gold mb-8">{t("explore")}</h4>
             <ul className="space-y-4">
-              <li><Link href="/weddings" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">Weddings</Link></li>
-              <li><Link href="/portfolio" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">Portfolio</Link></li>
-              <li><Link href="/videos" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">Videos</Link></li>
-              <li><Link href="/pricing" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">Price List</Link></li>
+              <li><Link href="/weddings" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">{t("weddings")}</Link></li>
+              <li><Link href="/portfolio" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">{t("portfolio")}</Link></li>
+              <li><Link href="/videos" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">{t("videos")}</Link></li>
+              <li><Link href="/pricing" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">{t("priceList")}</Link></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-[10px] tracking-[0.3em] uppercase text-gold mb-8">Contact</h4>
+            <h4 className="text-[10px] tracking-[0.3em] uppercase text-gold mb-8">{t("contact")}</h4>
             <ul className="space-y-6">
               <li className="flex items-start space-x-4">
                 <Mail size={16} className="text-gold mt-1" />
@@ -58,10 +60,10 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:row justify-between items-center text-[10px] tracking-[0.2em] text-zinc-600 uppercase">
-          <p>© {new Date().getFullYear()} Said Aqqa Photography. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {t("rights")}</p>
           <div className="flex space-x-8 mt-6 md:mt-0">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">{t("privacyPolicy")}</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">{t("termsOfService")}</Link>
           </div>
         </div>
       </div>

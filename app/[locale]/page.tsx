@@ -1,6 +1,7 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { ParticleHero } from "@/components/ParticleHero";
 import { RevealOnScroll, ParallaxSection } from "@/components/AnimationWrappers";
 import { MasonryGallery } from "@/components/MasonryGallery";
@@ -11,6 +12,7 @@ import { ArrowRight } from "lucide-react";
 import { TrustFactors } from "@/components/TrustFactors";
 
 export default function HomePage() {
+  const t = useTranslations("HomePage");
 
   return (
     <div className="bg-black text-white">
@@ -19,12 +21,12 @@ export default function HomePage() {
         backgroundImage={getCloudinaryUrl("https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/10aa1f1b-94f0-4c0a-a001-46671cbdc6ca/Couple%2band%2bhorses.jpg", { width: 1920, quality: "auto" })}
       />
 
-      {/* Gallery Section */} {/* Replaced Featured Weddings Section */}
+      {/* Gallery Section */}
       <section className="py-32 bg-zinc-950">
         <div className="max-w-7xl mx-auto px-4">
           <RevealOnScroll className="text-center mb-20">
-            <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">Portfolio</h2>
-            <h3 className="text-5xl md:text-7xl font-serif">Selected Works</h3>
+            <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">{t("portfolioOptions")}</h2>
+            <h3 className="text-5xl md:text-7xl font-serif">{t("selectedWorks")}</h3>
           </RevealOnScroll>
           
           <MasonryGallery 
@@ -42,7 +44,7 @@ export default function HomePage() {
               href="/weddings" 
               className="btn-liquid inline-block border border-white/20 px-12 py-5 text-[10px] tracking-[0.4em] uppercase hover:border-gold transition-all duration-500"
             >
-              All Weddings
+              {t("allWeddings")}
             </Link>
           </div>
         </div>
@@ -70,14 +72,13 @@ export default function HomePage() {
            </div>
            <div className="flex-1 space-y-8">
               <RevealOnScroll>
-                 <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase">The Artist</h2>
+                 <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase">{t("theArtist")}</h2>
                  <h3 className="text-4xl md:text-6xl font-serif leading-tight">Said Aqqa</h3>
                  <p className="text-zinc-400 font-light leading-relaxed text-lg max-w-lg">
-                    With over a decade of experience capturing the most intimate moments across Finland and beyond, 
-                    my philosophy is simple: search for the light that reflects the soul.
+                    {t("artistDescription")}
                  </p>
                  <Link href="/about" className="text-gold text-xs tracking-[0.3em] uppercase flex items-center hover:translate-x-2 transition-transform duration-500">
-                    My Philosophy <ArrowRight size={14} className="ml-3" />
+                    {t("myPhilosophy")} <ArrowRight size={14} className="ml-3" />
                  </Link>
               </RevealOnScroll>
            </div>
@@ -88,8 +89,8 @@ export default function HomePage() {
       <section className="py-32 bg-zinc-950 border-y border-white/5">
         <div className="container mx-auto px-6">
            <RevealOnScroll className="text-center mb-20">
-              <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">Kind Words</h2>
-              <h3 className="text-4xl font-serif">Client Feedback</h3>
+              <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">{t("kindWords")}</h2>
+              <h3 className="text-4xl font-serif">{t("clientFeedback")}</h3>
            </RevealOnScroll>
            
            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -104,7 +105,7 @@ export default function HomePage() {
                    </p>
                    <div>
                       <h5 className="text-white text-xs tracking-widest uppercase font-medium">{testimonial.name}</h5>
-                      <p className="text-gold text-[10px] tracking-[0.2em] uppercase mt-1">Verified Experience</p>
+                      <p className="text-gold text-[10px] tracking-[0.2em] uppercase mt-1">{t("verifiedExperience")}</p>
                    </div>
                 </RevealOnScroll>
               ))}
@@ -117,7 +118,7 @@ export default function HomePage() {
          <div className="flex whitespace-nowrap animate-marquee">
             {[1, 2, 3, 4, 5].map((i) => (
               <span key={i} className="text-6xl md:text-9xl font-serif text-white/[0.03] uppercase tracking-tighter mx-10">
-                Book Your Story • Now Booking 2024/2025 • Destination Wedding • Luxury Photography •
+                {t("marquee")}
               </span>
             ))}
          </div>

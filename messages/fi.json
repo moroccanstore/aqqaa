@@ -1,0 +1,33 @@
+{
+  "Header": {
+    "home": "Etusivu",
+    "weddings": "Häät",
+    "videos": "Videot",
+    "portfolio": "Portfolio",
+    "about": "Tietoa",
+    "pricing": "Hinnasto",
+    "contact": "Ota Yhteyttä",
+    "photographyVisuals": "Valokuvaus & Visuaalit"
+  },
+  "Footer": {
+    "description": "Ikuistamme hetkien sielun ylellisen hää- ja lifestyle-valokuvauksen kautta. Kotipaikkana Helsinki ja Espoo, palvelemme asiakkaita maailmanlaajuisesti.",
+    "explore": "Tutustu",
+    "priceList": "Hinnasto",
+    "contact": "Yhteystiedot",
+    "rights": "Said Aqqa Photography. Kaikki oikeudet pidätetään.",
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "termsOfService": "Käyttöehdot"
+  },
+  "HomePage": {
+    "portfolioOptions": "Portfolio",
+    "selectedWorks": "Valitut Teokset",
+    "allWeddings": "Kaikki Häät",
+    "theArtist": "Taiteilija",
+    "artistDescription": "Yli vuosikymmenen kokemuksella ikuistan intiimeimpiä hetkiä Suomessa ja sen ulkopuolella. Filosofiani on yksinkertainen: etsi valoa, joka heijastaa sielua.",
+    "myPhilosophy": "Filosofiani",
+    "kindWords": "Kauniita Sanoja",
+    "clientFeedback": "Asiakaspalautteet",
+    "verifiedExperience": "Vahvistettu Kokemus",
+    "marquee": "Varaa Tarinasi • Nyt Vastaanotetaan Varauksia 2024/2025 • Kohdehäät • Ylellinen Valokuvaus •"
+  }
+}
