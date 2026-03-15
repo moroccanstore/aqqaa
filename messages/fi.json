@@ -29,5 +29,56 @@
     "clientFeedback": "Asiakaspalautteet",
     "verifiedExperience": "Vahvistettu Kokemus",
     "marquee": "Varaa Tarinasi • Nyt Vastaanotetaan Varauksia 2024/2025 • Kohdehäät • Ylellinen Valokuvaus •"
+  },
+  "Pricing": {
+    "heroTitle": "Perintösi",
+    "heroSubtitle": "Investointi & Palvelut",
+    "sectionTitle": "Perintösi Vaaliminen",
+    "sectionDescription": "Valokuvaus on investointi muistoihisi. Jokainen paketti on räätälöity tarjoamaan korkeimman tason palvelua ja taiteellista huippuosaamista.",
+    "startingFrom": "Alkaen",
+    "reserveDate": "Varaa Päivä",
+    "bespokeTitle": "Tarvitsetko jotain räätälöityä?",
+    "bespokeDescription": "Tarjoamme kustomoituja kokonaisuuksia kohdehäihin ja usean päivän tapahtumiin.",
+    "customQuote": "Pyydä Tarjous",
+    "package1": {
+      "name": "Hääportretit",
+      "duration": "2–4 Tunnin Kuvaus",
+      "features": [
+        "Suunnittelupalaveri",
+        "Potrettikuvaus miljöössä",
+        "40–60 täysikokoista käsiteltyä kuvaa",
+        "Täydet käyttöoikeudet sisältyvät"
+      ]
+    },
+    "package2": {
+      "name": "Vihkiminen & Potretit",
+      "duration": "2–5 Tunnin Kuvaus",
+      "features": [
+        "Suunnittelupalaveri",
+        "60–80 potrettikuvaa",
+        "60–80 dokumentaarista kuvaa",
+        "Vihkimisen kattava kuvaus"
+      ]
+    },
+    "package3": {
+      "name": "Dokumentaarinen Paketti I",
+      "duration": "6–8 Tunnin Kuvaus",
+      "features": [
+        "6–8 tuntia kuvausaikaa",
+        "Tutustumis- ja suunnittelupalaveri",
+        "Vihkiminen, potretit ja hääjuhla",
+        "300–500 täysikokoista käsiteltyä kuvaa"
+      ]
+    },
+    "package4": {
+      "name": "Dokumentaarinen Paketti II",
+      "duration": "8–10 Tunnin Kuvaus",
+      "features": [
+        "8–10 tuntia kuvausaikaa",
+        "Tutustumis- ja suunnittelupalaveri",
+        "Vihkiminen, potretit ja hääjuhla",
+        "500–700 täysikokoista käsiteltyä kuvaa"
+      ]
+    }
   }
 }

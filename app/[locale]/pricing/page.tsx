@@ -1,12 +1,13 @@
 import React from "react";
 import { RevealOnScroll } from "@/components/AnimationWrappers";
 import { Check } from "lucide-react";
-import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 import { ParticleHero } from "@/components/ParticleHero";
 import { pricingData } from "@/lib/data/pricing";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { Link } from "@/navigation";
 
 export const metadata = {
   title: "Investment | Said Aqqa Photography",
@@ -15,11 +16,13 @@ export const metadata = {
 
 
 export default function PricingPage() {
+  const t = useTranslations('Pricing');
+
   return (
     <div className="bg-black text-white pb-32">
       <ParticleHero 
-        title="Your Legacy"
-        subtitle="Investment & Services"
+        title={t('heroTitle')}
+        subtitle={t('heroSubtitle')}
         backgroundImage={getCloudinaryUrl(pricingData.heroImage, { width: 1920, quality: "auto" })}
         height="half"
         showScrollIndicator={false}
@@ -27,63 +30,63 @@ export default function PricingPage() {
 
       <div className="container mx-auto px-6 mt-32">
         <RevealOnScroll className="max-w-4xl mx-auto text-center mb-24">
-           <h2 className="text-5xl md:text-7xl font-serif leading-tight">Preserving Your Legacy</h2>
+           <h2 className="text-5xl md:text-7xl font-serif leading-tight">{t('sectionTitle')}</h2>
            <p className="text-zinc-500 font-light mt-12 text-lg italic">
-             "Photography is an investment in your memories. Each package is tailored to provide the highest level of service and artistic excellence."
+             "{t('sectionDescription')}"
            </p>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-           {pricingData.packages.map((pkg, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1600px] mx-auto">
+           {pricingData.packages.map((pkg: any, index: number) => (
              <RevealOnScroll 
-               key={pkg.name} 
+               key={pkg.id} 
                delay={index * 0.1}
-               className={`relative flex flex-col p-12 bg-zinc-950 border transition-all duration-500 hover:border-gold/50 ${
-                  pkg.featured ? "border-gold/30 scale-105 z-10" : "border-white/5"
+               className={`relative flex flex-col p-8 bg-zinc-950 border transition-all duration-500 hover:border-gold/50 ${
+                  pkg.featured ? "border-gold/30 lg:scale-105 z-10 shadow-2xl shadow-gold/5" : "border-white/5"
                }`}
              >
                 {pkg.featured && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-black text-[10px] tracking-widest uppercase px-6 py-2">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-black text-[10px] tracking-widest uppercase px-6 py-2 whitespace-nowrap">
                     Most Requested
                   </div>
                 )}
                 
-                <h3 className="text-2xl font-serif mb-2">{pkg.name}</h3>
-                <p className="text-gold text-[10px] tracking-widest uppercase mb-8">{pkg.duration}</p>
+                <h3 className="text-xl font-serif mb-2">{t(`${pkg.id}.name`)}</h3>
+                <p className="text-gold text-[9px] tracking-widest uppercase mb-6">{t(`${pkg.id}.duration`)}</p>
                 
-                <div className="text-4xl font-serif mb-12">
+                <div className="text-3xl font-serif mb-8">
                    {pkg.price}
-                   <span className="text-[10px] text-zinc-600 block mt-2 tracking-widest uppercase">Starting from</span>
+                   <span className="text-[9px] text-zinc-600 block mt-2 tracking-widest uppercase">{t('startingFrom')}</span>
                 </div>
 
-                <ul className="space-y-6 flex-1 mb-12">
-                   {pkg.features.map(feature => (
-                     <li key={feature} className="flex items-start space-x-4 text-sm text-zinc-400 font-light">
-                        <Check size={16} className="text-gold mt-1 shrink-0" />
+                <ul className="space-y-4 flex-1 mb-8">
+                   {(t.raw(`${pkg.id}.features`) as string[]).map((feature: string) => (
+                     <li key={feature} className="flex items-start space-x-3 text-[13px] text-zinc-400 font-light leading-relaxed">
+                        <Check size={14} className="text-gold mt-1 shrink-0" />
                         <span>{feature}</span>
                      </li>
                    ))}
                 </ul>
 
                 {/* Visual Proof Mini-Gallery */}
-                <div className="flex gap-2 mb-12 h-20">
+                <div className="flex gap-1.5 mb-8 h-16">
                    {pkg.proofGallery?.map((img: any, i: number) => (
-                     <div key={i} className="flex-1 grayscale hover:grayscale-0 transition-all duration-500">
+                     <div key={i} className="flex-1 grayscale hover:grayscale-0 transition-all duration-500 relative">
                        <CloudinaryImage 
                          src={img.url}
                          alt="Quality Sample"
                          fill
-                         className="w-full h-full"
+                         className="object-cover"
                        />
                      </div>
                    ))}
                 </div>
 
-                <a href="/contact" className={`btn-liquid text-center py-5 text-[10px] tracking-[0.4em] uppercase transition-all duration-500 ${
-                  pkg.featured ? "bg-gold text-black hover:border-white" : "border border-white/20 hover:border-gold"
+                <Link href="/contact" className={`text-center py-4 text-[9px] tracking-[0.3em] uppercase transition-all duration-500 ${
+                  pkg.featured ? "bg-gold text-black border border-gold hover:bg-transparent hover:text-white" : "border border-white/20 hover:border-gold"
                 }`}>
-                   Reserve Date
-                </a>
+                   {t('reserveDate')}
+                </Link>
              </RevealOnScroll>
            ))}
         </div>
@@ -91,11 +94,11 @@ export default function PricingPage() {
         {/* Custom Quote Section */}
         <section className="mt-40 text-center">
            <RevealOnScroll>
-              <h4 className="text-zinc-500 text-[10px] tracking-[0.5em] uppercase mb-6">Need something bespoke?</h4>
-              <p className="text-2xl md:text-4xl font-serif mb-12">We offer custom collections for destination weddings and multi-day events.</p>
-              <a href="/contact" className="text-gold border-b border-gold/30 pb-2 hover:text-white hover:border-white transition-all text-sm tracking-widest uppercase">
-                 Inquire for a Custom Quote
-              </a>
+              <h4 className="text-zinc-500 text-[10px] tracking-[0.5em] uppercase mb-6">{t('bespokeTitle')}</h4>
+              <p className="text-2xl md:text-4xl font-serif mb-12">{t('bespokeDescription')}</p>
+              <Link href="/contact" className="text-gold border-b border-gold/30 pb-2 hover:text-white hover:border-white transition-all text-sm tracking-widest uppercase">
+                 {t('customQuote')}
+              </Link>
            </RevealOnScroll>
         </section>
       </div>

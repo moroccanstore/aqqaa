@@ -29,5 +29,56 @@
     "clientFeedback": "Client Feedback",
     "verifiedExperience": "Verified Experience",
     "marquee": "Book Your Story • Now Booking 2024/2025 • Destination Wedding • Luxury Photography •"
+  },
+  "Pricing": {
+    "heroTitle": "Your Legacy",
+    "heroSubtitle": "Investment & Services",
+    "sectionTitle": "Preserving Your Legacy",
+    "sectionDescription": "Photography is an investment in your memories. Each package is tailored to provide the highest level of service and artistic excellence.",
+    "startingFrom": "Starting from",
+    "reserveDate": "Reserve Date",
+    "bespokeTitle": "Need something bespoke?",
+    "bespokeDescription": "We offer custom collections for destination weddings and multi-day events.",
+    "customQuote": "Inquire for a Custom Quote",
+    "package1": {
+      "name": "Wedding Portraits",
+      "duration": "2–4 Hours Coverage",
+      "features": [
+        "Planning meeting",
+        "Portrait session in a specific milieu",
+        "40–60 full-size processed images",
+        "Full usage rights included"
+      ]
+    },
+    "package2": {
+      "name": "Ceremony & Portraits",
+      "duration": "2–5 Hours Coverage",
+      "features": [
+        "Planning meeting",
+        "60–80 portrait images",
+        "60–80 documentary pictures",
+        "Full ceremony coverage"
+      ]
+    },
+    "package3": {
+      "name": "Documentary Package I",
+      "duration": "6–8 Hours Coverage",
+      "features": [
+        "6–8 hours of photography time",
+        "Familiarization and planning meeting",
+        "Ceremony, portraits, and wedding party",
+        "300–500 full-size processed images"
+      ]
+    },
+    "package4": {
+      "name": "Documentary Package II",
+      "duration": "8–10 Hours Coverage",
+      "features": [
+        "8–10 hours of photography time",
+        "Familiarization and planning meeting",
+        "Ceremony, portraits, and wedding party",
+        "500–700 full-size processed images"
+      ]
+    }
   }
 }
