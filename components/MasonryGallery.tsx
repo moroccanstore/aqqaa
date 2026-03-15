@@ -10,10 +10,11 @@ const GalleryItemInner = ({ img }: { img: GalleryItem }) => (
     <CloudinaryImage
       src={img.url}
       alt={img.alt || "Gallery Image"}
-      width={800}
-      height={1200}
+      width={600}
+      height={900}
+      quality={80}
       className="w-full h-auto"
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
     />
     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
       <div className="btn-liquid border border-white/20 p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">

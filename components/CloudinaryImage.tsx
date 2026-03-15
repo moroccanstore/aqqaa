@@ -28,7 +28,7 @@ export const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
   const optimizedSrc = getCloudinaryUrl(src, { 
     width: typeof width === 'number' ? width : undefined, 
     quality, 
-    format 
+    format: format === "auto" ? "webp" : format, // default to highly compressed WebP
   });
 
   const aspectRatioClasses = {
