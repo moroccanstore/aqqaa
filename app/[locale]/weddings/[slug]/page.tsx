@@ -3,17 +3,23 @@ import { notFound } from "next/navigation";
 import { weddings, Wedding } from "@/lib/data/weddings";
 import { StoryGallery } from "@/components/StoryGallery";
 import { RevealOnScroll } from "@/components/AnimationWrappers";
+import { Link, routing } from "@/navigation";
 
 interface WeddingPageProps {
   params: {
+    locale: string;
     slug: string;
   };
 }
 
 export async function generateStaticParams() {
-  return weddings.map((wedding: Wedding) => ({
-    slug: wedding.slug,
-  }));
+  const locales = routing.locales;
+  return locales.flatMap(locale => 
+    weddings.map((wedding: Wedding) => ({
+      locale,
+      slug: wedding.slug,
+    }))
+  );
 }
 
 export async function generateMetadata({ params }: WeddingPageProps) {
@@ -58,12 +64,12 @@ export default function WeddingDetailPage({ params }: WeddingPageProps) {
                Every wedding is a unique masterpiece. Let's discuss how we can tell your story through our lens.
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-6">
-               <a href="/contact" className="bg-white text-black px-12 py-5 text-[10px] tracking-[0.4em] uppercase hover:bg-gold transition-colors">
+               <Link href="/contact" className="bg-white text-black px-12 py-5 text-[10px] tracking-[0.4em] uppercase hover:bg-gold transition-colors">
                   Inquire Now
-               </a>
-               <a href="/weddings" className="border border-white/20 text-white px-12 py-5 text-[10px] tracking-[0.4em] uppercase hover:bg-white hover:text-black transition-colors">
+               </Link>
+               <Link href="/weddings" className="border border-white/20 text-white px-12 py-5 text-[10px] tracking-[0.4em] uppercase hover:bg-white hover:text-black transition-colors">
                   Back to All Stories
-               </a>
+               </Link>
             </div>
          </RevealOnScroll>
       </section>

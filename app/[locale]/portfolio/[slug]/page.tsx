@@ -4,19 +4,25 @@ import { portfolioImages, PortfolioCategory } from "@/lib/data/portfolio";
 import { MasonryGallery } from "@/components/MasonryGallery";
 import { RevealOnScroll } from "@/components/AnimationWrappers";
 import { ChevronLeft } from "lucide-react";
-import Link from "next/link";
+import { Link, routing } from "@/navigation";
 
 interface PortfolioCategoryPageProps {
   params: {
+    locale: string;
     slug: string;
   };
 }
 
 export async function generateStaticParams() {
   const categories: PortfolioCategory[] = ["products", "interior", "food", "family", "portraits", "events", "landscape"];
-  return categories.map((cat) => ({
-    slug: cat,
-  }));
+  const locales = routing.locales;
+  
+  return locales.flatMap(locale => 
+    categories.map((cat) => ({
+      locale,
+      slug: cat,
+    }))
+  );
 }
 
 export async function generateMetadata({ params }: PortfolioCategoryPageProps) {

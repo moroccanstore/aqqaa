@@ -3,18 +3,23 @@ import { notFound } from "next/navigation";
 import { videoProjects } from "@/lib/data/videos";
 import { RevealOnScroll } from "@/components/AnimationWrappers";
 import { ChevronLeft } from "lucide-react";
-import Link from "next/link";
+import { Link, routing } from "@/navigation";
 
 interface VideoDetailPageProps {
   params: {
+    locale: string;
     slug: string;
   };
 }
 
 export async function generateStaticParams() {
-  return videoProjects.map((project) => ({
-    slug: project.id,
-  }));
+  const locales = routing.locales;
+  return locales.flatMap(locale => 
+    videoProjects.map((project) => ({
+      locale,
+      slug: project.id,
+    }))
+  );
 }
 
 export default function VideoDetailPage({ params }: VideoDetailPageProps) {
