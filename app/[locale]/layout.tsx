@@ -16,6 +16,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/navigation';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default async function RootLayout({
   children,
@@ -38,6 +39,7 @@ export default async function RootLayout({
           <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
