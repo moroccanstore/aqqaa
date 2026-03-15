@@ -5,7 +5,7 @@ import Link from "next/link";
 import { CloudinaryImage } from "./CloudinaryImage";
 import { RevealOnScroll } from "./AnimationWrappers";
 
-const GalleryItemInner = ({ img }: { img: GalleryItem }) => (
+const GalleryItemInner = ({ img, priority }: { img: GalleryItem, priority?: boolean }) => (
   <>
     <CloudinaryImage
       src={img.url}
@@ -13,6 +13,7 @@ const GalleryItemInner = ({ img }: { img: GalleryItem }) => (
       width={600}
       height={900}
       quality={80}
+      priority={priority}
       className="w-full h-auto"
       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
     />
@@ -46,11 +47,11 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images }) => {
         <RevealOnScroll key={`${img.url}-${index}`} delay={index * 0.05} className="break-inside-avoid">
           {img.href ? (
             <Link href={img.href} className="block group relative overflow-hidden bg-zinc-900">
-              <GalleryItemInner img={img} />
+              <GalleryItemInner img={img} priority={index < 2} />
             </Link>
           ) : (
             <div className="relative group overflow-hidden bg-zinc-900">
-              <GalleryItemInner img={img} />
+              <GalleryItemInner img={img} priority={index < 2} />
             </div>
           )}
         </RevealOnScroll>

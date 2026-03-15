@@ -16,13 +16,13 @@ export const Footer = () => {
             <h2 className="text-3xl font-serif tracking-widest uppercase mb-8">
               Said <span className="text-gold">Aqqa</span>
             </h2>
-            <p className="text-zinc-500 font-light max-w-sm leading-relaxed mb-8">
+            <p className="text-zinc-400 font-light max-w-sm leading-relaxed mb-8">
               {t("description")}
             </p>
             <div className="flex space-x-6 text-zinc-400">
-              <a href="https://instagram.com/saidaqqaweddings" className="hover:text-gold transition-colors"><Instagram size={20} /></a>
-              <a href="https://youtube.com/@saidaqqaphotography" className="hover:text-gold transition-colors"><Youtube size={20} /></a>
-              <a href="https://facebook.com/aqqasaid" className="hover:text-gold transition-colors"><Facebook size={20} /></a>
+              <a href="https://instagram.com/saidaqqaweddings" aria-label="Instagram" className="hover:text-gold transition-colors"><Instagram size={20} /></a>
+              <a href="https://youtube.com/@saidaqqaphotography" aria-label="YouTube" className="hover:text-gold transition-colors"><Youtube size={20} /></a>
+              <a href="https://facebook.com/aqqasaid" aria-label="Facebook" className="hover:text-gold transition-colors"><Facebook size={20} /></a>
             </div>
           </div>
 

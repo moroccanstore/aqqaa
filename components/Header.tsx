@@ -90,6 +90,7 @@ export const Header = () => {
         <button
           className="md:hidden text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -119,9 +120,9 @@ export const Header = () => {
         
         {/* Mobile Socials */}
         <div className="absolute bottom-10 flex space-x-6 text-gold">
-           <a href="https://instagram.com/saidaqqaweddings" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
-           <a href="https://youtube.com/@saidaqqaphotography" target="_blank" rel="noopener noreferrer"><Youtube size={20} /></a>
-           <a href="https://facebook.com/aqqasaid" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
+           <a href="https://instagram.com/saidaqqaweddings" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
+           <a href="https://youtube.com/@saidaqqaphotography" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><Youtube size={20} /></a>
+           <a href="https://facebook.com/aqqasaid" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={20} /></a>
         </div>
       </div>
     </header>

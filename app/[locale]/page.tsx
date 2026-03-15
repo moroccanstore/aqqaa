@@ -114,10 +114,10 @@ export default function HomePage() {
       </section>
 
       {/* Simple Marquee CTA */}
-      <section className="py-20 bg-black overflow-hidden border-b border-white/5">
+      <section className="py-20 bg-black overflow-hidden border-b border-white/5" aria-hidden="true">
          <div className="flex whitespace-nowrap animate-marquee">
             {[1, 2, 3, 4, 5].map((i) => (
-              <span key={i} className="text-6xl md:text-9xl font-serif text-white/[0.03] uppercase tracking-tighter mx-10">
+              <span key={i} className="text-6xl md:text-9xl font-serif text-white/[0.03] uppercase tracking-tighter mx-10" aria-hidden="true">
                 {t("marquee")}
               </span>
             ))}
