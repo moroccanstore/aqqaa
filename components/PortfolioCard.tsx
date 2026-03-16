@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 import { CloudinaryImage } from "./CloudinaryImage";
 import { PortfolioItem } from "@/lib/data/portfolio_data";
 import { ArrowRight } from "lucide-react";
@@ -37,19 +38,19 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ item }) => {
       
       {/* Top Left Label - Always visible as requested */}
       <div className="absolute top-6 left-6 z-20">
-        <span className="text-gold text-[9px] tracking-[0.4em] uppercase font-bold bg-black/40 px-3 py-1 backdrop-blur-sm border border-gold/20">
+        <span className="text-gold text-[9px] tracking-[0.4em] uppercase font-bold bg-black/60 px-3 py-1 backdrop-blur-sm border border-gold/30">
           {getTranslatedLabel(item.label)}
         </span>
       </div>
 
       {/* Bottom Content Area - Always visible title with serif font */}
-      <div className="absolute inset-x-0 bottom-0 p-8 z-20 bg-gradient-to-t from-black via-black/60 to-transparent">
+      <div className="absolute inset-x-0 bottom-0 p-8 z-20 bg-gradient-to-t from-black via-black/80 to-transparent">
         <h3 className="text-2xl md:text-3xl text-white font-serif tracking-tight leading-tight mb-4 drop-shadow-md">
           {item.title}
         </h3>
         
         {/* View Details Button with Arrow - Elegant and always visible */}
-        <div className="flex items-center gap-3 text-white/80 transition-colors duration-300">
+        <div className="flex items-center gap-3 text-white/90 transition-colors duration-300">
           <span className="text-[10px] tracking-[0.3em] uppercase font-light border-b border-white/20 pb-1 transition-all">
             {t("viewDetail")}
           </span>
@@ -57,8 +58,8 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ item }) => {
         </div>
       </div>
       
-      {/* Hover Overlay */}
-      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all duration-700 pointer-events-none" />
+      {/* Hover Overlay - Subtle scale and darkening */}
+      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all duration-700 pointer-events-none" />
     </div>
   );
 
