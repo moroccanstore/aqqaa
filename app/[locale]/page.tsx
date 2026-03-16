@@ -35,7 +35,10 @@ export default function HomePage() {
       {/* 2. Wedding Services Strip */}
       <WeddingServicesStrip />
 
-      {/* 3. Testimonials Section (Social Proof Early) */}
+      {/* 4. Portfolio Gallery Section (Featured Selection) */}
+      <PortfolioGallery isHomepage={true} />
+
+      {/* 3. Testimonials Section (Social Proof Early) - Moved below Portfolio per user request */}
       <section className="py-32 bg-zinc-950 border-y border-white/5">
         <div className="container mx-auto px-6">
            <RevealOnScroll className="text-center mb-20">
@@ -62,9 +65,6 @@ export default function HomePage() {
            </div>
         </div>
       </section>
-
-      {/* 4. Portfolio Gallery Section (Featured Selection) */}
-      <PortfolioGallery isHomepage={true} />
       
       {/* 5. Booking Process - Explain Next Steps */}
       <BookingProcess />
