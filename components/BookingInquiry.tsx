@@ -30,7 +30,7 @@ export const BookingInquiry: React.FC = () => {
           
           <Link 
             href="/contact" 
-            className="inline-flex items-center px-12 py-6 bg-gold text-black text-[11px] tracking-[0.4em] uppercase font-bold hover:bg-white transition-all duration-500 transform hover:scale-105"
+            className="btn-liquid inline-flex items-center px-12 py-6 bg-white text-black text-[11px] tracking-[0.4em] uppercase font-bold hover:text-white transition-all duration-500 transform hover:scale-105"
           >
             {t("cta")} <ArrowRight size={16} className="ml-4" />
           </Link>
