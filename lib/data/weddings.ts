@@ -8,13 +8,774 @@ export interface WeddingImage {
 export interface Wedding {
   slug: string;
   title: string;
+  location: string;
+  couple: string;
+  date: string;
+  story: string;
   images: WeddingImage[];
+  featured?: boolean;
+  category?: string;
 }
 
 export const weddings: Wedding[] = [
   {
+    "slug": "wedding-helsinki-summer",
+    "title": "Summer Wedding in Helsinki",
+    "location": "Helsinki, Finland",
+    "couple": "Maria & Thomas",
+    "date": "July 15, 2023",
+    "story": "A beautiful summer day in the heart of Helsinki, celebrating love with a vibrant city backdrop.",
+    "images": [
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bcda5e34-4608-4f5f-98f3-4a5c3c202c29/2AG01741-3.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 1"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bd17bb30-b34a-4d1f-8a71-0467a0a1b8e2/22-08-2020-DSC_0665.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 2"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bd249b6f-21c5-495f-854d-5bf032bd8145/SAI04076.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 3"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bd260e69-f71d-43cf-a9c7-1635f33041f3/SAI01553-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 4"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bd3a54ef-172d-4b7a-9336-7ee6cdce2c54/SAI04432.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 5"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bd6a32b8-e986-46b5-9dad-b900a25b998a/DSC09911.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 6"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bda24d47-31e7-466d-9bb3-21e9c21dbacf/A7307990.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 7"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bdb6bfb8-6c39-493b-a62a-4f96000a5d0c/SAI01429-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 8"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bdf7c178-aa26-468b-9306-e36cf6299425/A7302145-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 9"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/be060712-d7bd-4b55-bee7-e88bd7e3d762/DSC09478.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 10"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/be34e5c4-1e82-4602-a5e0-a3241a41ebf3/A7308504.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 11"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/be406076-02ae-4be3-88a8-a7aca4a3e0eb/SAI04856.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 12"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/be4bd636-fcd5-45e4-8251-10d2dca69f4c/SAI01280-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 13"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/be5bbcc4-847b-4342-aece-c08a986e6675/DSC04911.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 14"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/beca88e1-1dd7-4b59-9196-d14dec253e98/DSC09696-Enhanced-NR.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 15"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bed31d70-2c28-46b3-acff-2ed6e34f8e3d/A7308639.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 16"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bee8f87e-a449-4f65-add4-3cc1d3173f3b/SAI04608.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 17"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bef61496-ee0d-48c4-81b1-83ba769eba1a/DSC01453.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 18"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/befd292f-cc77-46df-b358-6bb6ca837eef/2AG02013-3.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 19"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bf049a41-4acf-4c98-a68c-db92e671476e/DSC01277.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 20"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bf2c0e14-1ef4-40a1-84ce-0bc245e0b006/A7307966.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 21"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bf369287-72a8-4b6d-adf9-8b492bd69c3c/A7302314.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 22"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bf74d009-28e7-42d4-8da9-39915873b489/DSC01870.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 23"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bf76f4c2-578f-446a-b6fc-99653b69e962/DSC00271-Enhanced-NR.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 24"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bf9a979e-578c-4501-af19-ea774458caca/SAI01409-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 25"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bfff2240-1d49-4690-ba26-2b7df53e1795/SAI01353-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 26"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c03417d8-ed66-4edd-a7b4-7c29efca47b3/SAI01545-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 27"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c0354707-49c8-4e6e-88ca-bff43de8beed/SAI05714.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 28"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c069e843-583b-4ea1-86ef-6372a3a21896/SAI05929.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 29"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c0743ea1-9b80-4d76-91ee-ed26695570b7/SAI01266-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 30"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c0a3a4ac-2ef7-40c4-bf99-feeed2cf77ed/SAI04986.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 31"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c0bb53cd-856c-4d55-8cd7-12f209235c04/A7308536.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 32"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c1055067-7df0-4c13-bd53-82968d1f13b8/SAI03241.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 33"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c11c2a10-a9e1-44e4-9030-de828c249d19/Lotta%2bLiina%2b%26%2bLauri-12.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 34"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c12a1376-24d3-4f01-a9ea-f355cc9e8970/DSC04778-Enhanced-NR.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 35"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c12bea1c-d645-4b05-aab6-31fec4cac616/DSC03327.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 36"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c132191c-9d05-4ccb-84dc-8e823fd4764a/DSC03468.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 37"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c17386af-f613-4743-8a06-7cb62deb8de2/A7306314.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 38"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c17a1604-836e-4e3f-bb36-b3d06e4d25d4/SAI06016.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 39"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c192cca5-2389-4493-adbb-6a0560bf3868/DSC04260.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Maria & Thomas Wedding - Helsinki, Finland - Photo 40"
+      }
+    ]
+  },
+  {
+    "slug": "wedding-espoo-beach",
+    "title": "Beachside Celebration in Espoo",
+    "location": "Espoo, Finland",
+    "couple": "Laura & Miika",
+    "date": "August 12, 2023",
+    "story": "An intimate ceremony on the shores of Espoo, where the sea breeze and golden hour light created a magical atmosphere.",
+    "images": [
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c1d2b132-5429-4588-add1-14a74a37c518/2AG02034-3.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 1"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c1d8268a-20e8-4ff2-a89a-7c80ee1a6634/DSC_0961.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 2"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c23a8338-dfb8-4064-ab7b-a2f07802e44b/DSC_1027.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 3"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c28900b7-9f7c-45d8-a67e-f3a8fb0ea3d7/A7305018.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 4"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c31536b7-d4cd-4c5b-b541-ca8656f1c055/A7305331.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 5"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c31f8fbe-0517-4e23-a42e-b3893a78b13b/SAI01272-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 6"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c3279110-5980-45c3-954b-f3e2b5daf2a7/SAI01273-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 7"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c33d01df-59f4-4cee-9951-13b816430478/A7305989.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 8"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c343523a-d743-4d17-ac49-f47dcca80c8f/A7308061.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 9"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c46189b1-9f8c-493b-8241-342c5d572d0b/A7308449.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 10"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c492133d-e0d6-4135-8efe-da495a83bf40/SAI03985.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 11"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c4932eb3-9364-4c3b-8c88-796f3dcd93be/DSC_1376.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 12"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c4a51ee5-cc6c-4a11-8f90-572e81ebb7fa/DSC03585.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 13"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c4ff8b53-9a96-48e4-8cde-dc5bb43fc81a/DSC05490.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 14"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c5625dbf-9fee-478d-aa64-48449323586e/Lotta%2bLiina%2b%26%2bLauri-29.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 15"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c59a8c9a-0364-462d-a093-9d8db6d5d502/DSC03263-Enhanced-NR.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 16"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c5c52402-c57d-4dc7-aab4-7559c070501e/SAI04951.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 17"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c5e32987-6d6f-4bb7-b4e4-254f5daafee5/SAI01537-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 18"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c62ca9cf-50f0-4e5a-8e09-7091f30b9993/1AG02561.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 19"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c66ec6b6-55e9-4472-8e8f-4f643e115e9e/2AG01249-3.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 20"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c6b5c933-3923-4a23-9e09-0f2cf90c42d4/SAI04602.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 21"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c7027318-db37-463c-b2e6-28ed9a76becf/DSC09938.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 22"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c7179402-d16d-47d6-8382-eb775275625e/DSC01984.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 23"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c76dd24d-4631-4a1a-a52d-d28b45c6997b/SAI04459.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 24"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c775b212-79e5-4334-a75a-6343855cf86a/DSC_1146.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 25"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c77b869f-e2bc-44d2-922b-7ae4ce2718ee/DSC_0959.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 26"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c79be3fa-8473-4695-bd0d-610376a7e064/DSC_0666-2-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 27"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c820edb2-2295-43ed-b9bd-9a6a9ded1e00/DSC01842.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 28"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c828de43-e483-406f-b499-ab35cddb7d64/DSC_8139.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 29"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c852747e-78c0-4770-a85e-4c9341fedf39/SAI06227.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 30"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c86c0e0b-da49-40aa-892b-9fbc0e1021aa/A7306420.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 31"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c8a37000-3af8-46d9-9ff7-aba7a2ee6e3b/A7306508.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 32"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c92a0231-fe12-4508-a67f-272b39b3a3ce/A7306168.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 33"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c92ab2be-05dd-4cd6-b7ec-12381fbedce9/DSC09688.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 34"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c980d762-f6ad-4242-9706-e872744cd507/SAI01443-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 35"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c98255e4-cbcd-41b5-8ec7-af3769e66ab6/SAI01694-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 36"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/ca693dc7-60c3-4191-b418-e83d55b6a354/A7306615.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 37"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cb355774-1027-4488-be67-6460b5800607/DSC01917.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 38"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cb45ce62-649c-4843-b19c-3da6baed178d/SAI03184-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 39"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cb689237-47bb-4cbf-9e69-34d11ea3d715/DSC04329.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Laura & Miika Wedding - Espoo, Finland - Photo 40"
+      }
+    ]
+  },
+  {
+    "slug": "wedding-finnish-lake",
+    "title": "Lakeside Romance at Lake Saimaa",
+    "location": "Lake Saimaa, Finland",
+    "couple": "Anna & Juho",
+    "date": "September 5, 2023",
+    "story": "A serene lakeside wedding surrounded by the tranquility of Finnish nature and breathtaking views of Lake Saimaa.",
+    "images": [
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cb7297ce-3f9c-4a30-8be3-0ad525357bab/2AG01476-3.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 1"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cb7cdf4f-49d1-411a-adbb-1bd76b91b823/A7306256.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 2"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cb8a9521-86ed-4254-ba74-d259d0cbcc7d/SAI04503.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 3"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cba73aef-2cee-49c2-a721-bdb03c6f61f2/A7307974.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 4"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cbb51608-5aa1-4c30-b0fc-378c90f555be/DSC09637.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 5"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cc44ec94-4ba8-460b-9c2b-381ae2d7b071/DSC09698.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 6"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cc5e84a7-35aa-4c7a-996b-c37457a166a2/A7306371.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 7"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cd292b94-54f0-4b96-8bee-2bbe1b80f27d/A7302125-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 8"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cd50c943-4b8f-406d-a230-c64ed76ee055/DSC09714.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 9"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cdefdb60-23c8-4276-862f-0f3467e47b38/SAI01740-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 10"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/ce07c742-c020-406e-90ad-6bc9e0cf955c/DSC03253.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 11"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/ce1687a0-dce9-4b77-980e-94b1dd0b9cfd/SAI04881.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 12"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/ce291d99-b752-4958-97ca-89cd62cf3d8d/DSC09727.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 13"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/ce52db48-44f1-48d0-a074-73361cb70139/SAI04125.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 14"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/ce6622b3-5920-4f03-a95d-819fe452b32b/A7304897.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 15"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cf1245eb-dffd-4f4e-9e0f-e6e53d8d070a/DSC04396-Enhanced-NR.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 16"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cf8797f0-d565-4a5a-a2f7-d5ab820c9913/A7306478.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 17"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cf9e7fa8-5741-4217-ab42-162ab4518fb3/DSC01546.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 18"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cfa464cb-3c23-4532-b06a-f157a687ed35/SAI01586-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 19"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cfad2814-ee27-4743-85fa-d7a7dca5b032/DSC05647.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 20"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cfcf2cf6-c5c4-46bc-8931-e6877624c243/SAI04065.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 21"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cfe0dfc2-15ea-4929-9a89-103a4b72588e/DSC09380.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 22"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d00162b1-b342-4328-908e-5cf3741b61b5/1AG02652.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 23"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d0687e85-6e8b-40d7-a73f-7ec7a08a3d56/A7305054.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 24"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d09e2255-131d-41ee-a61a-78b8050515ca/SAI01478-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 25"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d0b3262c-0bf7-4e43-b9e3-bfc55dcf42c0/SAI05916.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 26"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d0c265b7-f38e-492c-b9d1-dc252aceacc8/SAI01621-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 27"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d0d0f184-5919-4d1a-9264-fa2fa07c6b4b/A7304982.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 28"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d0e14be2-2051-4d96-b22b-ac8fadb4709c/A7307838.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 29"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d0f1a237-e312-4130-80b3-82311464f88b/A7306851.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 30"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d0f74c7b-b865-4b94-8ff0-3e2c633fd880/DSC06119.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 31"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d0fbc446-b03f-42b9-8746-1d298fee83fd/1AG02949.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 32"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d11f0735-1691-4c93-b980-cecf20f976bf/SAI01555-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 33"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d1369b6f-0f02-4962-9209-10ad2b3e0b44/A7307592.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 34"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d189a193-3c78-4c6a-ad4b-7ab2c74dde52/SAI01692-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 35"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d2116a53-e76e-4d49-8dc0-70642ce650f1/DSC01901.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 36"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d26d8db2-0e6e-429b-a93c-41a087c0f8ae/SAI05911.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 37"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d2789200-45c4-47dc-9a50-40c42929dc1e/DSC_0665-2-2.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 38"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d27b4f58-b722-4419-af27-323ab15cb524/A7304702.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 39"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/d27ce0f0-2acc-4e24-a9d7-029e56624c83/DSC_1282.jpg",
+        "width": 6000,
+        "height": 4000,
+        "alt": "Anna & Juho Wedding - Lake Saimaa, Finland - Photo 40"
+      }
+    ]
+  },
+  {
     "slug": "toni-elina",
     "title": "Toni & Elina",
+    "location": "Tampere, Finland",
+    "couple": "Toni & Elina",
+    "date": "June 24, 2023",
+    "story": "A breathtaking wedding celebration in Tampere, Finland, where the couple celebrated their love in a stunning lakeside setting.",
+    "featured": true,
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/06a12517-d328-43dc-960e-8d9cc5e282a6/SAI01269-2.jpg",
@@ -2270,7 +3031,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "yvette-dany",
-    "title": "Yvette & Dany",
+    "location": "Helsinki, Finland",
+    "couple": "Yvette & Dany",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "Yvette & Dany",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/b97e327c-91da-466e-84ed-af1e1619f792/DSC01717.jpg",
@@ -3368,7 +4132,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "project-two-ky966-8xweg",
-    "title": "O & N",
+    "location": "Helsinki, Finland",
+    "couple": "Project & Two & Ky966 & 8xweg",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "O & N",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/16428cb4-d09f-4f28-b219-e7092bd8184b/DSC09836.jpg",
@@ -4232,7 +4999,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "salonen",
-    "title": "Salonen",
+    "location": "Helsinki, Finland",
+    "couple": "Salonen",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "Salonen",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bccfc875-9489-45b0-ae4d-b4fa92c8e665/DSC03383.jpg",
@@ -4958,7 +5728,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "m-d",
-    "title": "M & D",
+    "location": "Helsinki, Finland",
+    "couple": "M & D",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "M & D",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/a0ff91f6-27b5-4af1-b60e-6c9ee7aa038d/DSC01975.jpg",
@@ -6248,7 +7021,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "project-two-ky966-8ww3w",
-    "title": "L & A",
+    "location": "Helsinki, Finland",
+    "couple": "Project & Two & Ky966 & 8ww3w",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "L & A",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/6819cbe2-4d5a-430f-afd7-6107c30462ab/DSC04175.jpg",
@@ -7154,7 +7930,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "helmi-joona",
-    "title": "HELMI & JOONA",
+    "location": "Helsinki, Finland",
+    "couple": "Helmi & Joona",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "HELMI & JOONA",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/4bf06cd7-e473-4287-9fbe-d19ee63d608d/SAI05779.jpg",
@@ -7904,7 +8683,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "lotta-toni",
-    "title": "LOTTA & TONI",
+    "location": "Helsinki, Finland",
+    "couple": "Lotta & Toni",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "LOTTA & TONI",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/a520f4b6-3535-4a61-ae8e-b066d1ba92ee/A7305934.jpg",
@@ -9230,7 +10012,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "l-l",
-    "title": "L & L",
+    "location": "Helsinki, Finland",
+    "couple": "L & L",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "L & L",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/9a045ba7-8c54-4be5-9d38-7ccafa335561/1AG01957.jpg",
@@ -10040,7 +10825,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "emma-lauri",
-    "title": "JENNA & KOSTI",
+    "location": "Helsinki, Finland",
+    "couple": "Emma & Lauri",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "JENNA & KOSTI",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/e2665d8d-6fcc-4b82-963d-d2594c48c617/A7307445.jpg",
@@ -11162,7 +11950,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "project-six-fhm4s",
-    "title": "MIKKO @ NAYOUNG",
+    "location": "Helsinki, Finland",
+    "couple": "Project & Six & Fhm4s",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "MIKKO @ NAYOUNG",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/38752803-bd8f-49f3-b851-7ecaab71bfb0/For_Homepage_22813035_10155970875734729_43643127_o.jpg",
@@ -11480,7 +12271,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "project-two-ky966-b7zbs",
-    "title": "EMMA & LAURI",
+    "location": "Helsinki, Finland",
+    "couple": "Project & Two & Ky966 & B7zbs",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "EMMA & LAURI",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/495c06c6-a0f0-4479-86b1-dceec975be20/A7306471.jpg",
@@ -12110,7 +12904,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "lotta-lauri",
-    "title": "Lotta & Lauri",
+    "location": "Helsinki, Finland",
+    "couple": "Lotta & Lauri",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "Lotta & Lauri",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c11c2a10-a9e1-44e4-9030-de828c249d19/Lotta+Liina+%26+Lauri-12.jpg",
@@ -12644,7 +13441,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "mari-joseph",
-    "title": "MARI & JOSEPH",
+    "location": "Helsinki, Finland",
+    "couple": "Mari & Joseph",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "MARI & JOSEPH",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/f8509172-c839-4ed5-80c7-440cb24ae221/DSC05609.jpg",
@@ -14318,7 +15118,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "maria-natti",
-    "title": "MARIA & MATTI",
+    "location": "Helsinki, Finland",
+    "couple": "Maria & Natti",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "MARIA & MATTI",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/4d13dc29-35d8-4abf-8acc-974294cf7269/Lotta+Liina+%26+Lauri.jpg",
@@ -15212,7 +16015,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "t-k",
-    "title": "T & K",
+    "location": "Helsinki, Finland",
+    "couple": "T & K",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "T & K",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/565ca0be-9573-4086-b418-d6e2f8d0fd93/2AG01171-3.jpg",
@@ -16154,7 +16960,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "a-j",
-    "title": "A & J",
+    "location": "Helsinki, Finland",
+    "couple": "A & J",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "A & J",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/80824266-dac6-4edd-a128-7ce0aae1e385/22-08-2020-DSC_0679.jpg",
@@ -17144,7 +17953,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "karoliina-jan",
-    "title": "KAROLIINA & JAN",
+    "location": "Helsinki, Finland",
+    "couple": "Karoliina & Jan",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "KAROLIINA & JAN",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/0852b73f-84c5-4c86-963b-324da9c0c15b/SAI03280.jpg",
@@ -18698,7 +19510,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "project-five-rmrjs",
-    "title": "RIIKKA & JULIEN",
+    "location": "Helsinki, Finland",
+    "couple": "Project & Five & Rmrjs",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "RIIKKA & JULIEN",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/9042f68c-f118-4026-9662-b56fcc2e4fce/DJI_0004.jpg",
@@ -19508,7 +20323,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "r-j",
-    "title": "R & J",
+    "location": "Helsinki, Finland",
+    "couple": "R & J",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "R & J",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/4c77fa77-f5a5-49fe-b6f8-789ecde7ba4e/A7300600.jpg",
@@ -20570,7 +21388,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "lars",
-    "title": "Lars & Abigael",
+    "location": "Helsinki, Finland",
+    "couple": "Lars",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "Lars & Abigael",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/18d36e1c-924d-49c8-aafe-870e13554b24/CM100119-2.jpg",
@@ -21248,7 +22069,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "project-four-bpjf9",
-    "title": "S & J",
+    "location": "Helsinki, Finland",
+    "couple": "Project & Four & Bpjf9",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "S & J",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/633b89c5-1a0f-45c3-9c60-d433b4901ea4/DSC00444.jpg",
@@ -21842,7 +22666,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "project-two-ky966-wfg45",
-    "title": "A . B",
+    "location": "Helsinki, Finland",
+    "couple": "Project & Two & Ky966 & Wfg45",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "A . B",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/9fdfe5af-fb8d-494b-8543-724d00840d28/DSC_5507.jpg",
@@ -22700,7 +23527,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "t-m",
-    "title": "T & M",
+    "location": "Helsinki, Finland",
+    "couple": "T & M",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "T & M",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/5a46aeed-6d82-4efa-a0f7-e4976cc9f53c/A7301361.jpg",
@@ -22778,7 +23608,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "erika-j",
-    "title": "Erika & J",
+    "location": "Helsinki, Finland",
+    "couple": "Erika & J",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "Erika & J",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/22c084ba-a558-450d-87f3-e169a7205cb1/JPM07341.jpg",
@@ -22904,7 +23737,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "project-two-kynyb",
-    "title": "AMARA & VILMA",
+    "location": "Helsinki, Finland",
+    "couple": "Project & Two & Kynyb",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "AMARA & VILMA",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/7dc71c0f-1038-4c4d-8d3d-abfaa5ff2e22/DSC09151.jpg",
@@ -23378,7 +24214,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "project-one-3wgjx",
-    "title": "T & S",
+    "location": "Helsinki, Finland",
+    "couple": "Project & One & 3wgjx",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "T & S",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1653226633196-S4WRGZAUJBGBFKO9YY09/Copy%252Bof%252BND8_2291.jpg",
@@ -23516,7 +24355,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "t-v",
-    "title": "T @ V",
+    "location": "Helsinki, Finland",
+    "couple": "T & V",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "T @ V",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/3b4b7fa7-b9d3-4f2e-a9b1-1daa96a41dc3/IMG_8526.jpg",
@@ -23762,7 +24604,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "kalle-anni",
-    "title": "KALLE & ANNI",
+    "location": "Helsinki, Finland",
+    "couple": "Kalle & Anni",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "KALLE & ANNI",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/539ecb28-229e-4cb3-907e-b0043dff621b/069_ND8_4758.jpg",
@@ -23792,7 +24637,10 @@ export const weddings: Wedding[] = [
   },
   {
     "slug": "project-two-ky966-4bm2m",
-    "title": "O & O",
+    "location": "Helsinki, Finland",
+    "couple": "Project & Two & Ky966 & 4bm2m",
+    "date": "September 20, 2023",
+    "story": "An atmospheric wedding story captured with a focus on cinematic details and emotional moments.",    "title": "O & O",
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/3e9567b0-1506-4eb8-8f61-a882d1abf062/DSC09836.jpg",

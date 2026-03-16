@@ -9,10 +9,15 @@ import { getCloudinaryUrl } from "@/lib/cloudinary";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { Link } from "@/navigation";
 
-export const metadata = {
-  title: "Investment | Said Aqqa Photography",
-  description: "View pricing and investment options for luxury wedding and portrait photography.",
-};
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'Pricing.meta' });
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 
 export default function PricingPage() {

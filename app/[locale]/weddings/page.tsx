@@ -8,8 +8,8 @@ import { getCloudinaryUrl } from "@/lib/cloudinary";
 import { ParticleHero } from "@/components/ParticleHero";
 
 export const metadata = {
-  title: "Weddings | Said Aqqa Photography",
-  description: "Explore our collection of luxury wedding stories captured across Finland and beyond.",
+  title: "Wedding Photography Collections | Said Aqqa",
+  description: "Explore a curated collection of luxury wedding stories captured in Helsinki, Finland, and iconic destinations worldwide.",
 };
 
 export default function WeddingsPage() {
@@ -25,7 +25,7 @@ export default function WeddingsPage() {
 
       <div className="container mx-auto px-6 mt-32">
         <RevealOnScroll className="mb-24 text-center">
-          <h2 className="text-5xl md:text-7xl font-serif">The Collections</h2>
+          <h1 className="text-5xl md:text-7xl font-serif">Wedding Stories</h1>
           <div className="w-20 h-[1px] bg-gold/50 mx-auto mt-12"></div>
         </RevealOnScroll>
 

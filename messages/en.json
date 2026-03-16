@@ -57,6 +57,10 @@
     "bespokeTitle": "Seeking a custom vision?",
     "bespokeDescription": "We curate bespoke collections for destination weddings and multi-day celebrations worldwide.",
     "customQuote": "Inquire for a Custom Vision",
+    "meta": {
+      "title": "Investment | Said Aqqa Photography",
+      "description": "View pricing and investment options for luxury wedding and portrait photography."
+    },
     "package1": {
       "name": "The Editorial Portrait",
       "duration": "2–4 Hours Coverage",
@@ -96,6 +100,64 @@
         "Comprehensive documentary storytelling",
         "500–700 masterfully processed images"
       ]
+    }
+  },
+  "About": {
+    "title": "Said Aqqa",
+    "subtitle": "The Artist Behind the Lens",
+    "intro": {
+      "title": "My Journey",
+      "heading": "Capturing Essence",
+      "bio": "Photography is not just about taking a picture; it's about capturing a feeling that lasts a lifetime. Based in the beautiful city of Helsinki, I specialize in preserving the most precious moments of your life with a cinematic and luxury touch."
+    },
+    "philosophyTitle": "My Philosophy",
+    "philosophy": "I believe in the power of authentic moments. My goal is to be an unobtrusive observer, capturing the raw emotions and the intricate details that make your story unique.",
+    "btsTitle": "Behind the Scenes",
+    "btsHeading": "My Process",
+    "stats": {
+      "experience": "Years Experience",
+      "weddings": "Weddings Captured",
+      "awards": "Awards Received"
+    },
+    "process": {
+      "scouting": "Scouting locations",
+      "setup": "Technical setup",
+      "directing": "Directing the shot",
+      "processing": "Post-processing"
+    },
+    "meta": {
+      "title": "About | Said Aqqa Photography",
+      "description": "Learn more about Said Aqqa, a luxury wedding and portrait photographer based in Helsinki."
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Let's Create Your Story Together",
+    "formTitle": "Let's Connect",
+    "tagline": "Whether it's a grand wedding or a personal portrait session, I'd love to hear about your vision. Let's start the conversation.",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "interest": "Interested In",
+    "message": "Message",
+    "send": "Inquire Now",
+    "sending": "Sending...",
+    "successTitle": "Connection Made",
+    "successMessage": "Your message has been received. I will reach out personally within 24-48 hours.",
+    "sendAnother": "Send Another Message",
+    "details": "Contact Details",
+    "social": "Social Media",
+    "latest": "Latest Captured",
+    "recognition": "Global Recognition",
+    "labels": {
+      "general": "General Inquiries",
+      "call": "Call / WhatsApp",
+      "location": "Location"
+    },
+    "interests": {
+      "wedding": "Wedding Photography",
+      "portrait": "Portrait Session",
+      "cinema": "Cinematography",
+      "other": "Other Project"
     }
   }
 }

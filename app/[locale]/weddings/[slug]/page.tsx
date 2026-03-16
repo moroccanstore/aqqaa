@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: WeddingPageProps) {
   if (!wedding) return {};
 
   return {
-    title: `${wedding.title} | Said Aqqa Photography`,
-    description: `Experience the beautiful wedding story of ${wedding.title}, captured in stunning detail by Said Aqqa.`,
+    title: `${wedding.couple} | ${wedding.location} Wedding Photography`,
+    description: `Experience the beautiful wedding story of ${wedding.couple} in ${wedding.location}, captured by Said Aqqa. ${wedding.story.substring(0, 150)}...`,
   };
 }
 
@@ -42,13 +42,21 @@ export default function WeddingDetailPage({ params }: WeddingPageProps) {
   return (
     <div className="bg-black">
       {/* Wedding Header */}
-      <section className="h-[60vh] flex flex-col items-center justify-center text-center px-6 pt-20">
+      <section className="min-h-[80vh] flex flex-col items-center justify-center text-center px-6 pt-32 pb-20 border-b border-white/5">
          <RevealOnScroll>
-            <h1 className="text-white text-5xl md:text-8xl font-serif mb-6">{wedding.title}</h1>
-            <div className="flex items-center justify-center space-x-4 text-gold text-[10px] tracking-[0.4em] uppercase">
-               <span>Gallery</span>
-               <span className="w-8 h-[1px] bg-gold/50"></span>
-               <span>{wedding.images.length} Moments</span>
+            <div className="text-gold text-[10px] tracking-[0.5em] uppercase mb-8">{wedding.location} — {wedding.date}</div>
+            <h1 className="text-white text-5xl md:text-9xl font-serif mb-12 italic">{wedding.couple}</h1>
+            
+            <div className="max-w-2xl mx-auto mb-16">
+               <p className="text-zinc-400 text-lg md:text-xl font-light leading-relaxed italic">
+                  "{wedding.story}"
+               </p>
+            </div>
+
+            <div className="flex items-center justify-center space-x-6 text-zinc-600 text-[10px] tracking-[0.4em] uppercase">
+               <span>Wedding Story</span>
+               <span className="w-12 h-[1px] bg-zinc-800"></span>
+               <span>{wedding.images.length} Captured Moments</span>
             </div>
          </RevealOnScroll>
       </section>

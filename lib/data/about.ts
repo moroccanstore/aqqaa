@@ -16,8 +16,8 @@ export const aboutData = {
   ],
   philosophy: "I believe in the power of authentic moments. My goal is to be an unobtrusive observer, capturing the raw emotions and the intricate details that make your story unique.",
   stats: [
-    { label: "Years Experience", value: "10+" },
-    { label: "Weddings Captured", value: "500+" },
-    { label: "Awards Received", value: "15+" }
+    { id: "experience", label: "Years Experience", value: "10+" },
+    { id: "weddings", label: "Weddings Captured", value: "500+" },
+    { id: "awards", label: "Awards Received", value: "15+" }
   ]
 };

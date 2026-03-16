@@ -4,20 +4,27 @@ import { RevealOnScroll, ParallaxSection } from "@/components/AnimationWrappers"
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 import { aboutData } from "@/lib/data/about";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import { ParticleHero } from "@/components/ParticleHero";
 
-export const metadata = {
-  title: "About | Said Aqqa Photography",
-  description: "Learn more about Said Aqqa, a luxury wedding and portrait photographer based in Helsinki.",
-};
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'About.meta' });
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 export default function AboutPage() {
+  const t = useTranslations('About');
+
   return (
     <div className="bg-black text-white pb-32">
       <ParticleHero 
-        title={aboutData.title}
-        subtitle={aboutData.subtitle}
+        title={t('title')}
+        subtitle={t('subtitle')}
         backgroundImage={getCloudinaryUrl(aboutData.heroImage, { width: 1920, quality: "auto" })}
         height="half"
         showScrollIndicator={false}
@@ -28,10 +35,10 @@ export default function AboutPage() {
         <section className="flex flex-col md:flex-row items-center gap-20 mb-40">
            <div className="flex-1">
               <RevealOnScroll>
-                 <h1 className="text-gold text-[10px] tracking-[0.6em] uppercase mb-8">{aboutData.intro.title}</h1>
-                 <h2 className="text-5xl md:text-8xl font-serif leading-tight mb-12">{aboutData.intro.heading}</h2>
+                 <h1 className="text-gold text-[10px] tracking-[0.6em] uppercase mb-8">{t('intro.title')}</h1>
+                 <h2 className="text-5xl md:text-8xl font-serif leading-tight mb-12">{t('intro.heading')}</h2>
                  <p className="text-zinc-400 font-light leading-relaxed text-xl max-w-xl">
-                    {aboutData.intro.bio}
+                    {t('intro.bio')}
                  </p>
               </RevealOnScroll>
            </div>
@@ -55,9 +62,9 @@ export default function AboutPage() {
         <section className="mb-40 border-t border-white/5 pt-40">
            <div className="max-w-4xl mx-auto text-center">
               <RevealOnScroll>
-                 <h3 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-8">My Philosophy</h3>
+                 <h3 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-8">{t('philosophyTitle')}</h3>
                  <p className="text-3xl md:text-5xl font-serif italic leading-snug text-zinc-300">
-                    "{aboutData.philosophy}"
+                    "{t('philosophy')}"
                  </p>
               </RevealOnScroll>
            </div>
@@ -65,32 +72,34 @@ export default function AboutPage() {
 
         {/* Experience / Stats */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center py-20 bg-zinc-950 border border-white/5 px-10">
-           {aboutData.stats.map((stat, index) => (
-             <RevealOnScroll key={stat.label} delay={(index + 1) * 0.1}>
+           {aboutData.stats.map((stat: any, index: number) => (
+             <RevealOnScroll key={stat.id} delay={(index + 1) * 0.1}>
                 <div className="text-5xl font-serif text-gold mb-4">{stat.value}</div>
-                <div className="text-zinc-500 text-[10px] tracking-widest uppercase">{stat.label}</div>
+                <div className="text-zinc-500 text-[10px] tracking-widest uppercase">{t(`stats.${stat.id}`)}</div>
              </RevealOnScroll>
            ))}
         </section>
         {/* Process Gallery */}
         <section className="mt-40">
            <RevealOnScroll className="text-center mb-20">
-              <h3 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">Behind the Scenes</h3>
-              <h4 className="text-4xl font-serif">My Process</h4>
+              <h3 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">{t('btsTitle')}</h3>
+              <h4 className="text-4xl font-serif">{t('btsHeading')}</h4>
            </RevealOnScroll>
            
            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {aboutData.processGallery.map((img, index) => (
+              {aboutData.processGallery.map((img: any, index: number) => (
                 <RevealOnScroll key={index} delay={index * 0.1}>
                    <div className="relative aspect-[3/4] group">
                       <CloudinaryImage 
                         src={img.url}
-                        alt={img.alt}
+                        alt={t(`process.${['scouting', 'setup', 'directing', 'processing'][index]}`)}
                         fill
                         className="w-full h-full"
                       />
                       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                         <span className="text-white text-[10px] tracking-widest uppercase border border-white/20 px-4 py-2">{img.alt}</span>
+                         <span className="text-white text-[10px] tracking-widest uppercase border border-white/20 px-4 py-2">
+                           {t(`process.${['scouting', 'setup', 'directing', 'processing'][index]}`)}
+                         </span>
                       </div>
                    </div>
                 </RevealOnScroll>

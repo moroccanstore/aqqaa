@@ -57,6 +57,10 @@
     "bespokeTitle": "Etsittekö yksilöllistä visiota?",
     "bespokeDescription": "Luomme räätälöityjä kokoelmia kohdehäihin ja usean päivän juhliin ympäri maailman.",
     "customQuote": "Pyydä Yksilöllinen Tarjous",
+    "meta": {
+      "title": "Sijoitus | Said Aqqa Photography",
+      "description": "Tutustu hintoihin ja sijoitusvaihtoehtoihin ylelliseen hää- ja muotokuvaukseen."
+    },
     "package1": {
       "name": "Editoriaalinen Muotokuva",
       "duration": "2–4 Tunnin Kuvaus",
@@ -96,6 +100,64 @@
         "Kattava dokumentaarinen tarinankerronta",
         "500–700 mestarillisesti käsiteltyä kuvaa"
       ]
+    }
+  },
+  "About": {
+    "title": "Said Aqqa",
+    "subtitle": "Artisti linssin takana",
+    "intro": {
+      "title": "Matkani",
+      "heading": "Olemuksen tallentaminen",
+      "bio": "Valokuvaus ei ole vain kuvan ottamista; se on eliniän kestävän tunteen tallentamista. Helsingissä asuvana ammattilaisena erikoistun elämäsi arvokkaimpien hetkien säilyttämiseen elokuvallisella ja ylellisellä otteella."
+    },
+    "philosophyTitle": "Filosofiani",
+    "philosophy": "Uskon aitojen hetkien voimaan. Tavoitteeni on olla huomaamaton tarkkailija, joka tavoittaa ne aidot tunteet ja yksityiskohdat, jotka tekevät tarinastasi ainutlaatuisen.",
+    "btsTitle": "Kulissien takana",
+    "btsHeading": "Prosessini",
+    "stats": {
+      "experience": "Vuoden kokemus",
+      "weddings": "Kuvattuja häitä",
+      "awards": "Saadut palkinnot"
+    },
+    "process": {
+      "scouting": "Kuvauspaikkojen etsintä",
+      "setup": "Tekninen valmistelu",
+      "directing": "Kuvauksen ohjaus",
+      "processing": "Jälkikäsittely"
+    },
+    "meta": {
+      "title": "Tietoa | Said Aqqa Photography",
+      "description": "Lue lisää Said Aqqasta, ylellisestä hää- ja muotokuvaajasta Helsingissä."
+    }
+  },
+  "Contact": {
+    "title": "Ota Yhteyttä",
+    "subtitle": "Luodaan tarinasi yhdessä",
+    "formTitle": "Otetaan Yhteyttä",
+    "tagline": "Olipa kyseessä suuret häät tai henkilökohtainen muotokuvaus, haluaisin kuulla visiostasi. Aloitetaan keskustelu.",
+    "fullName": "Koko Nimi",
+    "email": "Sähköpostiosoite",
+    "interest": "Olen kiinnostunut",
+    "message": "Viesti",
+    "send": "Ota Yhteyttä",
+    "sending": "Lähetetään...",
+    "successTitle": "Yhteys Otettu",
+    "successMessage": "Viestisi on vastaanotettu. Otan sinuun yhteyttä henkilökohtaisesti 24-48 tunnin sisällä.",
+    "sendAnother": "Lähetä Uusi Viesti",
+    "details": "Yhteystiedot",
+    "social": "Sosiaalinen Media",
+    "latest": "Viimeisimmät Työt",
+    "recognition": "Kansainvälinen Tunnustus",
+    "labels": {
+      "general": "Yleiset tiedustelut",
+      "call": "Soita / WhatsApp",
+      "location": "Sijainti"
+    },
+    "interests": {
+      "wedding": "Hääkuvaus",
+      "portrait": "Muotokuvaus",
+      "cinema": "Videokuvaus",
+      "other": "Muu Projekti"
     }
   }
 }

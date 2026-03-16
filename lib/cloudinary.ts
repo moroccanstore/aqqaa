@@ -4,12 +4,17 @@
  */
 export const getCloudinaryUrl = (
   src: string,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  _options: { width?: number; quality?: string | number; format?: string } = {}
+  options: { width?: number; quality?: string | number; format?: string } = {}
 ) => {
   if (!src) return '';
   
-  // Directly return original URL as Cloudinary Fetch API is returning 404s
-  // Next.js Image component will handle optimization via remotePatterns
+  // If cloud name exists in future, use:
+  // const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+  // if (cloudName && src.startsWith('http') && !src.includes('res.cloudinary.com')) {
+  //   const params = `f_${options.format || 'auto'},q_${options.quality || 'auto'}${options.width ? `,w_${options.width}` : ''}`;
+  //   return `https://res.cloudinary.com/${cloudName}/image/fetch/${params}/${encodeURIComponent(src)}`;
+  // }
+
+  // Next.js Image component handles optimization via remotePatterns in next.config.js
   return src;
 };

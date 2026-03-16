@@ -39,8 +39,8 @@ export default function HomePage() {
               <ParallaxSection speed={0.1}>
                  <div className="relative aspect-[4/5] w-full max-w-md mx-auto">
                     <Image 
-                      src={getCloudinaryUrl(weddings[5].images[0].url, { width: 800 })}
-                      alt="Said Aqqa"
+                      src={getCloudinaryUrl(weddings.find(w => w.featured)?.images[0].url || weddings[0].images[0].url, { width: 800 })}
+                      alt="Said Aqqa - Luxury Wedding Photographer"
                       fill
                       sizes="(max-width: 768px) 100vw, 400px"
                       className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
