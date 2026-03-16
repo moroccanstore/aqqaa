@@ -36,28 +36,25 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ item }) => {
       />
       
       {/* Premium Overlay with glassmorphism effect */}
-      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-700 backdrop-blur-[1px] group-hover:backdrop-blur-[3px] flex items-center justify-center">
-        {/* Centered View Detail Button - Always visible but subtle until hover */}
-        <div className="btn-liquid border border-white/40 group-hover:border-gold/50 px-6 py-3 transform transition-all duration-500 bg-black/40 group-hover:bg-white/10">
-          <span className="text-white group-hover:text-gold text-[10px] tracking-[0.3em] font-light uppercase">{t("viewDetail")}</span>
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-700 backdrop-blur-[1px] flex items-center justify-center">
+        {/* Centered View Detail Button - Always visible, high contrast */}
+        <div className="btn-liquid border border-white px-6 py-3 transform transition-all duration-500 bg-black/60 group-hover:bg-gold group-hover:border-gold">
+          <span className="text-white group-hover:text-black text-[10px] tracking-[0.3em] font-bold uppercase">{t("viewDetail")}</span>
         </div>
       </div>
       
-      {/* Content Overlay - Always visible */}
-      <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end p-6 md:p-8 transition-all duration-500">
+      {/* Content Overlay - Always visible with solid backing for guaranteed readability */}
+      <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end p-6 md:p-8 transition-all duration-500 bg-gradient-to-t from-black via-black/80 to-transparent">
         <div className="relative z-10">
-          <span className="text-gold text-[10px] tracking-[0.3em] uppercase block mb-2 opacity-90 group-hover:opacity-100 transition-opacity duration-700">
+          <span className="text-gold text-[10px] tracking-[0.3em] font-bold uppercase block mb-2 transition-opacity duration-700">
             {getTranslatedLabel(item.label)}
           </span>
-          <h3 className="text-xl md:text-2xl text-white font-light tracking-wide opacity-100 transition-opacity duration-700">
+          <h3 className="text-xl md:text-2xl text-white font-medium tracking-wide transition-opacity duration-700">
             {item.title}
           </h3>
-          <div className="w-12 h-[1px] bg-gold/50 mt-4 scale-x-100 transition-transform duration-700 origin-left" />
+          <div className="w-16 h-[1px] bg-gold mt-4" />
         </div>
       </div>
-      
-      {/* Permanent gradient for readability */}
-      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
     </div>
   );
 
