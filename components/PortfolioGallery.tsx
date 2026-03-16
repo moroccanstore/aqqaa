@@ -72,20 +72,6 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage =
             <PortfolioCard key={item.id} item={item} />
           ))}
         </div>
-
-        {isHomepage && (
-          <RevealOnScroll className="mt-20 text-center">
-            <Link 
-              href="/weddings" 
-              className="inline-flex items-center gap-4 px-12 py-6 border border-white/10 hover:border-gold/50 text-white hover:text-gold transition-all duration-700 group"
-            >
-              <span className="text-[10px] tracking-[0.4em] uppercase font-light">
-                {t("allWeddings")}
-              </span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-500" />
-            </Link>
-          </RevealOnScroll>
-        )}
       </div>
     </section>
   );

@@ -14,16 +14,13 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ item }) => {
   // Map internal labels to translation keys if they are generic
   const getTranslatedLabel = (label?: string) => {
     if (!label) return "";
-    const lowerLabel = label.toLowerCase();
-    
-    // Check for translation matches
-    if (lowerLabel === "wedding story") return t("weddingStory");
-    if (lowerLabel === "fine art portrait") return t("portraitSession");
-    if (lowerLabel === "event coverage") return t("eventCoverage");
-    if (lowerLabel === "commercial work") return t("commercialWork");
-    
-    // If it's already a descriptive label (e.g., "City Hall Wedding"), just return it
-    return label;
+    switch (label.toLowerCase()) {
+      case "wedding story": return t("weddingStory");
+      case "fine art portrait": return t("portraitSession");
+      case "event coverage": return t("eventCoverage");
+      case "commercial work": return t("commercialWork");
+      default: return label;
+    }
   };
 
   const CardContent = (
