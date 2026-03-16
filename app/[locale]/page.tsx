@@ -18,7 +18,7 @@ export default function HomePage() {
     <div className="bg-black text-white">
       {/* Hero Section */}
       <ParticleHero 
-        backgroundImage={getCloudinaryUrl(weddings[0].images[0].url, { width: 1920, quality: "auto" })}
+        backgroundImage="/hero-uploaded.webp"
         description={t("hero.description")}
         primaryCTA={{ label: t("hero.primaryCTA"), href: "/contact" }}
         secondaryCTA={{ label: t("hero.secondaryCTA"), href: "#portfolio" }}
