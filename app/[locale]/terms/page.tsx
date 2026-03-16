@@ -17,25 +17,48 @@ export default function TermsPage() {
 
       <div className="container mx-auto px-6 mt-32 max-w-4xl">
         <RevealOnScroll className="prose prose-invert max-w-none">
-          <h2 className="text-3xl font-serif text-gold mb-12 uppercase tracking-widest">1. Agreement to Terms</h2>
-          <p className="text-zinc-400 font-light leading-relaxed mb-8">
-            By accessing our website, you agree to be bound by these terms of service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
-          </p>
+          <div className="space-y-16">
+            <section>
+              <h2 className="text-3xl font-serif text-gold mb-8 uppercase tracking-widest">1. Agreement to Terms</h2>
+              <p className="text-zinc-400 font-light leading-relaxed">
+                By accessing our website and engaging with Said Aqqa Photography, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you are prohibited from using or accessing this site.
+              </p>
+            </section>
 
-          <h2 className="text-3xl font-serif text-gold mb-12 uppercase tracking-widest">2. Use License</h2>
-          <p className="text-zinc-400 font-light leading-relaxed mb-8">
-            Permission is granted to temporarily view the materials (information or images) on Said Aqqa Photography's website for personal, non-commercial transitory viewing only.
-          </p>
+            <section>
+              <h2 className="text-3xl font-serif text-gold mb-8 uppercase tracking-widest">2. Intellectual Property & Usage</h2>
+              <p className="text-zinc-400 font-light leading-relaxed mb-6">
+                All images and content on this website are the unique artistic property of Said Aqqa. Permission is granted for personal, non-commercial transitory viewing only.
+              </p>
+              <ul className="list-disc list-inside text-zinc-400 font-light space-y-4">
+                <li>You may not modify or copy the materials.</li>
+                <li>You may not use the materials for any commercial purpose without explicit written consent.</li>
+                <li>You may not attempt to decompile or reverse engineer any software contained on the website.</li>
+                <li>You may not remove any copyright or other proprietary notations from the materials.</li>
+              </ul>
+            </section>
 
-          <h2 className="text-3xl font-serif text-gold mb-12 uppercase tracking-widest">3. Disclaimer</h2>
-          <p className="text-zinc-400 font-light leading-relaxed mb-8">
-            The materials on our website are provided on an 'as is' basis. Said Aqqa Photography makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
-          </p>
+            <section>
+              <h2 className="text-3xl font-serif text-gold mb-8 uppercase tracking-widest">3. Booking & Service Disclaimer</h2>
+              <p className="text-zinc-400 font-light leading-relaxed">
+                Specific service agreements (contracts) signed during the booking process for weddings or portrait sessions supersede these general website terms. While we strive for absolute artistic excellence, all creative services are provided on an 'as is' basis regarding artistic interpretation.
+              </p>
+            </section>
 
-          <h2 className="text-3xl font-serif text-gold mb-12 uppercase tracking-widest">4. Governing Law</h2>
-          <p className="text-zinc-400 font-light leading-relaxed mb-8">
-            These terms and conditions are governed by and construed in accordance with the laws of Finland and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.
-          </p>
+            <section>
+              <h2 className="text-3xl font-serif text-gold mb-8 uppercase tracking-widest">4. Limitation of Liability</h2>
+              <p className="text-zinc-400 font-light leading-relaxed">
+                In no event shall Said Aqqa Photography or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit) arising out of the use or inability to use the materials on the website.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-3xl font-serif text-gold mb-8 uppercase tracking-widest">5. Governing Law</h2>
+              <p className="text-zinc-400 font-light leading-relaxed">
+                These terms and conditions are governed by and construed in accordance with the laws of <strong className="text-white">Finland</strong> and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
+              </p>
+            </section>
+          </div>
         </RevealOnScroll>
       </div>
     </div>
