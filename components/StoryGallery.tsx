@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
 import { CloudinaryImage } from "./CloudinaryImage";
 
 interface StoryImage {
@@ -29,14 +28,10 @@ export const StoryGallery: React.FC<StoryGalleryProps> = ({ images }) => {
         >
           <div className="relative w-full h-full max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-center">
             {/* Image Container */}
-            <motion.div 
-              className={`relative flex-1 aspect-[3/4] md:aspect-auto w-full md:h-[80vh] overflow-hidden ${
+            <div 
+              className={`relative flex-1 aspect-[3/4] md:aspect-auto w-full md:h-[80vh] overflow-hidden transition-all duration-1000 ${
                 index % 2 === 0 ? "md:order-1" : "md:order-2"
               }`}
-              initial={{ scale: 1.1, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true, margin: "-20%" }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
             >
               <CloudinaryImage
                 src={img.url}
@@ -46,7 +41,7 @@ export const StoryGallery: React.FC<StoryGalleryProps> = ({ images }) => {
                 className="w-full h-full object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-            </motion.div>
+            </div>
 
             {/* Content Sidebar / Quote */}
             <div 
@@ -54,13 +49,7 @@ export const StoryGallery: React.FC<StoryGalleryProps> = ({ images }) => {
                  index % 2 === 0 ? "md:order-2 text-right md:items-end" : "md:order-1 text-left md:items-start"
                }`}
              >
-                <motion.div 
-                  className="story-text"
-                  initial={{ y: 50, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  viewport={{ once: true, margin: "-20%" }}
-                  transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-                >
+                <div className="story-text transition-all duration-1000">
                    <span className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4 block">
                      CHAPTER {index + 1}
                    </span>
@@ -72,7 +61,7 @@ export const StoryGallery: React.FC<StoryGalleryProps> = ({ images }) => {
                       Through the artistic lens, we capture the raw emotions and delicate details that tell your unique love story. 
                       Every frame is a testament to the timeless heritage of your most cherished day.
                    </p>
-                </motion.div>
+                </div>
              </div>
           </div>
           

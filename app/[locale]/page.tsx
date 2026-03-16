@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ParticleHero } from "@/components/ParticleHero";
 import { RevealOnScroll, ParallaxSection } from "@/components/AnimationWrappers";
-import { MasonryGallery } from "@/components/MasonryGallery";
+import { PortfolioGallery } from "@/components/PortfolioGallery";
 import { weddings } from "@/lib/data/weddings";
 import { testimonials } from "@/lib/data/testimonials";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
@@ -18,43 +18,22 @@ export default function HomePage() {
     <div className="bg-black text-white">
       {/* Hero Section */}
       <ParticleHero 
-        backgroundImage={getCloudinaryUrl("https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/10aa1f1b-94f0-4c0a-a001-46671cbdc6ca/Couple%2band%2bhorses.jpg", { width: 1920, quality: "auto" })}
+        backgroundImage={getCloudinaryUrl(weddings[0].images[0].url, { width: 1920, quality: "auto" })}
+        description={t("hero.description")}
+        primaryCTA={{ label: t("hero.primaryCTA"), href: "/contact" }}
+        secondaryCTA={{ label: t("hero.secondaryCTA"), href: "#portfolio" }}
       />
 
-      {/* Gallery Section */}
-      <section className="py-32 bg-zinc-950">
-        <div className="max-w-7xl mx-auto px-4">
-          <RevealOnScroll className="text-center mb-20">
-            <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">{t("portfolioOptions")}</h2>
-            <h3 className="text-5xl md:text-7xl font-serif">{t("selectedWorks")}</h3>
-          </RevealOnScroll>
-          
-          <MasonryGallery 
-            images={weddings.flatMap(w => w.images.slice(0, 2).map(img => ({
-               url: img.url,
-               width: 800,
-               height: 1200,
-               alt: img.alt || "Cinematic Wedding Moment",
-               href: `/weddings/${w.slug}`
-            })))}
-          />
-
-          <div className="mt-20 text-center">
-             <Link 
-              href="/weddings" 
-              className="btn-liquid inline-block border border-white/20 px-12 py-5 text-[10px] tracking-[0.4em] uppercase hover:border-gold transition-all duration-500"
-            >
-              {t("allWeddings")}
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Portfolio Gallery Section */}
+      <PortfolioGallery />
       
-      {/* Trust Factors Section */}
-      <TrustFactors />
+      {/* Trust Factors Section (Partners) */}
+      <div className="pb-32 bg-black">
+        <TrustFactors />
+      </div>
 
       {/* About Teaser */}
-      <section className="py-32 bg-black overflow-hidden">
+      <section className="py-48 bg-black overflow-hidden">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
            <div className="flex-1">
               <ParallaxSection speed={0.1}>
@@ -86,7 +65,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-32 bg-zinc-950 border-y border-white/5">
+      <section className="py-48 bg-zinc-950 border-y border-white/5">
         <div className="container mx-auto px-6">
            <RevealOnScroll className="text-center mb-20">
               <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">{t("kindWords")}</h2>

@@ -10,10 +10,10 @@
     "photographyVisuals": "Photography & Visuals"
   },
   "Footer": {
-    "description": "Capturing the soul of moments through luxury wedding and lifestyle photography. Based in Helsinki & Espoo, serving clients worldwide.",
+    "description": "Artisan of light capturing the heritage of your most intimate moments. Based in Helsinki & Espoo, serving global clients with a cinematic vision.",
     "explore": "Explore",
-    "priceList": "Price List",
-    "contact": "Contact",
+    "priceList": "Investment",
+    "contact": "Inquire",
     "rights": "Said Aqqa Photography. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
@@ -22,62 +22,79 @@
     "portfolioOptions": "Portfolio",
     "selectedWorks": "Selected Works",
     "allWeddings": "All Weddings",
-    "theArtist": "The Artist",
-    "artistDescription": "With over a decade of experience capturing the most intimate moments across Finland and beyond, my philosophy is simple: search for the light that reflects the soul.",
-    "myPhilosophy": "My Philosophy",
-    "kindWords": "Kind Words",
-    "clientFeedback": "Client Feedback",
-    "verifiedExperience": "Verified Experience",
-    "marquee": "Book Your Story • Now Booking 2024/2025 • Destination Wedding • Luxury Photography •"
+    "theArtist": "About Me",
+    "artistDescription": "With over a decade of experience across Finland and beyond, I curate light to reflect the unique soul of your story. My approach is cinematic, editorial, and deeply personal.",
+    "myPhilosophy": "The Philosophy",
+    "kindWords": "Client Reflections",
+    "clientFeedback": "Kind Words",
+    "verifiedExperience": "A Professional Journey",
+    "marquee": "Preserve Your Legacy • Booking 2024/2025 • Destination Weddings • Cinematic Excellence •",
+    "filterAll": "All Works",
+    "filterWeddings": "Weddings",
+    "filterPortraits": "Portraits",
+    "filterEvents": "Events",
+    "filterCommercial": "Commercial",
+    "hero": {
+      "title": "Heritage Wedding & Portrait Photography",
+      "subtitle": "Cinematic Storytelling for Modern Romantics Across Finland",
+      "description": "Exquisite visual narratives crafted with over a decade of mastery. We translate the ephemeral into eternal art, capturing the soulful elegance of your milestones.",
+      "primaryCTA": "Request a Consult",
+      "secondaryCTA": "Explore the Gallery",
+      "trust": {
+        "experience": "10+ Years of Mastery",
+        "services": "Bespoke Photography",
+        "location": "Available Worldwide"
+      }
+    }
   },
   "Pricing": {
-    "heroTitle": "Your Legacy",
-    "heroSubtitle": "Investment & Services",
-    "sectionTitle": "Preserving Your Legacy",
-    "sectionDescription": "Photography is an investment in your memories. Each package is tailored to provide the highest level of service and artistic excellence.",
-    "startingFrom": "Starting from",
-    "reserveDate": "Reserve Date",
-    "bespokeTitle": "Need something bespoke?",
-    "bespokeDescription": "We offer custom collections for destination weddings and multi-day events.",
-    "customQuote": "Inquire for a Custom Quote",
+    "heroTitle": "The Investment",
+    "heroSubtitle": "Preserving Your Legacy",
+    "sectionTitle": "Artistry & Heritage",
+    "sectionDescription": "Photography is an enduring investment in your family's heritage. Each collection is meticulously crafted to provide unparalleled service and artistic excellence.",
+    "startingFrom": "Investment starting from",
+    "reserveDate": "Secure Your Date",
+    "bespokeTitle": "Seeking a custom vision?",
+    "bespokeDescription": "We curate bespoke collections for destination weddings and multi-day celebrations worldwide.",
+    "customQuote": "Inquire for a Custom Vision",
     "package1": {
-      "name": "Wedding Portraits",
+      "name": "The Editorial Portrait",
       "duration": "2–4 Hours Coverage",
       "features": [
-        "Planning meeting",
-        "Portrait session in a specific milieu",
-        "40–60 full-size processed images",
-        "Full usage rights included"
+        "Artistic planning session",
+        "Curated milieus",
+        "40–60 masterfully processed images",
+        "Private digital gallery & usage rights"
       ]
     },
     "package2": {
-      "name": "Ceremony & Portraits",
+      "name": "The Intimate Union",
       "duration": "2–5 Hours Coverage",
       "features": [
-        "Planning meeting",
-        "60–80 portrait images",
-        "60–80 documentary pictures",
-        "Full ceremony coverage"
+        "Personalized planning",
+        "60–80 editorial portraits",
+        "60–80 documentary moments",
+        "Comprehensive ceremony coverage"
       ]
     },
     "package3": {
-      "name": "Documentary Package I",
+      "name": "The Heritage Collection I",
       "duration": "6–8 Hours Coverage",
       "features": [
-        "6–8 hours of photography time",
-        "Familiarization and planning meeting",
-        "Ceremony, portraits, and wedding party",
-        "300–500 full-size processed images"
+        "8 hours of artistic coverage",
+        "In-depth design & timeline consultation",
+        "Ceremony, portraits, & reception",
+        "300–500 masterfully processed images"
       ]
     },
     "package4": {
-      "name": "Documentary Package II",
+      "name": "The Heritage Collection II",
       "duration": "8–10 Hours Coverage",
       "features": [
-        "8–10 hours of photography time",
-        "Familiarization and planning meeting",
-        "Ceremony, portraits, and wedding party",
-        "500–700 full-size processed images"
+        "10 hours of artistic coverage",
+        "Premium design & planning",
+        "Comprehensive documentary storytelling",
+        "500–700 masterfully processed images"
       ]
     }
   }

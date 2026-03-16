@@ -10,74 +10,91 @@
     "photographyVisuals": "Valokuvaus & Visuaalit"
   },
   "Footer": {
-    "description": "Ikuistamme hetkien sielun ylellisen hää- ja lifestyle-valokuvauksen kautta. Kotipaikkana Helsinki ja Espoo, palvelemme asiakkaita maailmanlaajuisesti.",
+    "description": "Valon mestari, joka ikuistaa sukusi arvokkaimmat hetket. Kotipaikkana Helsinki ja Espoo, palvelemme asiakkaita ympäri maailman elokuvallisella näkemyksellä.",
     "explore": "Tutustu",
-    "priceList": "Hinnasto",
-    "contact": "Yhteystiedot",
+    "priceList": "Investointi",
+    "contact": "Ota Yhteyttä",
     "rights": "Said Aqqa Photography. Kaikki oikeudet pidätetään.",
     "privacyPolicy": "Tietosuojakäytäntö",
     "termsOfService": "Käyttöehdot"
   },
   "HomePage": {
     "portfolioOptions": "Portfolio",
-    "selectedWorks": "Valitut Teokset",
-    "allWeddings": "Kaikki Häät",
-    "theArtist": "Taiteilija",
-    "artistDescription": "Yli vuosikymmenen kokemuksella ikuistan intiimeimpiä hetkiä Suomessa ja sen ulkopuolella. Filosofiani on yksinkertainen: etsi valoa, joka heijastaa sielua.",
-    "myPhilosophy": "Filosofiani",
-    "kindWords": "Kauniita Sanoja",
-    "clientFeedback": "Asiakaspalautteet",
-    "verifiedExperience": "Vahvistettu Kokemus",
-    "marquee": "Varaa Tarinasi • Nyt Vastaanotetaan Varauksia 2024/2025 • Kohdehäät • Ylellinen Valokuvaus •"
+    "selectedWorks": "Valitut teokset",
+    "allWeddings": "Kaikki häät",
+    "theArtist": "Tietoa minusta",
+    "artistDescription": "Yli vuosikymmenen kokemuksella Suomessa ja maailmalla, valjastan valon heijastamaan tarinanne ainutlaatuista sielua. Lähestymistapani on elokuvallinen, toimituksellinen ja syvästi persoonallinen.",
+    "myPhilosophy": "Filosofia",
+    "kindWords": "Asiakkaiden Ääni",
+    "clientFeedback": "Kauniita Sanoja",
+    "verifiedExperience": "Ammatillinen Matka",
+    "marquee": "Vaalikaa Perintöänne • Varaukset 2024/2025 • Kohdehäät • Elokuvallinen Huippuosaaminen •",
+    "filterAll": "Kaikki Teokset",
+    "filterWeddings": "Häät",
+    "filterPortraits": "Muotokuvat",
+    "filterEvents": "Tapahtumat",
+    "filterCommercial": "Kaupallinen",
+    "hero": {
+      "title": "Arvokas Hää- ja Muotokuvaus",
+      "subtitle": "Elokuvallista Tarinankerrontaa Nykyajan Romantikoille",
+      "description": "Hienostuneita visuaalisia kertomuksia yli kymmenen vuoden mestaruudella. Muutamme katoavat hetket ikuiseksi taiteeksi, vangiten merkkipaalujenne sielukkaan eleganssin.",
+      "primaryCTA": "Pyydä Konsultaatiota",
+      "secondaryCTA": "Tutustu Galleriaan",
+      "trust": {
+        "experience": "10+ Vuotta Mestaruutta",
+        "services": "Räätälöity Valokuvaus",
+        "location": "Palvelemme Maailmanlaajuisesti"
+      }
+    }
   },
   "Pricing": {
-    "heroTitle": "Perintösi",
-    "heroSubtitle": "Investointi & Palvelut",
-    "sectionTitle": "Perintösi Vaaliminen",
-    "sectionDescription": "Valokuvaus on investointi muistoihisi. Jokainen paketti on räätälöity tarjoamaan korkeimman tason palvelua ja taiteellista huippuosaamista.",
-    "startingFrom": "Alkaen",
-    "reserveDate": "Varaa Päivä",
-    "bespokeTitle": "Tarvitsetko jotain räätälöityä?",
-    "bespokeDescription": "Tarjoamme kustomoituja kokonaisuuksia kohdehäihin ja usean päivän tapahtumiin.",
-    "customQuote": "Pyydä Tarjous",
+    "heroTitle": "Investointi",
+    "heroSubtitle": "Perintönne Vaaliminen",
+    "sectionTitle": "Taide & Perintö",
+    "sectionDescription": "Valokuvaus on pysyvä investointi sukunne perintöön. Jokainen kokoelma on huolellisesti valmistettu tarjoamaan vertaansa vailla olevaa palvelua ja taiteellista tasoa.",
+    "startingFrom": "Investointi alkaen",
+    "reserveDate": "Varmista Päiväsi",
+    "bespokeTitle": "Etsittekö yksilöllistä visiota?",
+    "bespokeDescription": "Luomme räätälöityjä kokoelmia kohdehäihin ja usean päivän juhliin ympäri maailman.",
+    "customQuote": "Pyydä Yksilöllinen Tarjous",
     "package1": {
-      "name": "Hääportretit",
+      "name": "Editoriaalinen Muotokuva",
       "duration": "2–4 Tunnin Kuvaus",
       "features": [
-        "Suunnittelupalaveri",
-        "Potrettikuvaus miljöössä",
-        "40–60 täysikokoista käsiteltyä kuvaa",
-        "Täydet käyttöoikeudet sisältyvät"
+        "Taiteellinen suunnittelu",
+        "Kuratoidut miljööt",
+        "40–60 mestarillisesti käsiteltyä kuvaa",
+        "Yksityinen galleria & käyttöoikeudet"
       ]
     },
     "package2": {
-      "name": "Vihkiminen & Potretit",
+      "name": "Intiimi Liitto",
       "duration": "2–5 Tunnin Kuvaus",
       "features": [
-        "Suunnittelupalaveri",
-        "60–80 potrettikuvaa",
-        "60–80 dokumentaarista kuvaa",
-        "Vihkimisen kattava kuvaus"
+        "Yksilöllinen suunnittelu",
+        "60–80 editoriaalista potrettia",
+        "60–80 dokumentaarista hetkeä",
+        "Vihkimisen kattava taltiointi"
       ]
     },
     "package3": {
-      "name": "Dokumentaarinen Paketti I",
+      "name": "Heritage-kokoelma I",
       "duration": "6–8 Tunnin Kuvaus",
       "features": [
-        "6–8 tuntia kuvausaikaa",
-        "Tutustumis- ja suunnittelupalaveri",
-        "Vihkiminen, potretit ja hääjuhla",
-        "300–500 täysikokoista käsiteltyä kuvaa"
+        "8 tuntia taiteellista taltiointia",
+        "Syvällinen suunnittelu & aikataulutus",
+        "Vihkiminen, potretit & juhlat",
+        "300–500 mestarillisesti käsiteltyä kuvaa"
       ]
     },
     "package4": {
-      "name": "Dokumentaarinen Paketti II",
+      "name": "Heritage-kokoelma II",
       "duration": "8–10 Tunnin Kuvaus",
       "features": [
-        "8–10 tuntia kuvausaikaa",
-        "Tutustumis- ja suunnittelupalaveri",
-        "Vihkiminen, potretit ja hääjuhla",
-        "500–700 täysikokoista käsiteltyä kuvaa"
+        "10 tuntia taiteellista taltiointia",
+        "Premium-tason suunnittelu",
+        "Kattava dokumentaarinen tarinankerronta",
+        "500–700 mestarillisesti käsiteltyä kuvaa"
       ]
     }
   }

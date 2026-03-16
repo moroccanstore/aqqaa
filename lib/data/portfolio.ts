@@ -4,6 +4,8 @@ export interface PortfolioImage {
   height: number;
   alt: string;
   category: PortfolioCategory;
+  title?: string;
+  subtitle?: string;
 }
 
 export type PortfolioCategory =
@@ -23,6 +25,8 @@ export const portfolioImages: PortfolioImage[] = [
     height: 1931,
     alt: "High-end automotive project showcase",
     category: "products",
+    title: "Mercedes Commercial",
+    subtitle: "Automotive",
   },
   {
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1701033335730-406Q7PY14K7VHLB87GCO/Mercedess_06.jpg",
@@ -38,20 +42,15 @@ export const portfolioImages: PortfolioImage[] = [
     alt: "High-end automotive project showcase",
     category: "products",
   },
-  {
-    url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1701033335730-406Q7PY14K7VHLB87GCO/Mercedess_06.jpg",
-    width: 2382,
-    height: 1305,
-    alt: "Mercedes commercial product shoot",
-    category: "products",
-  },
   // Interior
   {
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1675520936650-6Z41QVIP5HPM0ARG02K6/01-06-2021-DSC_4166.jpg",
     width: 4849,
     height: 3237,
-    alt: "",
+    alt: "Espoo House interior design showcase",
     category: "interior",
+    title: "Espoo House",
+    subtitle: "Interior Design",
   },
   {
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1704638206546-Y4XL9HKLVQNSHOEK8KTY/DJI_0326.jpg",
@@ -139,6 +138,8 @@ export const portfolioImages: PortfolioImage[] = [
     height: 1989,
     alt: "Professional studio portrait photography",
     category: "portraits",
+    title: "Risro Siilasmaa",
+    subtitle: "Business Portrait",
   },
   {
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1682516599967-79SBD5TVCDVTKZG1FNMF/DSC_1161-Edit-Recovered-Recovered-2.jpg",
@@ -151,8 +152,10 @@ export const portfolioImages: PortfolioImage[] = [
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1655052492961-YKQWMXCNHNK6OP3Z1O1Q/IMG_9655-Edit.jpg",
     width: 3487,
     height: 5472,
-    alt: "Breathtaking natural landscape photography",
+    alt: "Creative portrait session for Oum Moroccan Artist",
     category: "portraits",
+    title: "Oum Moroccan Artist",
+    subtitle: "Creative Session",
   },
   {
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1653227777394-7ZI93ON806DRN5RGK261/DSC_1957.jpg",
@@ -193,30 +196,12 @@ export const portfolioImages: PortfolioImage[] = [
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1695587389156-EF1EVTILTSG4OY52WC36/SAI03757.jpg",
     width: 3000,
     height: 4500,
-    alt: "Breathtaking natural landscape photography",
+    alt: "Portrait of finnish actor Janne Mattila",
     category: "portraits",
+    title: "Mattila Janne",
+    subtitle: "Finnish Actor",
   },
-  {
-    url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/2a60a5d5-d940-4a5f-85e1-64af68ff3a39/SAI01410-2.jpg",
-    width: 4000,
-    height: 6000,
-    alt: "Breathtaking natural landscape photography",
-    category: "portraits",
-  },
-  {
-    url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/2af1b073-ef79-4c95-a197-f34cce06956a/SAI01743-2.jpg",
-    width: 4000,
-    height: 6000,
-    alt: "Breathtaking natural landscape photography",
-    category: "portraits",
-  },
-  {
-    url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/29902fd7-0844-4fb7-b1f7-029015851762/SAI01498-2.jpg",
-    width: 4000,
-    height: 6000,
-    alt: "Breathtaking natural landscape photography",
-    category: "portraits",
-  },
+
   {
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1676927213562-ENJXI32SYAPC5G5U5GC9/IMG_3321JPG_sRGB.jpg",
     width: 2500,
@@ -231,13 +216,7 @@ export const portfolioImages: PortfolioImage[] = [
     alt: "Breathtaking natural landscape photography",
     category: "portraits",
   },
-  {
-    url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1676927397733-2HAGVEG99RA9SN8OF8WE/Lotta%2BLiina%2B%2526%2BLauri.jpg",
-    width: 1080,
-    height: 1389,
-    alt: "Breathtaking natural landscape photography",
-    category: "portraits",
-  },
+
   {
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/27edd2f6-e32a-4cda-a812-71e669f57938/DSC_1466.jpg",
     width: 1000,
@@ -245,13 +224,7 @@ export const portfolioImages: PortfolioImage[] = [
     alt: "Breathtaking natural landscape photography",
     category: "portraits",
   },
-  {
-    url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1f4fa0af-c719-4160-80d2-6cf56315a3ed/Lotta+Liina+%26+Lauri-170.jpg",
-    width: 1080,
-    height: 1619,
-    alt: "Breathtaking natural landscape photography",
-    category: "portraits",
-  },
+
   {
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/17ae844e-512c-4348-8a6b-5f96470b927e/17_05_2017-039.jpg",
     width: 1709,
@@ -481,8 +454,10 @@ export const portfolioImages: PortfolioImage[] = [
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1699096609296-4GMHTXOGQEV9NN6MUQQP/kim-1.jpg",
     width: 1114,
     height: 1417,
-    alt: "Breathtaking natural landscape photography",
+    alt: "Event photography for Kim Väisänen",
     category: "events",
+    title: "Kim Väisänen",
+    subtitle: "Personal Branding",
   },
   {
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1655053712287-0FZRRVMN6BH3CGXVR168/20151029-04.jpg",
@@ -495,15 +470,19 @@ export const portfolioImages: PortfolioImage[] = [
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1655054440651-31AMBW4LUI4LHRBPFGER/30_tammi_2019_008.jpg",
     width: 4816,
     height: 3215,
-    alt: "Breathtaking natural landscape photography",
+    alt: "Event photography at the Embassy of Morocco",
     category: "events",
+    title: "Embassy of Morocco",
+    subtitle: "Official Event",
   },
   {
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1653223465325-5BVKCRFF03IT101PMVPW/26_10_2018-017.jpg",
     width: 6000,
     height: 3376,
-    alt: "Breathtaking natural landscape photography",
+    alt: "Landscape photography from Norway 2019 expedition",
     category: "events",
+    title: "Norway 2019",
+    subtitle: "Expedition",
   },
   {
     url: "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/1654268429779-24LF0ND4O7YTY2ERSG6M/DSC_0310.jpg",
@@ -569,11 +548,5 @@ export const portfolioImages: PortfolioImage[] = [
     alt: "Breathtaking natural landscape photography",
     category: "landscape",
   },
-  {
-    url: "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847125281-8N1K6OCODBZ02DX6T8P8/AroHa_02.jpg",
-    width: 1500,
-    height: 1000,
-    alt: "Breathtaking natural landscape photography",
-    category: "landscape",
-  },
+
 ];
