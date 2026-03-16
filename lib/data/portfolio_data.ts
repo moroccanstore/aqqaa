@@ -59,35 +59,28 @@ const getCategoryItems = (cat: "portraits" | "events" | "commercial", startIndex
       href
     }));
 
-export const curatedPortfolioItems: PortfolioItem[] = [
-  weddingHighlights[0],
-  ...getCategoryItems("portraits", 0, 1, "/portfolio/portraits"),
-  weddingHighlights[1],
-  ...getCategoryItems("events", 0, 1, "/portfolio/events"),
-  weddingHighlights[2],
-  ...getCategoryItems("commercial", 0, 1, "/portfolio/products"),
-  weddingHighlights[3],
-  ...getCategoryItems("portraits", 1, 1, "/portfolio/portraits"),
-  weddingHighlights[4],
-  ...getCategoryItems("events", 1, 1, "/portfolio/events"),
-  weddingHighlights[5],
-  ...getCategoryItems("commercial", 1, 1, "/portfolio/products"),
-  weddingHighlights[6],
-  ...getCategoryItems("portraits", 2, 1, "/portfolio/portraits"),
-  weddingHighlights[7],
-  ...getCategoryItems("events", 2, 1, "/portfolio/events"),
-  weddingHighlights[8],
-  ...getCategoryItems("commercial", 2, 1, "/portfolio/products"),
-  weddingHighlights[9],
-  ...getCategoryItems("portraits", 3, 1, "/portfolio/portraits"),
-  weddingHighlights[10],
-  ...getCategoryItems("events", 3, 1, "/portfolio/events"),
-  weddingHighlights[11],
-  ...getCategoryItems("commercial", 3, 1, "/portfolio/products"),
-  weddingHighlights[12],
-  ...getCategoryItems("portraits", 4, 1, "/portfolio/portraits"),
-  weddingHighlights[13],
-  ...getCategoryItems("events", 4, 1, "/portfolio/events"),
-  weddingHighlights[14],
-  ...getCategoryItems("commercial", 4, 1, "/portfolio/products"),
-];
+// Construct a richer curated list by iterating more extensively through available data
+const createCuratedList = () => {
+  const items: PortfolioItem[] = [];
+  const maxWeddings = Math.min(weddings.length, 24);
+  const itemsPerCategory = 8;
+
+  for (let i = 0; i < maxWeddings; i++) {
+    if (weddingHighlights[i]) items.push(weddingHighlights[i]);
+    
+    // Interleave other categories
+    if (i % 3 === 0) {
+      const catIndex = Math.floor(i / 3);
+      const portraits = getCategoryItems("portraits", catIndex, 1, "/portfolio/portraits");
+      const events = getCategoryItems("events", catIndex, 1, "/portfolio/events");
+      const commercial = getCategoryItems("commercial", catIndex, 1, "/portfolio/products");
+      
+      if (portraits.length) items.push(portraits[0]);
+      if (events.length) items.push(events[0]);
+      if (commercial.length) items.push(commercial[0]);
+    }
+  }
+  return items;
+};
+
+export const curatedPortfolioItems: PortfolioItem[] = createCuratedList();
