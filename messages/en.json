@@ -41,11 +41,17 @@
       "title": "Heritage Wedding & Portrait Photography",
       "subtitle": "Cinematic Storytelling for Modern Romantics Across Finland",
       "description": "Exquisite visual narratives crafted with over a decade of mastery. We translate the ephemeral into eternal art, capturing the soulful elegance of your milestones.",
-      "primaryCTA": "Request a Wedding Consultation",
-      "secondaryCTA": "Explore the Gallery",
+      "primaryCTA": "Check Availability",
+      "secondaryCTA": "Get Pricing",
+      "pricingAnchor": "Packages from €399 • Full-Day from €1,200",
+      "contactStrip": {
+        "phone": "+358 40 7444838",
+        "whatsapp": "WhatsApp",
+        "location": "Helsinki • Espoo • Worldwide"
+      },
       "trust": {
-        "experience": "10+ Years of Mastery",
-        "services": "Bespoke Photography",
+        "experience": "100+ Weddings Captured",
+        "services": "2h Response Time",
         "location": "Available Worldwide"
       }
     },
@@ -80,6 +86,32 @@
       "startingFrom": "Investment starting from",
       "viewAll": "View all packages",
       "inquire": "Inquire for Availability"
+    },
+    "bookingProcess": {
+      "title": "How it Works",
+      "subtitle": "Your Journey to Beautiful Memories",
+      "step1": { "title": "Inquire", "desc": "Send a request with your date and vision." },
+      "step2": { "title": "Secure Date", "desc": "Confirm with a booking fee to lock your day." },
+      "step3": { "title": "Planning", "desc": "Design your timeline and shots together." },
+      "step4": { "title": "Shoot Day", "desc": "Relax while we capture the magic." },
+      "step5": { "title": "Delivery", "desc": "Receive your curated gallery within 3 weeks." }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Are you available for my date?",
+      "a1": "I recommend booking 6-12 months in advance, but please inquire for last-minute availability.",
+      "q2": "Do you travel outside of Helsinki?",
+      "a2": "Yes, I capture weddings across Finland and worldwide. Travel fees apply for remote locations.",
+      "q3": "How many images will I receive?",
+      "a3": "Depending on the package, usually between 400-700 masterfully edited images.",
+      "q4": "What is the delivery timeline?",
+      "a4": "A 'Sneak Peek' is delivered within 48 hours. The full gallery takes 3-4 weeks.",
+      "q5": "Is a deposit required?",
+      "a5": "Yes, a 25% non-refundable booking fee is required to secure your date."
+    },
+    "stickyCTA": {
+      "whatsapp": "WhatsApp",
+      "availability": "Check Availability"
     }
   },
   "Pricing": {

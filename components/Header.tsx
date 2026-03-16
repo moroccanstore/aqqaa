@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Menu, X, Instagram, Youtube, Facebook } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { TopContactStrip } from "./TopContactStrip";
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -43,11 +44,17 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full z-50 transition-all duration-500 py-6",
-        isScrolled ? "bg-black/90 backdrop-blur-md py-4" : "bg-transparent"
+        "fixed top-0 left-0 w-full z-50 transition-all duration-500",
+        isScrolled ? "bg-black/95 backdrop-blur-md shadow-2xl" : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      {/* 1. Top Contact Strip (Intent focused) */}
+      {!isScrolled && <TopContactStrip />}
+
+      <div className={cn(
+        "container mx-auto px-6 flex justify-between items-center transition-all duration-500",
+        isScrolled ? "py-4" : "py-8"
+      )}>
         {/* Logo with framed lines */}
         <div className="relative group">
           {/* Top-Left Accent Lines */}

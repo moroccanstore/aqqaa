@@ -109,6 +109,18 @@ const createHomepageFeaturedList = () => {
   const items: PortfolioItem[] = [];
   
   featuredWeddings.forEach((w, index) => {
+    // Descriptive labels for conversion optimization
+    const labels = [
+      "City Hall Wedding",
+      "Full-Day Coverage",
+      "Destination Celebration",
+      "Intimate Ceremony",
+      "Editorial Portrait",
+      "Heritage Story",
+      "Luxury Celebration",
+      "Coastal Wedding"
+    ];
+
     // Take exactly one strong highlight image per featured wedding for the homepage grid
     const img = w.images[0];
     items.push({
@@ -119,7 +131,7 @@ const createHomepageFeaturedList = () => {
       alt: img.alt || w.title,
       category: "weddings" as const,
       title: w.title,
-      label: "Featured Story",
+      label: labels[index % labels.length],
       href: `/weddings/${w.slug}`
     });
   });

@@ -41,11 +41,17 @@
       "title": "Arvokas Hää- ja Muotokuvaus",
       "subtitle": "Elokuvallista Tarinankerrontaa Nykyajan Romantikoille",
       "description": "Hienostuneita visuaalisia kertomuksia yli kymmenen vuoden mestaruudella. Muutamme katoavat hetket ikuiseksi taiteeksi, vangiten merkkipaalujenne sielukkaan eleganssin.",
-      "primaryCTA": "Pyydä hääkonsultaatiota",
-      "secondaryCTA": "Tutustu Galleriaan",
+      "primaryCTA": "Tarkista saatavuus",
+      "secondaryCTA": "Katso hinnasto",
+      "pricingAnchor": "Paketit alkaen 399€ • Koko päivä alkaen 1 200€",
+      "contactStrip": {
+        "phone": "+358 40 7444838",
+        "whatsapp": "WhatsApp",
+        "location": "Helsinki • Espoo • Maailmanlaajuisesti"
+      },
       "trust": {
-        "experience": "10+ Vuotta Mestaruutta",
-        "services": "Räätälöity Valokuvaus",
+        "experience": "100+ Kuvattua häätä",
+        "services": "2h Vastausaika",
         "location": "Palvelemme Maailmanlaajuisesti"
       }
     },
@@ -80,6 +86,32 @@
       "startingFrom": "Investointi alkaen",
       "viewAll": "Katso kaikki paketit",
       "inquire": "Tiedustele saatavuutta"
+    },
+    "bookingProcess": {
+      "title": "Miten se toimii",
+      "subtitle": "Matkasi kauniisiin muistoihin",
+      "step1": { "title": "Kysy", "desc": "Lähetä kysely päivämäärästä ja visiostasi." },
+      "step2": { "title": "Varmista", "desc": "Vahvista varausmaksulla ja lukitse päiväsi." },
+      "step3": { "title": "Suunnittelu", "desc": "Suunnitellaan aikataulu ja kuvat yhdessä." },
+      "step4": { "title": "Kuvauspäivä", "desc": "Rentoudu ja nauti, me hoidamme loput." },
+      "step5": { "title": "Toimitus", "desc": "Saat kuratoidun gallerian 3 viikon kuluessa." }
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "q1": "Oletko vapaana päivänäni?",
+      "a1": "Suosittelen varaamaan 6-12 kuukautta etukäteen, mutta kysy rohkeasti myös viime hetken aikoja.",
+      "q2": "Matkustatko Helsingin ulkopuolelle?",
+      "a2": "Kyllä, kuvaan häitä ympäri Suomen ja maailman. Matkakulut lisätään etäkohteisiin.",
+      "q3": "Kuinka monta kuvaa saan?",
+      "a3": "Paketista riippuen saat yleensä 400-700 mestarillisesti käsiteltyä kuvaa.",
+      "q4": "Mikä on toimitusaika?",
+      "a4": "Ensimmäiset maistiaiset saat 48 tunnissa. Koko galleria valmistuu 3-4 viikossa.",
+      "q5": "Tarvitaanko varausmaksua?",
+      "a5": "Kyllä, 25 % varausmaksu tarvitaan päivän lukitsemiseksi."
+    },
+    "stickyCTA": {
+      "whatsapp": "WhatsApp",
+      "availability": "Tarkista saatavuus"
     }
   },
   "Pricing": {

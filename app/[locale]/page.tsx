@@ -9,6 +9,9 @@ import { WeddingServicesStrip } from "@/components/WeddingServicesStrip";
 import { PricingTeaser } from "@/components/PricingTeaser";
 import { TrustFactors } from "@/components/TrustFactors";
 import { BookingInquiry } from "@/components/BookingInquiry";
+import { BookingProcess } from "@/components/BookingProcess";
+import { FAQ } from "@/components/FAQ";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import MiniInquiryForm from "@/components/MiniInquiryForm";
 import { curatedPortfolioItems } from "@/lib/data/portfolio_data";
 import { weddings } from "@/lib/data/weddings";
@@ -32,18 +35,52 @@ export default function HomePage() {
       {/* 2. Wedding Services Strip */}
       <WeddingServicesStrip />
 
-      {/* 3. Portfolio Gallery Section (Featured) */}
+      {/* 3. Testimonials Section (Social Proof Early) */}
+      <section className="py-32 bg-zinc-950 border-y border-white/5">
+        <div className="container mx-auto px-6">
+           <RevealOnScroll className="text-center mb-20">
+              <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">{t("kindWords")}</h2>
+              <h3 className="text-4xl font-serif text-white">{t("clientFeedback")}</h3>
+           </RevealOnScroll>
+           
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.slice(0, 3).map((testimonial, index) => (
+                <RevealOnScroll 
+                  key={index} 
+                  className="bg-white/[0.02] border border-white/[0.05] p-10 hover:border-gold/30 transition-colors"
+                  delay={index * 0.1}
+                >
+                   <p className="text-zinc-300 font-light italic leading-relaxed mb-8 text-sm">
+                      "{testimonial.text}"
+                   </p>
+                   <div>
+                      <h4 className="text-white text-xs tracking-widest uppercase font-medium">{testimonial.name}</h4>
+                      <p className="text-gold text-[10px] tracking-[0.2em] uppercase mt-1">{t("verifiedExperience")}</p>
+                   </div>
+                </RevealOnScroll>
+              ))}
+           </div>
+        </div>
+      </section>
+
+      {/* 4. Portfolio Gallery Section (Featured Selection) */}
       <PortfolioGallery isHomepage={true} />
       
-      {/* 4. Pricing Teaser Section */}
+      {/* 5. Booking Process - Explain Next Steps */}
+      <BookingProcess />
+
+      {/* 6. Pricing Teaser Section */}
       <PricingTeaser />
 
-      {/* 5. Trust Factors Section (Partners) */}
-      <div className="bg-black py-12">
+      {/* 7. FAQ Section */}
+      <FAQ />
+
+      {/* 8. Trust Factors Section (Partners) */}
+      <div className="bg-black py-24 border-t border-white/5">
         <TrustFactors />
       </div>
 
-      {/* 6. About Teaser Section */}
+      {/* 9. About Teaser Section */}
       <section className="py-32 bg-black overflow-hidden border-t border-white/5">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
            <div className="flex-1">
@@ -63,7 +100,7 @@ export default function HomePage() {
            <div className="flex-1 space-y-8">
               <RevealOnScroll>
                  <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase">{t("theArtist")}</h2>
-                 <h3 className="text-4xl md:text-6xl font-serif leading-tight">Said Aqqa</h3>
+                 <h3 className="text-4xl md:text-6xl font-serif leading-tight text-white">Said Aqqa</h3>
                  <p className="text-zinc-300 font-light leading-relaxed text-lg max-w-lg">
                     {t("artistDescription")}
                  </p>
@@ -75,39 +112,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Testimonials Section */}
-      <section className="py-48 bg-zinc-950 border-y border-white/5">
-        <div className="container mx-auto px-6">
-           <RevealOnScroll className="text-center mb-20">
-              <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">{t("kindWords")}</h2>
-              <h3 className="text-4xl font-serif">{t("clientFeedback")}</h3>
-           </RevealOnScroll>
-           
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.slice(0, 6).map((testimonial, index) => (
-                <RevealOnScroll 
-                  key={index} 
-                  className="bg-white/[0.02] border border-white/[0.05] p-10 hover:border-gold/30 transition-colors"
-                  delay={index * 0.1}
-                >
-                   <p className="text-zinc-300 font-light italic leading-relaxed mb-8 text-sm">
-                      "{testimonial.text}"
-                   </p>
-                   <div>
-                      <h4 className="text-white text-xs tracking-widest uppercase font-medium">{testimonial.name}</h4>
-                      <p className="text-gold text-[10px] tracking-[0.2em] uppercase mt-1">{t("verifiedExperience")}</p>
-                   </div>
-                </RevealOnScroll>
-              ))}
-           </div>
-        </div>
-      </section>
-
-      {/* 8. Summer Booking Inquiry Section */}
+      {/* 10. Summer Booking Inquiry Section */}
       <BookingInquiry />
 
-      {/* 9. Mini Inquiry Form */}
+      {/* 11. Mini Inquiry Form */}
       <MiniInquiryForm />
+
+      {/* 12. Mobile Bottom Buttons */}
+      <StickyMobileCTA />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 import { RevealOnScroll } from "./AnimationWrappers";
+import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
 import { TrustStrip } from "./TrustStrip";
 
@@ -81,6 +82,14 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
 
         {(primaryCTA || secondaryCTA) && (
           <RevealOnScroll delay={0.6} className="w-full">
+            {/* Pricing Anchor - Removes budget uncertainty */}
+            <div className="mb-8 flex flex-col items-center">
+              <span className="text-[10px] tracking-[0.3em] uppercase text-white/40 mb-2 font-light">Starting Investment</span>
+              <p className="text-sm md:text-base font-serif text-gold tracking-wide italic whitespace-nowrap">
+                {useTranslations("HomePage.hero")("pricingAnchor")}
+              </p>
+            </div>
+
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               {primaryCTA && (
                 <Link 

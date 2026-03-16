@@ -19,10 +19,10 @@ export const TrustStrip = () => {
         {factors.map((factor, index) => (
           <RevealOnScroll key={factor.key} delay={index * 0.1} className="flex flex-col items-center md:items-start text-center md:text-left group">
             <span className="text-gold text-[10px] tracking-[0.4em] uppercase font-medium mb-2 group-hover:tracking-[0.5em] transition-all duration-300">
-              {factor.label.split(' ')[0]}
+              {factor.label.includes(' ') ? factor.label.split(' ')[0] : factor.label}
             </span>
             <p className="text-white/60 text-[11px] md:text-sm font-light tracking-widest uppercase">
-              {factor.label.split(' ').slice(1).join(' ')}
+              {factor.label.includes(' ') ? factor.label.split(' ').slice(1).join(' ') : ""}
             </p>
           </RevealOnScroll>
         ))}
