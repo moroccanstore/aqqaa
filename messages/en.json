@@ -45,6 +45,39 @@
         "services": "Bespoke Photography",
         "location": "Available Worldwide"
       }
+    },
+    "services": {
+      "title": "Signature Services",
+      "subtitle": "Discover Our Artistry",
+      "wedding": {
+        "title": "Cinematic Weddings",
+        "cta": "Explore Collections"
+      },
+      "portrait": {
+        "title": "Editorial Portraits",
+        "cta": "View Artistry"
+      },
+      "cinema": {
+        "title": "Legacy Films",
+        "cta": "Watch Stories"
+      },
+      "commercial": {
+        "title": "Brand Vision",
+        "cta": "See Projects"
+      }
+    },
+    "labels": {
+      "viewDetail": "View Detail",
+      "weddingStory": "Wedding Story",
+      "portraitSession": "Portrait Session",
+      "eventCoverage": "Event Coverage",
+      "commercialWork": "Commercial Work"
+    },
+    "inquiry": {
+      "title": "Reserve Your Date",
+      "subtitle": "Limited Availability for 2024/2025",
+      "description": "Every story is unique. Let's discuss how we can beautifully preserve yours.",
+      "cta": "Start a Conversation"
     }
   },
   "Pricing": {

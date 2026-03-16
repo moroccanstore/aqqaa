@@ -10,13 +10,15 @@ import { testimonials } from "@/lib/data/testimonials";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 import { ArrowRight } from "lucide-react";
 import { TrustFactors } from "@/components/TrustFactors";
+import { ServiceRouting } from "@/components/ServiceRouting";
+import { BookingInquiry } from "@/components/BookingInquiry";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
 
   return (
     <div className="bg-black text-white">
-      {/* Hero Section */}
+      {/* 1. Hero Section */}
       <ParticleHero 
         backgroundImage="/hero-uploaded.webp"
         description={t("hero.description")}
@@ -24,16 +26,17 @@ export default function HomePage() {
         secondaryCTA={{ label: t("hero.secondaryCTA"), href: "#portfolio" }}
       />
 
-      {/* Portfolio Gallery Section */}
+      {/* 2. Signature Services (CRO Component) */}
+      <ServiceRouting />
+
+      {/* 3. Portfolio Gallery Section */}
       <PortfolioGallery />
       
-      {/* Trust Factors Section (Partners) */}
-      <div className="pb-32 bg-black">
-        <TrustFactors />
-      </div>
+      {/* 4. Trust Factors Section (Partners) */}
+      <TrustFactors />
 
-      {/* About Teaser */}
-      <section className="py-48 bg-black overflow-hidden">
+      {/* 5. About Teaser */}
+      <section className="py-48 bg-black overflow-hidden border-t border-white/5">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
            <div className="flex-1">
               <ParallaxSection speed={0.1}>
@@ -64,7 +67,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* 6. Testimonials Section */}
       <section className="py-48 bg-zinc-950 border-y border-white/5">
         <div className="container mx-auto px-6">
            <RevealOnScroll className="text-center mb-20">
@@ -92,7 +95,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Simple Marquee CTA */}
+      {/* 7. Booking Inquiry Section (CRO Component) */}
+      <BookingInquiry />
+
+      {/* 8. Simple Marquee CTA */}
       <section className="py-20 bg-black overflow-hidden border-b border-white/5" aria-hidden="true">
          <div className="flex whitespace-nowrap animate-marquee">
             {[1, 2, 3, 4, 5].map((i) => (

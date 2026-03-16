@@ -45,6 +45,39 @@
         "services": "Räätälöity Valokuvaus",
         "location": "Palvelemme Maailmanlaajuisesti"
       }
+    },
+    "services": {
+      "title": "Nimikkopalvelumme",
+      "subtitle": "Tutustu Taiteeseemme",
+      "wedding": {
+        "title": "Elokuvalliset Häät",
+        "cta": "Tutustu Kokoelmiin"
+      },
+      "portrait": {
+        "title": "Editoriaaliset Muotokuvat",
+        "cta": "Katso Taidetta"
+      },
+      "cinema": {
+        "title": "Perintöelokuvat",
+        "cta": "Katso Tarinoita"
+      },
+      "commercial": {
+        "title": "Brändivisio",
+        "cta": "Katso Projektit"
+      }
+    },
+    "labels": {
+      "viewDetail": "Katso Lisää",
+      "weddingStory": "Hääkuvaus",
+      "portraitSession": "Muotokuvaus",
+      "eventCoverage": "Tapahtumakuvaus",
+      "commercialWork": "Kaupallinen Kuvaus"
+    },
+    "inquiry": {
+      "title": "Varmista Päiväsi",
+      "subtitle": "Rajoitetusti Vapaita Aikoja 2024/2025",
+      "description": "Jokainen tarina on ainutlaatuinen. Keskustellaan siitä, miten voimme ikuistaa teidän tarinanne kauniisti.",
+      "cta": "Aloita Keskustelu"
     }
   },
   "Pricing": {
