@@ -34,7 +34,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage =
   }, [activeCategory, isHomepage]);
 
   return (
-    <section className="py-24 bg-black overflow-hidden" id="portfolio">
+    <section className="py-24 bg-black overflow-hidden" id="portfolio" data-restoration-id="RESTORATION_VERIFIED_MARKER">
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <RevealOnScroll className="mb-16 text-center lg:text-left">
