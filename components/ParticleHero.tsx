@@ -37,12 +37,11 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
           <img
             src={backgroundImage}
             alt="Hero Background"
-            className="w-full h-full object-cover grayscale"
+            className="w-full h-full object-cover"
           />
         </div>
         {/* Cinematic Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black" />
       </div>
 
       {/* Particle Overlay - Temporarily disabled for stability */}
