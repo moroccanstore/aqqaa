@@ -5,12 +5,14 @@ import { useTranslations } from "next-intl";
 import { ParticleHero } from "@/components/ParticleHero";
 import { RevealOnScroll, ParallaxSection } from "@/components/AnimationWrappers";
 import { PortfolioGallery } from "@/components/PortfolioGallery";
+import { TrustFactors } from "@/components/TrustFactors";
+import { BookingInquiry } from "@/components/BookingInquiry";
+import MiniInquiryForm from "@/components/MiniInquiryForm";
+import { curatedPortfolioItems } from "@/lib/data/portfolio_data";
 import { weddings } from "@/lib/data/weddings";
 import { testimonials } from "@/lib/data/testimonials";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 import { ArrowRight } from "lucide-react";
-import { TrustFactors } from "@/components/TrustFactors";
-import { BookingInquiry } from "@/components/BookingInquiry";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -31,7 +33,7 @@ export default function HomePage() {
       {/* 3. Trust Factors Section (Partners) */}
       <TrustFactors />
 
-      {/* 4. About Teaser */}
+      {/* 4. About Teaser Section */}
       <section className="py-48 bg-black overflow-hidden border-t border-white/5">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
            <div className="flex-1">
@@ -94,16 +96,8 @@ export default function HomePage() {
       {/* 6. Booking Inquiry Section (CRO Component) */}
       <BookingInquiry />
 
-      {/* 7. Simple Marquee CTA */}
-      <section className="py-20 bg-black overflow-hidden border-b border-white/5" aria-hidden="true">
-         <div className="flex whitespace-nowrap animate-marquee">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <span key={i} className="text-6xl md:text-9xl font-serif text-white/[0.03] uppercase tracking-tighter mx-10" aria-hidden="true">
-                {t("marquee")}
-              </span>
-            ))}
-         </div>
-      </section>
+      {/* 7. Mini Inquiry Form (High-intent Lead Capture) */}
+      <MiniInquiryForm />
     </div>
   );
 }

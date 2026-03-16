@@ -58,6 +58,14 @@
       "subtitle": "Limited Availability for 2024/2025",
       "description": "Every story is unique. Let's discuss how we can beautifully preserve yours.",
       "cta": "Start a Conversation"
+    },
+    "miniForm": {
+      "title": "Quick Inquiry",
+      "name": "Name",
+      "email": "Email",
+      "message": "Project Vision",
+      "send": "Send",
+      "success": "Talk soon."
     }
   },
   "Pricing": {

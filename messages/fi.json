@@ -58,6 +58,14 @@
       "subtitle": "Rajoitetusti Vapaita Aikoja 2024/2025",
       "description": "Jokainen tarina on ainutlaatuinen. Keskustellaan siitä, miten voimme ikuistaa teidän tarinanne kauniisti.",
       "cta": "Aloita Keskustelu"
+    },
+    "miniForm": {
+      "title": "Pikayhteydenotto",
+      "name": "Nimi",
+      "email": "Sähköposti",
+      "message": "Projektin visio",
+      "send": "Lähetä",
+      "success": "Palataan pian."
     }
   },
   "Pricing": {
