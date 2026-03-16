@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
