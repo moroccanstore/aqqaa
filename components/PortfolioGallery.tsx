@@ -42,7 +42,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage =
             {t("portfolioOptions")}
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-8">
-            {t("selectedWorks")}
+            Restored Selected Works
           </h2>
 
           {/* Filters */}
