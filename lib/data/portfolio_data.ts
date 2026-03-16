@@ -70,8 +70,6 @@ const createCuratedList = () => {
   
   // Use a targeted filter with exact match logic to avoid duplicates from similar prefixes
   for (let i = 0; i < totalWeddings; i++) {
-    // Exact match for the wedding index to avoid "wedding-hl-1" matching "wedding-hl-10"
-    const weddingMatches = weddingHighlights.filter(h => h.id.startsWith(`wedding-hl-${i}-`) && !h.id.startsWith(`wedding-hl-${i}0-`));
     // Safer: check the exact part of the ID
     const safeMatches = weddingHighlights.filter(h => {
         const parts = h.id.split('-');
@@ -81,7 +79,6 @@ const createCuratedList = () => {
     items.push(...safeMatches);
     
     // Interleave other categories more densely without creating huge overlaps
-    // Use i*3 to provide unique offsets for each iteration
     const portraits = getCategoryItems("portraits", i * 3, 3, "/portfolio/portraits");
     const events = getCategoryItems("events", i * 3, 3, "/portfolio/events");
     const commercial = getCategoryItems("commercial", i * 3, 3, "/portfolio/products");
@@ -91,10 +88,19 @@ const createCuratedList = () => {
     items.push(...commercial);
   }
   
-  // Return a healthy amount for the masonry (approx 100-120 items is good for dense look)
-  // Ensure we remove any actual accidental duplicates by ID
-  const uniqueItems = Array.from(new Map(items.map(item => [item.id, item])).values());
-  return uniqueItems.slice(0, 120); 
+  // CRITICAL: Ensure every URL is unique across the final list to prevent layout gaps
+  // and visual repetition. We prefer earlier items (highlights) over later ones.
+  const uniqueByUrl = new Map<string, PortfolioItem>();
+  for (const item of items) {
+    if (!uniqueByUrl.has(item.url)) {
+      uniqueByUrl.set(item.url, item);
+    }
+  }
+  
+  const finalItems = Array.from(uniqueByUrl.values());
+  
+  // Return a healthy amount for the masonry (approx 80-100 unique items is plenty for a dense look)
+  return finalItems.slice(0, 100); 
 };
 
 export const curatedPortfolioItems: PortfolioItem[] = createCuratedList();
