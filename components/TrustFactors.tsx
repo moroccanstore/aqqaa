@@ -27,30 +27,30 @@ export const TrustFactors = () => {
 
       <div className="relative flex overflow-hidden group">
         {/* First track */}
-        <div className="flex space-x-20 animate-marquee whitespace-nowrap py-4">
+        <div className="flex space-x-20 animate-marquee whitespace-nowrap py-8">
           {trustImages.map((src, i) => (
-            <div key={`trust-1-${i}`} className="relative w-32 h-16 md:w-40 md:h-20 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+            <div key={`trust-1-${i}`} className="relative flex-shrink-0 w-36 h-20 md:w-52 md:h-28 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-pointer">
               <Image
                 src={src}
                 alt="Trust logo"
                 fill
                 className="object-contain"
-                sizes="(max-width: 768px) 128px, 160px"
+                sizes="(max-width: 768px) 144px, 208px"
               />
             </div>
           ))}
         </div>
         
         {/* Second track (duplicate for seamless loop) */}
-        <div className="flex space-x-20 animate-marquee whitespace-nowrap py-4 ml-20" aria-hidden="true">
+        <div className="flex space-x-20 animate-marquee whitespace-nowrap py-8 ml-20" aria-hidden="true">
           {trustImages.map((src, i) => (
-            <div key={`trust-2-${i}`} className="relative w-32 h-16 md:w-40 md:h-20 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+            <div key={`trust-2-${i}`} className="relative flex-shrink-0 w-36 h-20 md:w-52 md:h-28 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-pointer">
               <Image
                 src={src}
                 alt="Trust logo"
                 fill
                 className="object-contain"
-                sizes="(max-width: 768px) 128px, 160px"
+                sizes="(max-width: 768px) 144px, 208px"
               />
             </div>
           ))}
