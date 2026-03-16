@@ -10,7 +10,6 @@ import { testimonials } from "@/lib/data/testimonials";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 import { ArrowRight } from "lucide-react";
 import { TrustFactors } from "@/components/TrustFactors";
-import { ServiceRouting } from "@/components/ServiceRouting";
 import { BookingInquiry } from "@/components/BookingInquiry";
 
 export default function HomePage() {
@@ -26,16 +25,13 @@ export default function HomePage() {
         secondaryCTA={{ label: t("hero.secondaryCTA"), href: "#portfolio" }}
       />
 
-      {/* 2. Signature Services (CRO Component) */}
-      <ServiceRouting />
-
-      {/* 3. Portfolio Gallery Section */}
+      {/* 2. Portfolio Gallery Section */}
       <PortfolioGallery />
       
-      {/* 4. Trust Factors Section (Partners) */}
+      {/* 3. Trust Factors Section (Partners) */}
       <TrustFactors />
 
-      {/* 5. About Teaser */}
+      {/* 4. About Teaser */}
       <section className="py-48 bg-black overflow-hidden border-t border-white/5">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
            <div className="flex-1">
@@ -67,7 +63,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Testimonials Section */}
+      {/* 5. Testimonials Section */}
       <section className="py-48 bg-zinc-950 border-y border-white/5">
         <div className="container mx-auto px-6">
            <RevealOnScroll className="text-center mb-20">
@@ -95,10 +91,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Booking Inquiry Section (CRO Component) */}
+      {/* 6. Booking Inquiry Section (CRO Component) */}
       <BookingInquiry />
 
-      {/* 8. Simple Marquee CTA */}
+      {/* 7. Simple Marquee CTA */}
       <section className="py-20 bg-black overflow-hidden border-b border-white/5" aria-hidden="true">
          <div className="flex whitespace-nowrap animate-marquee">
             {[1, 2, 3, 4, 5].map((i) => (

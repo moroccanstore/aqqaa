@@ -46,26 +46,6 @@
         "location": "Available Worldwide"
       }
     },
-    "services": {
-      "title": "Signature Services",
-      "subtitle": "Discover Our Artistry",
-      "wedding": {
-        "title": "Cinematic Weddings",
-        "cta": "Explore Collections"
-      },
-      "portrait": {
-        "title": "Editorial Portraits",
-        "cta": "View Artistry"
-      },
-      "cinema": {
-        "title": "Legacy Films",
-        "cta": "Watch Stories"
-      },
-      "commercial": {
-        "title": "Brand Vision",
-        "cta": "See Projects"
-      }
-    },
     "labels": {
       "viewDetail": "View Detail",
       "weddingStory": "Wedding Story",

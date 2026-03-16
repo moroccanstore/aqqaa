@@ -46,26 +46,6 @@
         "location": "Palvelemme Maailmanlaajuisesti"
       }
     },
-    "services": {
-      "title": "Nimikkopalvelumme",
-      "subtitle": "Tutustu Taiteeseemme",
-      "wedding": {
-        "title": "Elokuvalliset Häät",
-        "cta": "Tutustu Kokoelmiin"
-      },
-      "portrait": {
-        "title": "Editoriaaliset Muotokuvat",
-        "cta": "Katso Taidetta"
-      },
-      "cinema": {
-        "title": "Perintöelokuvat",
-        "cta": "Katso Tarinoita"
-      },
-      "commercial": {
-        "title": "Brändivisio",
-        "cta": "Katso Projektit"
-      }
-    },
     "labels": {
       "viewDetail": "Katso Lisää",
       "weddingStory": "Hääkuvaus",
