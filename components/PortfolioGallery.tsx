@@ -45,13 +45,13 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage =
             {t("selectedWorks")}
           </h2>
 
-          {/* Filters */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-8">
+          {/* Filters - Scrollable on mobile */}
+          <div className="flex items-center lg:justify-start gap-8 overflow-x-auto no-scrollbar pb-4 -mx-4 px-4 snap-x">
               {categories.map((cat) => (
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`relative py-2 text-[11px] tracking-[0.3em] uppercase transition-colors duration-300 ${
+                  className={`relative py-2 text-[11px] tracking-[0.3em] uppercase transition-colors duration-300 whitespace-nowrap snap-start ${
                     activeCategory === cat.id ? "text-gold" : "text-zinc-500 hover:text-zinc-300"
                   }`}
                 >

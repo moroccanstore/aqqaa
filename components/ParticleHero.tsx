@@ -56,7 +56,7 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
 
       {/* Hero Content */}
       <div className="relative z-20 text-center max-w-lg md:max-w-3xl px-6 flex flex-col items-center">
-        <RevealOnScroll className="mb-4">
+        <RevealOnScroll className="mb-4 hidden md:block">
           <span className="text-gold text-[10px] md:text-xs tracking-[0.5em] uppercase font-light">
             {subtitle || "Said Aqqa"}
           </span>
@@ -73,7 +73,7 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
         </RevealOnScroll>
 
         {description && (
-          <RevealOnScroll delay={0.4} className="mb-10 max-w-2xl">
+          <RevealOnScroll delay={0.4} className="mb-10 max-w-2xl px-2 md:px-0">
             <p className="text-white/70 text-sm md:text-lg font-light leading-relaxed tracking-wide">
               {description}
             </p>
@@ -83,7 +83,7 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
         {(primaryCTA || secondaryCTA) && (
           <RevealOnScroll delay={0.6} className="w-full">
             {/* Pricing Anchor - Removes budget uncertainty */}
-            <div className="mb-8 flex flex-col items-center">
+            <div className="mb-12 flex flex-col items-center">
               <span className="text-[10px] tracking-[0.3em] uppercase text-white/40 mb-2 font-light">Starting Investment</span>
               <p className="text-sm md:text-base font-serif text-gold tracking-wide italic whitespace-nowrap">
                 {useTranslations("HomePage.hero")("pricingAnchor")}
