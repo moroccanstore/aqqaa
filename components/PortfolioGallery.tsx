@@ -57,7 +57,7 @@ export const PortfolioGallery: React.FC = () => {
         </RevealOnScroll>
 
         {/* Gallery Grid - Masonry style */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-8">
           {filteredItems.map((item) => (
             <PortfolioCard key={item.id} item={item} />
           ))}

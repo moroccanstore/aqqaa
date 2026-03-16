@@ -31,10 +31,12 @@ export default function HomePage() {
       <PortfolioGallery />
       
       {/* 3. Trust Factors Section (Partners) */}
-      <TrustFactors />
+      <div className="bg-black py-12">
+        <TrustFactors />
+      </div>
 
       {/* 4. About Teaser Section */}
-      <section className="py-48 bg-black overflow-hidden border-t border-white/5">
+      <section className="py-32 bg-black overflow-hidden border-t border-white/5">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
            <div className="flex-1">
               <ParallaxSection speed={0.1}>

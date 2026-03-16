@@ -33,9 +33,9 @@ const mapCategory = (cat: string): "weddings" | "portraits" | "events" | "commer
 // Get first image from each wedding as a highlight
 // Get more highlight images from each wedding to fill the gallery
 const weddingHighlights = weddings.flatMap((w, index) => {
-  // Take up to 3 images from each wedding to provide a richer preview
-  return w.images.slice(0, 3).map((img, imgIndex) => ({
-    id: `wedding-hl-${index}-${imgIndex}`,
+  // Take up to 4 images from each wedding to provide a richer preview
+  return w.images.slice(0, 4).map((img, imgIndex) => ({
+    id: `wedding-hl-${index}-${imgIndex}`, 
     url: img.url,
     width: img.width,
     height: img.height,
@@ -66,26 +66,35 @@ const getCategoryItems = (cat: "portraits" | "events" | "commercial", startIndex
 // Construct a richer curated list by iterating more extensively through available data
 const createCuratedList = () => {
   const items: PortfolioItem[] = [];
-  const maxWeddings = weddings.length;
+  const totalWeddings = weddings.length;
   
-  // Interleave wedding highlights with other categories more densely
-  for (let i = 0; i < maxWeddings; i++) {
-    // Add all highlights for this wedding (we took 3 per wedding above)
-    const weddingMatches = weddingHighlights.filter(h => h.id.startsWith(`wedding-hl-${i}-`));
-    items.push(...weddingMatches);
+  // Use a targeted filter with exact match logic to avoid duplicates from similar prefixes
+  for (let i = 0; i < totalWeddings; i++) {
+    // Exact match for the wedding index to avoid "wedding-hl-1" matching "wedding-hl-10"
+    const weddingMatches = weddingHighlights.filter(h => h.id.startsWith(`wedding-hl-${i}-`) && !h.id.startsWith(`wedding-hl-${i}0-`));
+    // Safer: check the exact part of the ID
+    const safeMatches = weddingHighlights.filter(h => {
+        const parts = h.id.split('-');
+        return parts[0] === 'wedding' && parts[1] === 'hl' && parts[2] === String(i);
+    });
     
-    // Interleave other categories more frequently
-    const portraits = getCategoryItems("portraits", i * 2, 2, "/portfolio/portraits");
-    const events = getCategoryItems("events", i * 2, 2, "/portfolio/events");
-    const commercial = getCategoryItems("commercial", i * 2, 2, "/portfolio/products");
+    items.push(...safeMatches);
+    
+    // Interleave other categories more densely without creating huge overlaps
+    // Use i*3 to provide unique offsets for each iteration
+    const portraits = getCategoryItems("portraits", i * 3, 3, "/portfolio/portraits");
+    const events = getCategoryItems("events", i * 3, 3, "/portfolio/events");
+    const commercial = getCategoryItems("commercial", i * 3, 3, "/portfolio/products");
     
     items.push(...portraits);
     items.push(...events);
     items.push(...commercial);
   }
   
-  // Provide a fallback if list is still too short (highly unlikely now)
-  return items.slice(0, 80); 
+  // Return a healthy amount for the masonry (approx 100-120 items is good for dense look)
+  // Ensure we remove any actual accidental duplicates by ID
+  const uniqueItems = Array.from(new Map(items.map(item => [item.id, item])).values());
+  return uniqueItems.slice(0, 120); 
 };
 
 export const curatedPortfolioItems: PortfolioItem[] = createCuratedList();
