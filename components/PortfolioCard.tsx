@@ -28,8 +28,8 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ item }) => {
       <CloudinaryImage
         src={item.url}
         alt={item.alt}
-        width={800}
-        height={1000}
+        width={item.width}
+        height={item.height}
         quality={85}
         className="w-full h-auto transition-transform duration-1000 group-hover:scale-105"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

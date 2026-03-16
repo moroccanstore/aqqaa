@@ -99,6 +99,12 @@ const createCuratedList = () => {
   
   const finalItems = Array.from(uniqueByUrl.values());
   
+  // Shuffle for "random sizing" effect (mixing landscape/portrait)
+  for (let i = finalItems.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [finalItems[i], finalItems[j]] = [finalItems[j], finalItems[i]];
+  }
+  
   // Return a healthy amount for the masonry (approx 80-100 unique items is plenty for a dense look)
   return finalItems.slice(0, 100); 
 };

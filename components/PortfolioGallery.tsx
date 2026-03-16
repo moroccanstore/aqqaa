@@ -28,9 +28,9 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage =
   ];
 
   const filteredItems = useMemo(() => {
-    if (isHomepage) return homepageFeaturedItems;
-    if (activeCategory === "all") return curatedPortfolioItems;
-    return curatedPortfolioItems.filter((item) => item.category === activeCategory);
+    const baseItems = activeCategory === "all" ? curatedPortfolioItems : curatedPortfolioItems.filter((item) => item.category === activeCategory);
+    if (isHomepage) return baseItems.slice(0, 24); // Show a good amount for the homepage
+    return baseItems;
   }, [activeCategory, isHomepage]);
 
   return (
@@ -46,8 +46,7 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage =
           </h2>
 
           {/* Filters */}
-          {!isHomepage && (
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-8">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-8">
               {categories.map((cat) => (
                 <button
                   key={cat.id}
@@ -63,7 +62,6 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage =
                 </button>
               ))}
             </div>
-          )}
         </RevealOnScroll>
 
         {/* Gallery Grid - Masonry style */}
