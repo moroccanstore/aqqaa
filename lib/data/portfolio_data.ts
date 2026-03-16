@@ -31,17 +31,21 @@ const mapCategory = (cat: string): "weddings" | "portraits" | "events" | "commer
 };
 
 // Get first image from each wedding as a highlight
-const weddingHighlights = weddings.map((w, index) => ({
-  id: `wedding-hl-${index}`,
-  url: w.images[0]?.url || "",
-  width: w.images[0]?.width || 1200,
-  height: w.images[0]?.height || 800,
-  alt: w.images[0]?.alt || w.title,
-  category: "weddings" as const,
-  title: w.title,
-  label: "Wedding Story",
-  href: `/weddings/${w.slug}`
-}));
+// Get more highlight images from each wedding to fill the gallery
+const weddingHighlights = weddings.flatMap((w, index) => {
+  // Take up to 3 images from each wedding to provide a richer preview
+  return w.images.slice(0, 3).map((img, imgIndex) => ({
+    id: `wedding-hl-${index}-${imgIndex}`,
+    url: img.url,
+    width: img.width,
+    height: img.height,
+    alt: img.alt || w.title,
+    category: "weddings" as const,
+    title: w.title,
+    label: "Wedding Story",
+    href: `/weddings/${w.slug}`
+  }));
+});
 
 const getCategoryItems = (cat: "portraits" | "events" | "commercial", startIndex: number, count: number, href: string) => 
   portfolioImages
@@ -62,25 +66,26 @@ const getCategoryItems = (cat: "portraits" | "events" | "commercial", startIndex
 // Construct a richer curated list by iterating more extensively through available data
 const createCuratedList = () => {
   const items: PortfolioItem[] = [];
-  const maxWeddings = Math.min(weddings.length, 24);
-  const itemsPerCategory = 8;
-
+  const maxWeddings = weddings.length;
+  
+  // Interleave wedding highlights with other categories more densely
   for (let i = 0; i < maxWeddings; i++) {
-    if (weddingHighlights[i]) items.push(weddingHighlights[i]);
+    // Add all highlights for this wedding (we took 3 per wedding above)
+    const weddingMatches = weddingHighlights.filter(h => h.id.startsWith(`wedding-hl-${i}-`));
+    items.push(...weddingMatches);
     
-    // Interleave other categories
-    if (i % 3 === 0) {
-      const catIndex = Math.floor(i / 3);
-      const portraits = getCategoryItems("portraits", catIndex, 1, "/portfolio/portraits");
-      const events = getCategoryItems("events", catIndex, 1, "/portfolio/events");
-      const commercial = getCategoryItems("commercial", catIndex, 1, "/portfolio/products");
-      
-      if (portraits.length) items.push(portraits[0]);
-      if (events.length) items.push(events[0]);
-      if (commercial.length) items.push(commercial[0]);
-    }
+    // Interleave other categories more frequently
+    const portraits = getCategoryItems("portraits", i * 2, 2, "/portfolio/portraits");
+    const events = getCategoryItems("events", i * 2, 2, "/portfolio/events");
+    const commercial = getCategoryItems("commercial", i * 2, 2, "/portfolio/products");
+    
+    items.push(...portraits);
+    items.push(...events);
+    items.push(...commercial);
   }
-  return items;
+  
+  // Provide a fallback if list is still too short (highly unlikely now)
+  return items.slice(0, 80); 
 };
 
 export const curatedPortfolioItems: PortfolioItem[] = createCuratedList();
