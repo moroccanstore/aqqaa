@@ -25,6 +25,7 @@ export const weddings: Wedding[] = [
     "couple": "Maria & Thomas",
     "date": "July 15, 2023",
     "story": "A beautiful summer day in the heart of Helsinki, celebrating love with a vibrant city backdrop.",
+    "featured": true,
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/bcda5e34-4608-4f5f-98f3-4a5c3c202c29/2AG01741-3.jpg",
@@ -275,6 +276,7 @@ export const weddings: Wedding[] = [
     "couple": "Laura & Miika",
     "date": "August 12, 2023",
     "story": "An intimate ceremony on the shores of Espoo, where the sea breeze and golden hour light created a magical atmosphere.",
+    "featured": true,
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/c1d2b132-5429-4588-add1-14a74a37c518/2AG02034-3.jpg",
@@ -525,6 +527,7 @@ export const weddings: Wedding[] = [
     "couple": "Anna & Juho",
     "date": "September 5, 2023",
     "story": "A serene lakeside wedding surrounded by the tranquility of Finnish nature and breathtaking views of Lake Saimaa.",
+    "featured": true,
     "images": [
       {
         "url": "https://images.squarespace-cdn.com/content/v1/6283cf4349f1dd700fa9a5ee/cb7297ce-3f9c-4a30-8be3-0ad525357bab/2AG01476-3.jpg",

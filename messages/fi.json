@@ -41,7 +41,7 @@
       "title": "Arvokas Hää- ja Muotokuvaus",
       "subtitle": "Elokuvallista Tarinankerrontaa Nykyajan Romantikoille",
       "description": "Hienostuneita visuaalisia kertomuksia yli kymmenen vuoden mestaruudella. Muutamme katoavat hetket ikuiseksi taiteeksi, vangiten merkkipaalujenne sielukkaan eleganssin.",
-      "primaryCTA": "Pyydä Konsultaatiota",
+      "primaryCTA": "Pyydä hääkonsultaatiota",
       "secondaryCTA": "Tutustu Galleriaan",
       "trust": {
         "experience": "10+ Vuotta Mestaruutta",
@@ -57,10 +57,10 @@
       "commercialWork": "Kaupallinen Kuvaus"
     },
     "inquiry": {
-      "title": "Varmista Päiväsi",
-      "subtitle": "Rajoitetusti Vapaita Aikoja 2024/2025",
-      "description": "Jokainen tarina on ainutlaatuinen. Keskustellaan siitä, miten voimme ikuistaa teidän tarinanne kauniisti.",
-      "cta": "Aloita Keskustelu"
+      "title": "Kesän häävaraukset",
+      "subtitle": "Suosituimmat 2025/2026 päivät täyttyvät pian",
+      "description": "Varmista päiväsi unohtumatonta elokuvallista elämystä varten. Keskustellaan visiostasi täydellistä kesäjuhlaa varten.",
+      "cta": "Tarkista saatavuus"
     },
     "miniForm": {
       "title": "Pikayhteydenotto",
@@ -69,6 +69,17 @@
       "message": "Projektin visio",
       "send": "Lähetä",
       "success": "Palataan pian."
+    },
+    "servicesStrip": {
+      "ceremony": "Vihkiminen",
+      "portraits": "Potretit",
+      "fullDay": "Koko päivän taltiointi"
+    },
+    "pricingTeaser": {
+      "title": "Taide & Investointi",
+      "startingFrom": "Investointi alkaen",
+      "viewAll": "Katso kaikki paketit",
+      "inquire": "Tiedustele saatavuutta"
     }
   },
   "Pricing": {

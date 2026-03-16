@@ -41,7 +41,7 @@
       "title": "Heritage Wedding & Portrait Photography",
       "subtitle": "Cinematic Storytelling for Modern Romantics Across Finland",
       "description": "Exquisite visual narratives crafted with over a decade of mastery. We translate the ephemeral into eternal art, capturing the soulful elegance of your milestones.",
-      "primaryCTA": "Request a Consult",
+      "primaryCTA": "Request a Wedding Consultation",
       "secondaryCTA": "Explore the Gallery",
       "trust": {
         "experience": "10+ Years of Mastery",
@@ -57,10 +57,10 @@
       "commercialWork": "Commercial Work"
     },
     "inquiry": {
-      "title": "Reserve Your Date",
-      "subtitle": "Limited Availability for 2024/2025",
-      "description": "Every story is unique. Let's discuss how we can beautifully preserve yours.",
-      "cta": "Start a Conversation"
+      "title": "Summer Wedding Bookings",
+      "subtitle": "Peak 2025/2026 Dates Filling Fast",
+      "description": "Secure your date for an unforgettable cinematic experience. Let's discuss your vision for the perfect summer celebration.",
+      "cta": "Check Availability"
     },
     "miniForm": {
       "title": "Quick Inquiry",
@@ -69,6 +69,17 @@
       "message": "Project Vision",
       "send": "Send",
       "success": "Talk soon."
+    },
+    "servicesStrip": {
+      "ceremony": "Ceremony",
+      "portraits": "Portraits",
+      "fullDay": "Full-Day Coverage"
+    },
+    "pricingTeaser": {
+      "title": "Artistry & Investment",
+      "startingFrom": "Investment starting from",
+      "viewAll": "View all packages",
+      "inquire": "Inquire for Availability"
     }
   },
   "Pricing": {

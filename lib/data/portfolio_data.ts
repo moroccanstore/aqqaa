@@ -103,4 +103,29 @@ const createCuratedList = () => {
   return finalItems.slice(0, 100); 
 };
 
+// Construct a list of 6-8 strongest wedding stories for the homepage
+const createHomepageFeaturedList = () => {
+  const featuredWeddings = weddings.filter(w => w.featured);
+  const items: PortfolioItem[] = [];
+  
+  featuredWeddings.forEach((w, index) => {
+    // Take exactly one strong highlight image per featured wedding for the homepage grid
+    const img = w.images[0];
+    items.push({
+      id: `home-featured-${index}`,
+      url: img.url,
+      width: img.width,
+      height: img.height,
+      alt: img.alt || w.title,
+      category: "weddings" as const,
+      title: w.title,
+      label: "Featured Story",
+      href: `/weddings/${w.slug}`
+    });
+  });
+  
+  return items.slice(0, 8);
+};
+
 export const curatedPortfolioItems: PortfolioItem[] = createCuratedList();
+export const homepageFeaturedItems: PortfolioItem[] = createHomepageFeaturedList();

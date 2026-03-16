@@ -5,6 +5,8 @@ import { useTranslations } from "next-intl";
 import { ParticleHero } from "@/components/ParticleHero";
 import { RevealOnScroll, ParallaxSection } from "@/components/AnimationWrappers";
 import { PortfolioGallery } from "@/components/PortfolioGallery";
+import { WeddingServicesStrip } from "@/components/WeddingServicesStrip";
+import { PricingTeaser } from "@/components/PricingTeaser";
 import { TrustFactors } from "@/components/TrustFactors";
 import { BookingInquiry } from "@/components/BookingInquiry";
 import MiniInquiryForm from "@/components/MiniInquiryForm";
@@ -27,15 +29,21 @@ export default function HomePage() {
         secondaryCTA={{ label: t("hero.secondaryCTA"), href: "#portfolio" }}
       />
 
-      {/* 2. Portfolio Gallery Section */}
-      <PortfolioGallery />
+      {/* 2. Wedding Services Strip */}
+      <WeddingServicesStrip />
+
+      {/* 3. Portfolio Gallery Section (Featured) */}
+      <PortfolioGallery isHomepage={true} />
       
-      {/* 3. Trust Factors Section (Partners) */}
+      {/* 4. Pricing Teaser Section */}
+      <PricingTeaser />
+
+      {/* 5. Trust Factors Section (Partners) */}
       <div className="bg-black py-12">
         <TrustFactors />
       </div>
 
-      {/* 4. About Teaser Section */}
+      {/* 6. About Teaser Section */}
       <section className="py-32 bg-black overflow-hidden border-t border-white/5">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
            <div className="flex-1">
@@ -67,7 +75,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. Testimonials Section */}
+      {/* 7. Testimonials Section */}
       <section className="py-48 bg-zinc-950 border-y border-white/5">
         <div className="container mx-auto px-6">
            <RevealOnScroll className="text-center mb-20">
@@ -95,10 +103,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Booking Inquiry Section (CRO Component) */}
+      {/* 8. Summer Booking Inquiry Section */}
       <BookingInquiry />
 
-      {/* 7. Mini Inquiry Form (High-intent Lead Capture) */}
+      {/* 9. Mini Inquiry Form */}
       <MiniInquiryForm />
     </div>
   );

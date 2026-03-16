@@ -1,14 +1,19 @@
-"use client";
-
 import React, { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
+import { ArrowRight } from "lucide-react";
+import { Link } from "@/navigation";
 import { PortfolioCard } from "./PortfolioCard";
 import { RevealOnScroll } from "./AnimationWrappers";
-import { curatedPortfolioItems } from "@/lib/data/portfolio_data";
+import { curatedPortfolioItems, homepageFeaturedItems } from "@/lib/data/portfolio_data";
+import { cn } from "@/lib/utils";
 
 type Category = "all" | "weddings" | "portraits" | "events" | "commercial";
 
-export const PortfolioGallery: React.FC = () => {
+interface PortfolioGalleryProps {
+  isHomepage?: boolean;
+}
+
+export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage = false }) => {
   const t = useTranslations("HomePage");
   const [activeCategory, setActiveCategory] = useState<Category>("weddings");
 
@@ -21,9 +26,10 @@ export const PortfolioGallery: React.FC = () => {
   ];
 
   const filteredItems = useMemo(() => {
+    if (isHomepage) return homepageFeaturedItems;
     if (activeCategory === "all") return curatedPortfolioItems;
     return curatedPortfolioItems.filter((item) => item.category === activeCategory);
-  }, [activeCategory]);
+  }, [activeCategory, isHomepage]);
 
   return (
     <section className="py-24 bg-black overflow-hidden" id="portfolio">
@@ -38,22 +44,24 @@ export const PortfolioGallery: React.FC = () => {
           </h2>
 
           {/* Filters */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-8">
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={`relative py-2 text-[11px] tracking-[0.3em] uppercase transition-colors duration-300 ${
-                  activeCategory === cat.id ? "text-gold" : "text-zinc-500 hover:text-zinc-300"
-                }`}
-              >
-                {cat.label}
-                {activeCategory === cat.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gold/50" />
-                )}
-              </button>
-            ))}
-          </div>
+          {!isHomepage && (
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-8">
+              {categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`relative py-2 text-[11px] tracking-[0.3em] uppercase transition-colors duration-300 ${
+                    activeCategory === cat.id ? "text-gold" : "text-zinc-500 hover:text-zinc-300"
+                  }`}
+                >
+                  {cat.label}
+                  {activeCategory === cat.id && (
+                    <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gold/50" />
+                  )}
+                </button>
+              ))}
+            </div>
+          )}
         </RevealOnScroll>
 
         {/* Gallery Grid - Masonry style */}
@@ -62,6 +70,20 @@ export const PortfolioGallery: React.FC = () => {
             <PortfolioCard key={item.id} item={item} />
           ))}
         </div>
+
+        {isHomepage && (
+          <RevealOnScroll className="mt-20 text-center">
+            <Link 
+              href="/weddings" 
+              className="inline-flex items-center gap-4 px-12 py-6 border border-white/10 hover:border-gold/50 text-white hover:text-gold transition-all duration-700 group"
+            >
+              <span className="text-[10px] tracking-[0.4em] uppercase font-light">
+                {t("allWeddings")}
+              </span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-500" />
+            </Link>
+          </RevealOnScroll>
+        )}
       </div>
     </section>
   );
