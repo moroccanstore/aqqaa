@@ -31,7 +31,7 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
   showScrollIndicator = true
 }) => {
   return (
-    <div className={`relative ${height === "full" ? "h-screen" : "h-[60vh]"} w-full bg-black overflow-hidden flex flex-col justify-center items-center`}>
+    <div className={`relative ${height === "full" ? "min-h-screen" : "h-[60vh]"} w-full bg-black overflow-hidden flex flex-col justify-center items-center pt-28 md:pt-36`}>
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0">
