@@ -56,7 +56,7 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
 
       {/* Hero Content */}
       <div className="relative z-20 text-center max-w-lg md:max-w-3xl px-6 flex flex-col items-center">
-        <RevealOnScroll className="mb-4 hidden md:block" style={{ display: 'none !important' } as any}>
+        <RevealOnScroll className="mb-4">
           <div className="hidden md:block">
             <span className="text-gold text-[10px] md:text-xs tracking-[0.5em] uppercase font-light">
               {subtitle || "Said Aqqa"}

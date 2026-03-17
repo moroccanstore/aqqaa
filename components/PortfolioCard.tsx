@@ -50,11 +50,13 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ item }) => {
         </h3>
         
         {/* View Details Button with Arrow - Elegant and always visible */}
-        <div className="flex items-center justify-center md:justify-start gap-3 text-white/90 transition-colors duration-300">
-          <span className="text-[10px] tracking-[0.3em] uppercase font-light border-b border-white/20 pb-1 transition-all">
-            {t("viewDetail")}
-          </span>
-          <ArrowRight size={14} className="text-gold" />
+        <div className="flex items-center justify-center md:justify-start gap-3 text-white/90 transition-colors duration-300 w-full md:w-auto">
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] tracking-[0.3em] uppercase font-light border-b border-white/20 pb-1 transition-all">
+              {t("viewDetail")}
+            </span>
+            <ArrowRight size={14} className="text-gold" />
+          </div>
         </div>
       </div>
       
