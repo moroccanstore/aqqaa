@@ -44,8 +44,8 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ item }) => {
       </div>
 
       {/* Bottom Content Area - Always visible title with serif font */}
-      <div className="absolute inset-x-0 bottom-0 p-8 z-20 bg-gradient-to-t from-black via-black/80 to-transparent">
-        <h3 className="text-2xl md:text-3xl text-white font-serif tracking-tight leading-tight mb-4 drop-shadow-md text-center md:text-left">
+      <div className="absolute inset-x-0 bottom-0 p-8 z-20 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col items-center md:items-start text-center md:text-left">
+        <h3 className="text-2xl md:text-3xl text-white font-serif tracking-tight leading-tight mb-4 drop-shadow-md">
           {item.title}
         </h3>
         

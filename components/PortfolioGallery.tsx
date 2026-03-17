@@ -46,22 +46,25 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage =
           </h2>
 
           {/* Filters - Scrollable on mobile */}
-          <div className="flex items-center lg:justify-start gap-8 overflow-x-auto no-scrollbar pb-4 -mx-4 px-4 snap-x">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`relative py-2 text-[11px] tracking-[0.3em] uppercase transition-colors duration-300 whitespace-nowrap snap-start ${
-                    activeCategory === cat.id ? "text-gold" : "text-zinc-500 hover:text-zinc-300"
-                  }`}
-                >
-                  {cat.label}
-                  {activeCategory === cat.id && (
-                    <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gold/50" />
-                  )}
-                </button>
-              ))}
-            </div>
+          <div className="w-full overflow-hidden mb-12">
+            <div className="flex items-center lg:justify-start gap-8 overflow-x-auto no-scrollbar pb-4 snap-x -mx-4 px-4 flex-nowrap">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id)}
+                    className={cn(
+                      "relative py-2 text-[11px] tracking-[0.3em] uppercase transition-colors duration-300 whitespace-nowrap snap-start shrink-0",
+                      activeCategory === cat.id ? "text-gold" : "text-zinc-500 hover:text-zinc-300"
+                    )}
+                  >
+                    {cat.label}
+                    {activeCategory === cat.id && (
+                      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gold/50" />
+                    )}
+                  </button>
+                ))}
+              </div>
+          </div>
         </RevealOnScroll>
 
         {/* Gallery Grid - Masonry style */}
