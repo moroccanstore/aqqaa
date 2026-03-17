@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import { Instagram, Youtube, Facebook, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 
 export const Footer = () => {
   const t = useTranslations("Footer");
@@ -15,7 +16,13 @@ export const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-6 mb-8 group">
               <div className="w-16 h-16 rounded-full overflow-hidden border border-gold/20 p-1 bg-zinc-900 group-hover:border-gold/50 transition-colors duration-500">
-                <img src="/logo.png" alt="Said Aqqa Logo" className="w-full h-full object-cover rounded-full" />
+                <Image 
+                  src="/logo.png" 
+                  alt="Said Aqqa Logo" 
+                  width={64} 
+                  height={64} 
+                  className="w-full h-full object-cover rounded-full" 
+                />
               </div>
               <h2 className="text-3xl font-serif tracking-widest uppercase">
                 Said <span className="text-gold">Aqqa</span>

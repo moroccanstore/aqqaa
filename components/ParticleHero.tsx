@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { RevealOnScroll } from "./AnimationWrappers";
 import { useTranslations } from "next-intl";
@@ -35,10 +36,14 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0">
-          <img
+          <Image
             src={backgroundImage}
             alt="Hero Background"
-            className="w-full h-full object-cover"
+            fill
+            priority
+            quality={90}
+            className="object-cover"
+            sizes="100vw"
           />
         </div>
         {/* Cinematic Gradient Overlay */}
