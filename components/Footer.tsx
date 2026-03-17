@@ -13,9 +13,14 @@ export const Footer = () => {
           
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <h2 className="text-3xl font-serif tracking-widest uppercase mb-8">
-              Said <span className="text-gold">Aqqa</span>
-            </h2>
+            <div className="flex items-center gap-6 mb-8 group">
+              <div className="w-16 h-16 rounded-full overflow-hidden border border-gold/20 p-1 bg-zinc-900 group-hover:border-gold/50 transition-colors duration-500">
+                <img src="/logo.png" alt="Said Aqqa Logo" className="w-full h-full object-cover rounded-full" />
+              </div>
+              <h2 className="text-3xl font-serif tracking-widest uppercase">
+                Said <span className="text-gold">Aqqa</span>
+              </h2>
+            </div>
             <p className="text-zinc-400 font-light max-w-sm leading-relaxed mb-8">
               {t("description")}
             </p>

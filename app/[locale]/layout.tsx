@@ -10,6 +10,10 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 export const metadata: Metadata = {
   title: "Said Aqqa Photography | Luxury Wedding Photographer Helsinki & Worldwide",
   description: "Exquisite visual narratives by Said Aqqa. Award-winning luxury wedding, portrait, and commercial photography in Helsinki, Espoo, and available for destinations worldwide.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/logo.png",
+  },
 };
 
 const jsonLd = {
