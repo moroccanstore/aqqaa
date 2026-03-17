@@ -31,7 +31,7 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ item }) => {
         alt={item.alt}
         width={item.width}
         height={item.height}
-        quality={85}
+        quality={90}
         className="w-full h-auto transition-transform duration-1000 group-hover:scale-110"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
       />

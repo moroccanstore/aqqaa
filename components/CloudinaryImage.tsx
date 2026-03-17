@@ -16,7 +16,7 @@ export const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
   src,
   width,
   height,
-  quality = "auto",
+  quality = 90,
   format = "auto",
   className,
   alt = "Cinematic Photography",
@@ -50,6 +50,7 @@ export const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
         width={width}
         height={height}
         fill={fill}
+        quality={typeof quality === 'number' ? quality : 90}
         className={cn(
           "object-cover transition-all duration-700 hover:scale-105",
           fill ? "absolute inset-0" : ""
