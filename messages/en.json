@@ -39,34 +39,34 @@
     "filterCommercial": "Commercial",
     "hero": {
       "title": "Heritage Wedding & Portrait Photography",
-      "subtitle": "Cinematic Storytelling for Modern Romantics Across Finland",
-      "description": "Exquisite visual narratives crafted with over a decade of mastery. We translate the ephemeral into eternal art, capturing the soulful elegance of your milestones.",
-      "primaryCTA": "Check Availability",
-      "secondaryCTA": "Get Pricing",
-      "pricingAnchor": "Packages from €399 • Full-Day from €1,200",
+      "subtitle": "Editorial Storytelling for the Discerning",
+      "description": "Translating the ephemeral into enduring art. We document your most intimate celebrations with editorial grace and cinematic depth.",
+      "primaryCTA": "Inquire for Availability",
+      "secondaryCTA": "View Collections",
+      "pricingAnchor": "Bespoke Commissions from €1,200",
       "contactStrip": {
         "phone": "+358 40 7444838",
         "whatsapp": "WhatsApp",
-        "location": "Helsinki • Espoo • Worldwide"
+        "location": "Helsinki • Worldwide"
       },
       "trust": {
-        "experience": "100+ Weddings Captured",
-        "services": "2h Response Time",
+        "experience": "Exclusive Commissions",
+        "services": "Bespoke Curation",
         "location": "Available Worldwide"
       }
     },
     "labels": {
-      "viewDetail": "View Detail",
+      "viewDetail": "Explore",
       "weddingStory": "Wedding Story",
-      "portraitSession": "Portrait Session",
+      "portraitSession": "Editorial Portrait",
       "eventCoverage": "Event Coverage",
       "commercialWork": "Commercial Work"
     },
     "inquiry": {
-      "title": "Summer Wedding Bookings",
-      "subtitle": "Peak 2025/2026 Dates Filling Fast",
-      "description": "Secure your date for an unforgettable cinematic experience. Let's discuss your vision for the perfect summer celebration.",
-      "cta": "Check Availability"
+      "title": "Commissions",
+      "subtitle": "Accepting a limited number of commissions for 2025/2026.",
+      "description": "To ensure artistic excellence and a deeply personal experience, I document only a select number of celebrations each year.",
+      "cta": "Inquire"
     },
     "miniForm": {
       "title": "Quick Inquiry",
@@ -74,7 +74,8 @@
       "email": "Email",
       "message": "Project Vision",
       "send": "Send",
-      "success": "Talk soon."
+      "success": "Talk soon.",
+      "error": "Something went wrong. Please retry."
     },
     "servicesStrip": {
       "ceremony": "Ceremony",
@@ -98,6 +99,8 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
+      "information": "Information",
+      "description": "Everything you need to know about the cinematic experience and investment process for your wedding.",
       "q1": "Are you available for my date?",
       "a1": "I recommend booking 6-12 months in advance, but please inquire for last-minute availability.",
       "q2": "Do you travel outside of Helsinki?",
@@ -215,6 +218,7 @@
     "social": "Social Media",
     "latest": "Latest Captured",
     "recognition": "Global Recognition",
+    "errorMessage": "Oops! Something went wrong. Please try again or email me directly.",
     "labels": {
       "general": "General Inquiries",
       "call": "Call / WhatsApp",

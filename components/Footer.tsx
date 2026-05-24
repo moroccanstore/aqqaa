@@ -32,9 +32,9 @@ export const Footer = () => {
               {t("description")}
             </p>
             <div className="flex space-x-6 text-zinc-400">
-              <a href="https://instagram.com/saidaqqaweddings" aria-label="Instagram" className="hover:text-gold transition-colors"><Instagram size={20} /></a>
-              <a href="https://youtube.com/@saidaqqaphotography" aria-label="YouTube" className="hover:text-gold transition-colors"><Youtube size={20} /></a>
-              <a href="https://facebook.com/aqqasaid" aria-label="Facebook" className="hover:text-gold transition-colors"><Facebook size={20} /></a>
+              <a href="https://instagram.com/saidaqqaweddings" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-gold transition-colors"><Instagram size={20} /></a>
+              <a href="https://youtube.com/@saidaqqaphotography" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-gold transition-colors"><Youtube size={20} /></a>
+              <a href="https://facebook.com/aqqasaid" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-gold transition-colors"><Facebook size={20} /></a>
             </div>
           </div>
 
@@ -71,7 +71,7 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-12 border-t border-white/5 flex flex-col md:row justify-between items-center text-[10px] tracking-[0.2em] text-zinc-600 uppercase">
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] text-zinc-600 uppercase">
           <p>© {new Date().getFullYear()} {t("rights")}</p>
           <div className="flex space-x-8 mt-6 md:mt-0">
             <Link href="/privacy" className="hover:text-white transition-colors">{t("privacyPolicy")}</Link>

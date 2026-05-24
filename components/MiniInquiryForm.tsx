@@ -62,7 +62,9 @@ export default function MiniInquiryForm() {
               ) : (
                 <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-1">
+                    <label htmlFor="mini-name" className="sr-only">{t('name')}</label>
                     <input 
+                      id="mini-name"
                       name="name" 
                       required 
                       type="text" 
@@ -71,7 +73,9 @@ export default function MiniInquiryForm() {
                     />
                   </div>
                   <div className="space-y-1">
+                    <label htmlFor="mini-email" className="sr-only">{t('email')}</label>
                     <input 
+                      id="mini-email"
                       name="email" 
                       required 
                       type="email" 
@@ -80,24 +84,27 @@ export default function MiniInquiryForm() {
                     />
                   </div>
                   <div className="md:col-span-2 space-y-1">
-                    <input 
+                    <label htmlFor="mini-message" className="sr-only">{t('message')}</label>
+                    <textarea 
+                      id="mini-message"
                       name="message" 
                       required 
+                      rows={3}
                       placeholder={t('message')}
-                      className="w-full bg-zinc-900/30 border-b border-white/10 p-4 focus:border-gold outline-none transition-colors text-sm font-light placeholder:text-zinc-600" 
+                      className="w-full bg-zinc-900/30 border-b border-white/10 p-4 focus:border-gold outline-none transition-colors text-sm font-light placeholder:text-zinc-600 resize-none" 
                     />
                   </div>
                   
                   <div className="md:col-span-2 pt-4">
                     <button 
+                      type="submit"
                       disabled={status === "SUBMITTING"}
-                      type="submit" 
-                      className="btn-liquid w-full md:w-auto px-12 bg-white text-black py-4 text-[10px] tracking-[0.4em] uppercase disabled:opacity-50"
+                      className="plausible-event-name=Mini+Form+Submit btn-liquid w-full md:w-auto px-12 bg-white text-black py-4 text-[10px] tracking-[0.4em] uppercase disabled:opacity-50"
                     >
                       {status === "SUBMITTING" ? "..." : t('send')}
                     </button>
                     {status === "ERROR" && (
-                      <p className="text-red-500 text-[10px] mt-4 uppercase tracking-widest italic">Error scaling communication. Please retry.</p>
+                      <p className="text-red-500 text-[10px] mt-4 uppercase tracking-widest italic">{t('error')}</p>
                     )}
                   </div>
                 </form>

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://saiid-eta.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://saidaqqa.com"),
   title: "Said Aqqa Photography | Luxury Wedding Photographer Helsinki & Worldwide",
   description: "Exquisite visual narratives by Said Aqqa. Award-winning luxury wedding, portrait, and commercial photography based in Helsinki and available worldwide.",
   alternates: {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Said Aqqa Photography | Luxury Wedding Photographer Helsinki & Worldwide",
     description: "Exquisite visual narratives by Said Aqqa. Award-winning luxury wedding, portrait, and commercial photography based in Helsinki and available worldwide.",
-    url: "https://saiid-eta.vercel.app",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://saidaqqa.com",
     siteName: "Said Aqqa Photography",
     images: [
       {

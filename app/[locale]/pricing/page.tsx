@@ -9,7 +9,7 @@ import { getCloudinaryUrl } from "@/lib/cloudinary";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { Link } from "@/navigation";
 
-import { getTranslations } from "next-intl/server";
+import { strapiData } from "@/lib/strapi";
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Pricing.meta' });
@@ -19,16 +19,17 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-
-export default function PricingPage() {
-  const t = useTranslations('Pricing');
+export default async function PricingPage() {
+  const t = await getTranslations('Pricing');
+  const strapiPricingRes = await strapiData.getPricing().catch(() => ({ data: null }));
+  const cmsPricing = strapiPricingRes?.data || {};
 
   return (
     <div className="bg-black text-white pb-32">
       <ParticleHero 
-        title={t('heroTitle')}
-        subtitle={t('heroSubtitle')}
-        backgroundImage={getCloudinaryUrl(pricingData.heroImage, { width: 1920, quality: "auto" })}
+        title={cmsPricing.title || t('heroTitle')}
+        subtitle={cmsPricing.subtitle || t('heroSubtitle')}
+        backgroundImage={getCloudinaryUrl(cmsPricing.heroImage?.url || pricingData.heroImage, { width: 1920, quality: "auto" })}
         height="half"
         showScrollIndicator={false}
       />
@@ -37,7 +38,7 @@ export default function PricingPage() {
         <RevealOnScroll className="max-w-4xl mx-auto text-center mb-24">
            <h2 className="text-5xl md:text-7xl font-serif leading-tight">{t('sectionTitle')}</h2>
            <p className="text-zinc-500 font-light mt-12 text-lg italic">
-             "{t('sectionDescription')}"
+             "{cmsPricing.description || t('sectionDescription')}"
            </p>
         </RevealOnScroll>
 

@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://saiid-eta.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://saidaqqa.com"),
   title: "Said Aqqa Photography | Luxury Wedding Photographer Helsinki & Worldwide",
   description: "Exquisite visual narratives by Said Aqqa. Award-winning luxury wedding, portrait, and commercial photography based in Helsinki and available worldwide.",
   alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Said Aqqa Photography | Luxury Wedding Photographer Helsinki & Worldwide",
     description: "Exquisite visual narratives by Said Aqqa. Award-winning luxury wedding, portrait, and commercial photography based in Helsinki and available worldwide.",
-    url: "https://saiid-eta.vercel.app",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://saidaqqa.com",
     siteName: "Said Aqqa Photography",
     images: [
       {
@@ -89,6 +89,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/navigation';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Script from "next/script";
 
 export default async function RootLayout({
   children,
@@ -110,6 +111,14 @@ export default async function RootLayout({
            type="application/ld+json"
            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
          />
+         <Script 
+           defer 
+           data-domain="saidaqqa.com" 
+           src="https://plausible.io/js/script.tagged-events.js" 
+         />
+         <Script id="plausible-setup">
+           {`window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }`}
+         </Script>
        </head>
        <body className="bg-black text-white antialiased">
         <NextIntlClientProvider messages={messages}>

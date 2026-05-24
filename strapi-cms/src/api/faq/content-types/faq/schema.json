@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "faq",
+  "info": {
+    "singularName": "faq",
+    "pluralName": "faqs",
+    "displayName": "FAQ Page",
+    "description": "Frequently Asked Questions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

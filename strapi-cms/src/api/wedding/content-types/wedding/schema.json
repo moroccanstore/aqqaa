@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "weddings",
+  "info": {
+    "singularName": "wedding",
+    "pluralName": "weddings",
+    "displayName": "Wedding"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "couple": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "story": {
+      "type": "text"
+    },
+    "images": {
+      "type": "json"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}

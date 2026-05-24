@@ -20,8 +20,8 @@ export const TrustFactors = () => {
     <section className="py-20 bg-black border-y border-white/5 overflow-hidden">
       <div className="container mx-auto px-6 mb-12">
         <RevealOnScroll className="text-center">
-          <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">Credibility</h2>
-          <h3 className="text-2xl md:text-3xl font-serif text-white/90">Trusted By Global Brands & Embassies</h3>
+          <h2 className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">Recognized Excellence</h2>
+          <h3 className="text-2xl md:text-3xl font-serif text-white/90">Featured Publications & Partnerships</h3>
         </RevealOnScroll>
       </div>
 

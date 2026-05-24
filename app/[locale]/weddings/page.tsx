@@ -2,7 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { RevealOnScroll } from "@/components/AnimationWrappers";
-import { weddings, Wedding } from "@/lib/data/weddings";
+import { weddings } from "@/lib/data/weddings";
+import { strapiData } from "@/lib/strapi";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 
 import { ParticleHero } from "@/components/ParticleHero";
@@ -12,7 +13,10 @@ export const metadata = {
   description: "Explore a curated collection of luxury wedding stories captured in Helsinki, Finland, and iconic destinations worldwide.",
 };
 
-export default function WeddingsPage() {
+export default async function WeddingsPage() {
+  const { data: strapiWeddings = [] } = await strapiData.getWeddings().catch(() => ({ data: [] }));
+  const activeWeddings = strapiWeddings.length > 0 ? strapiWeddings : weddings;
+
   return (
     <div className="bg-black pb-32">
       <ParticleHero 
@@ -30,15 +34,17 @@ export default function WeddingsPage() {
         </RevealOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-          {weddings.map((wedding: Wedding, index: number) => (
+          {activeWeddings.map((wedding: any, index: number) => (
             <RevealOnScroll key={wedding.slug} delay={index % 2 * 0.1}>
               <Link href={`/weddings/${wedding.slug}`} className="group block">
                 <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden mb-8 bg-zinc-900">
                   <Image
-                    src={getCloudinaryUrl(wedding.images[0].url, { width: 1000, quality: "auto" })}
+                    src={getCloudinaryUrl(wedding.images?.[0]?.url || "", { width: 1000, quality: "auto" })}
                     alt={wedding.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                     priority={index < 2}
                   />

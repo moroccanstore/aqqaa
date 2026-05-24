@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Suspense } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -31,6 +33,7 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
   height = "full",
   showScrollIndicator = true
 }) => {
+  const tHero = useTranslations("HomePage.hero");
   return (
     <div className={`relative ${height === "full" ? "min-h-screen" : "h-[60vh]"} w-full bg-black overflow-hidden flex flex-col justify-center items-center pt-28 md:pt-36`}>
       {/* Background Image with Overlay */}
@@ -42,6 +45,8 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
             fill
             priority
             quality={90}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
             className="object-cover"
             sizes="100vw"
           />
@@ -93,7 +98,7 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
             <div className="mb-12 flex flex-col items-center">
               <span className="text-[10px] tracking-[0.3em] uppercase text-white/40 mb-2 font-light">Starting Investment</span>
               <p className="text-sm md:text-base font-serif text-gold tracking-wide italic whitespace-nowrap">
-                {useTranslations("HomePage.hero")("pricingAnchor")}
+                  {tHero("pricingAnchor")}
               </p>
             </div>
 
@@ -101,7 +106,7 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
               {primaryCTA && (
                 <Link 
                   href={primaryCTA.href}
-                  className="btn-liquid w-full sm:w-auto px-10 py-4 bg-white text-black text-[10px] tracking-[0.3em] uppercase font-medium hover:bg-gold hover:text-white transition-all duration-500"
+                  className="plausible-event-name=Hero+Primary+Click btn-liquid w-full sm:w-auto px-10 py-4 bg-white text-black text-[10px] tracking-[0.3em] uppercase font-medium hover:bg-gold hover:text-white transition-all duration-500"
                 >
                   {primaryCTA.label}
                 </Link>
@@ -109,7 +114,7 @@ export const ParticleHero: React.FC<ParticleHeroProps> = ({
               {secondaryCTA && (
                 <Link 
                   href={secondaryCTA.href}
-                  className="w-full sm:w-auto px-10 py-4 border border-white/20 text-white text-[10px] tracking-[0.3em] uppercase font-light hover:border-gold hover:text-gold transition-all duration-500 bg-white/5 backdrop-blur-sm"
+                  className="plausible-event-name=Hero+Secondary+Click w-full sm:w-auto px-10 py-4 border border-white/20 text-white text-[10px] tracking-[0.3em] uppercase font-light hover:border-gold hover:text-gold transition-all duration-500 bg-white/5 backdrop-blur-sm"
                 >
                   {secondaryCTA.label}
                 </Link>

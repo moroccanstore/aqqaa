@@ -28,8 +28,12 @@ export async function fetchStrapi(path: string, urlParamsObject = {}) {
 }
 
 export const strapiData = {
-  getProjects: () => fetchStrapi('projects?populate=*'),
   getTestimonials: () => fetchStrapi('testimonials?populate=*'),
-  getAbout: () => fetchStrapi('about?populate=*'),
-  getPricing: () => fetchStrapi('pricing-packages?populate=*'),
+  getWeddings: () => fetchStrapi('weddings?populate=*'),
+  getPortfolio: () => fetchStrapi('portfolios?populate=*'),
+  getJournal: () => fetchStrapi('journals?populate=*'),
+  getHomepage: () => fetchStrapi('homepage?populate=*'),
+  getPricing: () => fetchStrapi('pricing?populate=*'),
+  getFaq: () => fetchStrapi('faq?populate=*'),
+  getContact: () => fetchStrapi('contact?populate=*'),
 };

@@ -6,7 +6,12 @@ import { RevealOnScroll } from "./AnimationWrappers";
 import { Plus, Minus } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export const FAQ = () => {
+interface FAQProps {
+  title?: string;
+  description?: string;
+}
+
+export const FAQ: React.FC<FAQProps> = ({ title, description }) => {
   const t = useTranslations("HomePage.faq");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -23,12 +28,12 @@ export const FAQ = () => {
       <div className="container mx-auto px-6 flex flex-col lg:flex-row gap-20">
         <div className="lg:w-1/3">
           <RevealOnScroll>
-            <span className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4 block">Information</span>
+            <span className="text-gold text-[10px] tracking-[0.5em] uppercase mb-4 block">{t("information")}</span>
             <h2 className="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">
-              {t("title")}
+              {title || t("title")}
             </h2>
             <p className="text-zinc-500 font-light leading-relaxed">
-              Everything you need to know about the cinematic experience and investment process for your wedding.
+              {description || t("description")}
             </p>
           </RevealOnScroll>
         </div>

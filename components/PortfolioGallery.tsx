@@ -13,9 +13,10 @@ type Category = "all" | "weddings" | "portraits" | "events" | "commercial";
 
 interface PortfolioGalleryProps {
   isHomepage?: boolean;
+  items?: any[];
 }
 
-export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage = false }) => {
+export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage = false, items }) => {
   const t = useTranslations("HomePage");
   const [activeCategory, setActiveCategory] = useState<Category>("weddings");
 
@@ -28,10 +29,11 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage =
   ];
 
   const filteredItems = useMemo(() => {
-    const baseItems = activeCategory === "all" ? curatedPortfolioItems : curatedPortfolioItems.filter((item) => item.category === activeCategory);
-    if (isHomepage) return baseItems.slice(0, 24); // Show a good amount for the homepage
+    const dataToUse = items && items.length > 0 ? items : curatedPortfolioItems;
+    const baseItems = activeCategory === "all" ? dataToUse : dataToUse.filter((item: any) => item.category === activeCategory);
+    if (isHomepage) return baseItems.slice(0, 12); // Curated to top 12 for premium impact
     return baseItems;
-  }, [activeCategory, isHomepage]);
+  }, [activeCategory, isHomepage, items]);
 
   return (
     <section className="py-24 bg-black overflow-hidden" id="portfolio" data-restoration-id="RESTORATION_VERIFIED_MARKER">

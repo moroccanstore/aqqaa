@@ -1,6 +1,7 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import { weddings, Wedding } from "@/lib/data/weddings";
+import { weddings } from "@/lib/data/weddings";
+import { strapiData } from "@/lib/strapi";
 import { StoryGallery } from "@/components/StoryGallery";
 import { RevealOnScroll } from "@/components/AnimationWrappers";
 import { Link, routing } from "@/navigation";
@@ -14,8 +15,10 @@ interface WeddingPageProps {
 
 export async function generateStaticParams() {
   const locales = routing.locales;
+  // Currently sticking to static data for build-time params, or you could fetch from Strapi.
+  // Using static is safer for Next.js standalone build without CMS running.
   return locales.flatMap(locale => 
-    weddings.map((wedding: Wedding) => ({
+    weddings.map((wedding: any) => ({
       locale,
       slug: wedding.slug,
     }))
@@ -23,17 +26,21 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: WeddingPageProps) {
-  const wedding = weddings.find((w: Wedding) => w.slug === params.slug);
+  const { data: strapiWeddings = [] } = await strapiData.getWeddings().catch(() => ({ data: [] }));
+  const activeWeddings = strapiWeddings.length > 0 ? strapiWeddings : weddings;
+  const wedding = activeWeddings.find((w: any) => w.slug === params.slug);
   if (!wedding) return {};
 
   return {
     title: `${wedding.couple} | ${wedding.location} Wedding Photography`,
-    description: `Experience the beautiful wedding story of ${wedding.couple} in ${wedding.location}, captured by Said Aqqa. ${wedding.story.substring(0, 150)}...`,
+    description: `Experience the beautiful wedding story of ${wedding.couple} in ${wedding.location}, captured by Said Aqqa. ${wedding.story?.substring(0, 150)}...`,
   };
 }
 
-export default function WeddingDetailPage({ params }: WeddingPageProps) {
-  const wedding = weddings.find((w: Wedding) => w.slug === params.slug);
+export default async function WeddingDetailPage({ params }: WeddingPageProps) {
+  const { data: strapiWeddings = [] } = await strapiData.getWeddings().catch(() => ({ data: [] }));
+  const activeWeddings = strapiWeddings.length > 0 ? strapiWeddings : weddings;
+  const wedding = activeWeddings.find((w: any) => w.slug === params.slug);
 
   if (!wedding) {
     notFound();
@@ -61,8 +68,8 @@ export default function WeddingDetailPage({ params }: WeddingPageProps) {
          </RevealOnScroll>
       </section>
 
-      {/* Cinematic Story Gallery */}
-      <StoryGallery images={wedding.images} />
+      {/* Cinematic Story Gallery - Curated to top 15 images for premium impact */}
+      <StoryGallery images={wedding.images.slice(0, 15)} />
 
       {/* Footer CTA specifically for Weddings */}
       <section className="py-40 bg-zinc-950 text-center px-6">

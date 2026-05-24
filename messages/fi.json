@@ -39,34 +39,34 @@
     "filterCommercial": "Kaupallinen",
     "hero": {
       "title": "Arvokas Hää- ja Muotokuvaus",
-      "subtitle": "Elokuvallista Tarinankerrontaa Nykyajan Romantikoille",
-      "description": "Hienostuneita visuaalisia kertomuksia yli kymmenen vuoden mestaruudella. Muutamme katoavat hetket ikuiseksi taiteeksi, vangiten merkkipaalujenne sielukkaan eleganssin.",
-      "primaryCTA": "Tarkista saatavuus",
-      "secondaryCTA": "Katso hinnasto",
-      "pricingAnchor": "Paketit alkaen 399€ • Koko päivä alkaen 1 200€",
+      "subtitle": "Kerronnallista tarinankerrontaa laatua arvostaville",
+      "description": "Muutamme katoavat hetket ikuiseksi taiteeksi. Dokumentoimme intiimimmät juhlanne elokuvallisella syvyydellä ja hienostuneisuudella.",
+      "primaryCTA": "Tiedustele saatavuutta",
+      "secondaryCTA": "Selaa portfolioita",
+      "pricingAnchor": "Erikoistilaukset alkaen 1 200€",
       "contactStrip": {
         "phone": "+358 40 7444838",
         "whatsapp": "WhatsApp",
-        "location": "Helsinki • Espoo • Maailmanlaajuisesti"
+        "location": "Helsinki • Maailmanlaajuisesti"
       },
       "trust": {
-        "experience": "100+ Kuvattua häätä",
-        "services": "2h Vastausaika",
+        "experience": "Eksklusiiviset tilaukset",
+        "services": "Räätälöity palvelu",
         "location": "Palvelemme Maailmanlaajuisesti"
       }
     },
     "labels": {
-      "viewDetail": "Katso Lisää",
+      "viewDetail": "Tutustu",
       "weddingStory": "Hääkuvaus",
       "portraitSession": "Muotokuvaus",
       "eventCoverage": "Tapahtumakuvaus",
       "commercialWork": "Kaupallinen Kuvaus"
     },
     "inquiry": {
-      "title": "Kesän häävaraukset",
-      "subtitle": "Suosituimmat 2025/2026 päivät täyttyvät pian",
-      "description": "Varmista päiväsi unohtumatonta elokuvallista elämystä varten. Keskustellaan visiostasi täydellistä kesäjuhlaa varten.",
-      "cta": "Tarkista saatavuus"
+      "title": "Kuvaukset",
+      "subtitle": "Vastaanotamme rajoitetun määrän tilauksia vuosille 2025/2026.",
+      "description": "Taataksemme taiteellisen erinomaisuuden ja syvästi henkilökohtaisen kokemuksen, dokumentoimme vain valikoidun määrän juhlia vuosittain.",
+      "cta": "Ota yhteyttä"
     },
     "miniForm": {
       "title": "Pikayhteydenotto",
@@ -74,7 +74,8 @@
       "email": "Sähköposti",
       "message": "Projektin visio",
       "send": "Lähetä",
-      "success": "Palataan pian."
+      "success": "Palataan pian.",
+      "error": "Jotain meni pieleen. Yritä uudelleen."
     },
     "servicesStrip": {
       "ceremony": "Vihkiminen",
@@ -98,6 +99,8 @@
     },
     "faq": {
       "title": "Usein kysytyt kysymykset",
+      "information": "Tietoa",
+      "description": "Kaikki mitä sinun tarvitsee tietää elokuvallisesta kokemuksesta ja hääkuvauksen investointiprosessista.",
       "q1": "Oletko vapaana päivänäni?",
       "a1": "Suosittelen varaamaan 6-12 kuukautta etukäteen, mutta kysy rohkeasti myös viime hetken aikoja.",
       "q2": "Matkustatko Helsingin ulkopuolelle?",
@@ -215,6 +218,7 @@
     "social": "Sosiaalinen Media",
     "latest": "Viimeisimmät Työt",
     "recognition": "Kansainvälinen Tunnustus",
+    "errorMessage": "Hups! Jokin meni pieleen. Yritä uudelleen tai lähetä minulle sähköpostia suoraan.",
     "labels": {
       "general": "Yleiset tiedustelut",
       "call": "Soita / WhatsApp",

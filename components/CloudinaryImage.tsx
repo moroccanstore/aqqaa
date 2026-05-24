@@ -51,6 +51,8 @@ export const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
         height={height}
         fill={fill}
         quality={typeof quality === 'number' ? quality : 90}
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
         className={cn(
           "object-cover transition-all duration-700 hover:scale-105",
           fill ? "absolute inset-0" : ""
