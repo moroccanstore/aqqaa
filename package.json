@@ -23,7 +23,6 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1",
     "three": "^0.162.0",
-    "@strapi/strapi": "5.39.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
