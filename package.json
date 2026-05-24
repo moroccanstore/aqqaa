@@ -23,19 +23,19 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1",
     "three": "^0.162.0",
-    "@strapi/strapi": "5.39.0"
-  },
-  "devDependencies": {
+    "@strapi/strapi": "5.39.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/three": "^0.162.0",
     "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "^14.2.35",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "^14.2.35"
   },
   "overrides": {
     "glob": "10.5.0"
