@@ -8,7 +8,7 @@ import { pricingData } from "@/lib/data/pricing";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { Link } from "@/navigation";
-
+import { getTranslations } from "next-intl/server";
 import { strapiData } from "@/lib/strapi";
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
