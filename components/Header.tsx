@@ -7,7 +7,7 @@ import { Menu, X, Instagram, Youtube, Facebook } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { TopContactStrip } from "./TopContactStrip";
 
-export const Header = () => {
+export const Header = ({ globalSettings }: { globalSettings?: any }) => {
   const t = useTranslations("Header");
   
   const navLinks = [
@@ -15,6 +15,7 @@ export const Header = () => {
     { name: t("weddings"), href: "/weddings" },
     { name: t("videos"), href: "/videos" },
     { name: t("portfolio"), href: "/portfolio" },
+    { name: t("journal"), href: "/journal" },
     { name: t("about"), href: "/about" },
     { name: t("pricing"), href: "/pricing" },
     { name: t("contact"), href: "/contact" },
@@ -122,9 +123,9 @@ export const Header = () => {
         
         {/* Mobile Socials */}
         <div className="absolute bottom-10 flex space-x-6 text-gold">
-           <a href="https://instagram.com/saidaqqaweddings" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
-           <a href="https://youtube.com/@saidaqqaphotography" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><Youtube size={20} /></a>
-           <a href="https://facebook.com/aqqasaid" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={20} /></a>
+           {globalSettings?.instagramUrl && <a href={globalSettings.instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} /></a>}
+           {globalSettings?.youtubeUrl && <a href={globalSettings.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube"><Youtube size={20} /></a>}
+           {globalSettings?.facebookUrl && <a href={globalSettings.facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={20} /></a>}
         </div>
       </div>
     </header>

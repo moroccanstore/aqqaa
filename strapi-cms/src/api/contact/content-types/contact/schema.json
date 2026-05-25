@@ -20,6 +20,18 @@
     },
     "description": {
       "type": "text"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "whatsapp": {
+      "type": "string"
+    },
+    "blockedDates": {
+      "type": "json"
     }
   }
 }

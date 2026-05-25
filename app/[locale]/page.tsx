@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Link } from "@/navigation";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import dynamic from "next/dynamic";
 
 // Above-the-fold: eagerly loaded
@@ -19,15 +19,15 @@ const FAQ = dynamic(() => import("@/components/FAQ").then(m => ({ default: m.FAQ
 const StickyMobileCTA = dynamic(() => import("@/components/StickyMobileCTA").then(m => ({ default: m.StickyMobileCTA })), { ssr: false });
 const MiniInquiryForm = dynamic(() => import("@/components/MiniInquiryForm"), { ssr: false });
 
-import { weddings } from "@/lib/data/weddings";
-import { testimonials } from "@/lib/data/testimonials";
 import { strapiData } from "@/lib/strapi";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 import { ArrowRight } from "lucide-react";
+import { testimonials as localTestimonials } from "@/lib/data/testimonials";
+import { weddings as localWeddings } from "@/lib/data/weddings";
 
 
 export default async function HomePage() {
-  const t = useTranslations("HomePage");
+  const t = await getTranslations("HomePage");
   
   const [strapiTestimonialsRes, strapiWeddingsRes, strapiHomepageRes, strapiPortfolioRes, strapiFaqRes] = await Promise.all([
     strapiData.getTestimonials().catch(() => ({ data: [] })),
@@ -37,8 +37,8 @@ export default async function HomePage() {
     strapiData.getFaq().catch(() => ({ data: null }))
   ]);
 
-  const activeTestimonials = strapiTestimonialsRes?.data?.length > 0 ? strapiTestimonialsRes.data : testimonials;
-  const activeWeddings = strapiWeddingsRes?.data?.length > 0 ? strapiWeddingsRes.data : weddings;
+  const activeTestimonials = strapiTestimonialsRes?.data?.length > 0 ? strapiTestimonialsRes.data : localTestimonials;
+  const activeWeddings = strapiWeddingsRes?.data?.length > 0 ? strapiWeddingsRes.data : localWeddings;
   const homepageCMS = strapiHomepageRes?.data || {};
   const activePortfolio = strapiPortfolioRes?.data?.length > 0 ? strapiPortfolioRes.data : [];
   const faqCMS = strapiFaqRes?.data || {};

@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { strapiData } from "@/lib/strapi";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
@@ -103,6 +104,16 @@ export default async function RootLayout({
   }
 
   const messages = await getMessages();
+  const strapiRes = await strapiData.getGlobalSettings().catch(() => ({ data: null }));
+  const globalSettings = strapiRes?.data || {
+    address: "Itäviitta 2, 02330 Espoo, Finland",
+    email: "saidaqqa@gmail.com",
+    phone: "+358 407 444 838",
+    instagramUrl: "https://instagram.com/saidaqqaweddings",
+    youtubeUrl: "https://youtube.com/@saidaqqaphotography",
+    facebookUrl: "https://facebook.com/aqqasaid",
+    footerDescription: "Exquisite visual narratives. Award-winning luxury wedding, portrait, and commercial photography."
+  };
 
   return (
     <html lang={locale} className={`${inter.variable} ${playfair.variable}`}>
@@ -122,9 +133,9 @@ export default async function RootLayout({
        </head>
        <body className="bg-black text-white antialiased">
         <NextIntlClientProvider messages={messages}>
-          <Header />
+          <Header globalSettings={globalSettings} />
           <main>{children}</main>
-          <Footer />
+          <Footer globalSettings={globalSettings} />
         </NextIntlClientProvider>
         <SpeedInsights />
       </body>

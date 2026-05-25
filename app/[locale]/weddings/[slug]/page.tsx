@@ -1,7 +1,7 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import { weddings } from "@/lib/data/weddings";
 import { strapiData } from "@/lib/strapi";
+import { weddings as localWeddings } from "@/lib/data/weddings";
 import { StoryGallery } from "@/components/StoryGallery";
 import { RevealOnScroll } from "@/components/AnimationWrappers";
 import { Link, routing } from "@/navigation";
@@ -15,20 +15,21 @@ interface WeddingPageProps {
 
 export async function generateStaticParams() {
   const locales = routing.locales;
-  // Currently sticking to static data for build-time params, or you could fetch from Strapi.
-  // Using static is safer for Next.js standalone build without CMS running.
+  const strapiWeddingsRes = await strapiData.getWeddings().catch(() => ({ data: [] }));
+  const weddings = strapiWeddingsRes?.data?.length > 0 ? strapiWeddingsRes.data : localWeddings;
   return locales.flatMap(locale => 
     weddings.map((wedding: any) => ({
       locale,
-      slug: wedding.slug,
+      slug: wedding.slug || wedding.documentId,
     }))
   );
 }
 
 export async function generateMetadata({ params }: WeddingPageProps) {
-  const { data: strapiWeddings = [] } = await strapiData.getWeddings().catch(() => ({ data: [] }));
-  const activeWeddings = strapiWeddings.length > 0 ? strapiWeddings : weddings;
-  const wedding = activeWeddings.find((w: any) => w.slug === params.slug);
+  const res = await strapiData.getWeddings().catch(() => null);
+  const strapiWeddings = res?.data ?? [];
+  const activeWeddings = strapiWeddings.length > 0 ? strapiWeddings : localWeddings;
+  const wedding = activeWeddings.find((w: any) => w.slug === params.slug || w.documentId === params.slug);
   if (!wedding) return {};
 
   return {
@@ -38,9 +39,10 @@ export async function generateMetadata({ params }: WeddingPageProps) {
 }
 
 export default async function WeddingDetailPage({ params }: WeddingPageProps) {
-  const { data: strapiWeddings = [] } = await strapiData.getWeddings().catch(() => ({ data: [] }));
-  const activeWeddings = strapiWeddings.length > 0 ? strapiWeddings : weddings;
-  const wedding = activeWeddings.find((w: any) => w.slug === params.slug);
+  const res = await strapiData.getWeddings().catch(() => null);
+  const strapiWeddings = res?.data ?? [];
+  const activeWeddings = strapiWeddings.length > 0 ? strapiWeddings : localWeddings;
+  const wedding = activeWeddings.find((w: any) => w.slug === params.slug || w.documentId === params.slug);
 
   if (!wedding) {
     notFound();

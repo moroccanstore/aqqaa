@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "@/navigation";
 import { PortfolioCard } from "./PortfolioCard";
 import { RevealOnScroll } from "./AnimationWrappers";
-import { curatedPortfolioItems, homepageFeaturedItems } from "@/lib/data/portfolio_data";
 import { cn } from "@/lib/utils";
+import { curatedPortfolioItems } from "@/lib/data/portfolio_data";
 
 type Category = "all" | "weddings" | "portraits" | "events" | "commercial";
 
@@ -18,7 +18,7 @@ interface PortfolioGalleryProps {
 
 export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage = false, items }) => {
   const t = useTranslations("HomePage");
-  const [activeCategory, setActiveCategory] = useState<Category>("weddings");
+  const [activeCategory, setActiveCategory] = useState<Category>("all");
 
   const categories: { id: Category; label: string }[] = [
     { id: "all", label: t("filterAll") },
@@ -69,12 +69,17 @@ export const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ isHomepage =
           </div>
         </RevealOnScroll>
 
-        {/* Gallery Grid - Masonry style */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-8">
           {filteredItems.map((item) => (
             <PortfolioCard key={item.id} item={item} />
           ))}
         </div>
+
+        {filteredItems.length === 0 && (
+          <div className="text-center py-20 border border-white/5 bg-white/[0.02]">
+            <p className="text-zinc-500 font-light italic">More beautiful stories coming soon...</p>
+          </div>
+        )}
       </div>
     </section>
   );

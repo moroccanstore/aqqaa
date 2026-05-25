@@ -7,6 +7,7 @@
     "about": "Tietoa",
     "pricing": "Hinnasto",
     "contact": "Ota Yhteyttä",
+    "journal": "Blogi",
     "photographyVisuals": "Valokuvaus & Visuaalit"
   },
   "Footer": {
@@ -15,6 +16,7 @@
     "weddings": "Häät",
     "portfolio": "Portfolio",
     "videos": "Videot",
+    "journal": "Blogi",
     "priceList": "Investointi",
     "contact": "Ota Yhteyttä",
     "rights": "Said Aqqa Photography. Kaikki oikeudet pidätetään.",
@@ -184,6 +186,21 @@
     "philosophy": "Uskon aitojen hetkien voimaan. Tavoitteeni on olla huomaamaton tarkkailija, joka tavoittaa ne aidot tunteet ja yksityiskohdat, jotka tekevät tarinastasi ainutlaatuisen.",
     "btsTitle": "Kulissien takana",
     "btsHeading": "Prosessini",
+    "awards": {
+      "title": "Tunnustukset",
+      "heading": "Palkittu ja Esillä",
+      "international": "Kansainvälinen häävalokuvapalkinto",
+      "destination": "Paras kohdehääkuvaaja",
+      "couples": "Pariskuntien valinta -palkinto",
+      "editorial": "Editoriaalinen huippuosaaminen muotokuvauksessa"
+    },
+    "cta": {
+      "label": "Aloita tarinasi",
+      "heading": "Luodaan jotain ajatonta",
+      "description": "Jokainen rakkaustarina ansaitsee tulla kerrotuksi rehellisesti, kauniisti ja ikuisesti.",
+      "inquire": "Tiedustele saatavuutta",
+      "portfolio": "Katso portfolio"
+    },
     "stats": {
       "experience": "Vuoden kokemus",
       "weddings": "Kuvattuja häitä",
@@ -219,16 +236,80 @@
     "latest": "Viimeisimmät Työt",
     "recognition": "Kansainvälinen Tunnustus",
     "errorMessage": "Hups! Jokin meni pieleen. Yritä uudelleen tai lähetä minulle sähköpostia suoraan.",
+    "availability": {
+      "label": "Saatavuus",
+      "booked": "Varattu",
+      "available": "Vapaa"
+    },
     "labels": {
       "general": "Yleiset tiedustelut",
       "call": "Soita / WhatsApp",
-      "location": "Sijainti"
+      "location": "Sijainti",
+      "whatsappCta": "Lähetä WhatsApp-viesti"
     },
     "interests": {
       "wedding": "Hääkuvaus",
       "portrait": "Muotokuvaus",
       "cinema": "Videokuvaus",
       "other": "Muu Projekti"
+    }
+  },
+  "Weddings": {
+    "heroTitle": "Hääkertomukset",
+    "heroSubtitle": "Rakkauden ikuistaminen Suomessa ja maailmalla",
+    "heading": "Hääkertomukset",
+    "subheading": "Kurattu kokoelma ajattomia rakkaustarinoja Suomesta ja maailmalta.",
+    "viewCollection": "Katso kokoelma",
+    "photos": "valokuvaa",
+    "noResults": "Ei häitä tässä kategoriassa.",
+    "filter": {
+      "all": "Kaikki tarinat",
+      "finland": "Suomi",
+      "destination": "Kohdehäät",
+      "elopement": "Kahdenkeskiset häät"
+    },
+    "cta": {
+      "label": "Sinun tarinasi odottaa",
+      "heading": "Ikuista rakkautesi",
+      "button": "Ota yhteyttä"
+    },
+    "meta": {
+      "title": "Hääkuvaukset | Said Aqqa Photography",
+      "description": "Tutustu kurattuun kokoelmaan ylellisiä hääkuvauksia Helsingissä, Suomessa ja maailman ikonisissa kohteissa."
+    }
+  },
+  "Videos": {
+    "heroTitle": "Visuaaliset tarinat",
+    "heroSubtitle": "Elokuvaus & Film",
+    "heading": "Visuaaliset projektit",
+    "subheading": "Elokuvalliset häävideot ja taiteilliset visuaaliset projektit.",
+    "filter": {
+      "all": "Kaikki filmit",
+      "wedding": "Häävideot",
+      "commercial": "Kaupalliset",
+      "project": "Projektit"
+    }
+  },
+  "Journal": {
+    "heroTitle": "Blogi",
+    "heroSubtitle": "Tarinoita, vinkkejä ja inspiraatiota",
+    "heading": "Blogi",
+    "subheading": "Kulissien takaa, valokuvausvinkkejä ja hääinspiraatiota Said Aqqalta.",
+    "readMore": "Lue lisää",
+    "backToJournal": "Takaisin blogiin",
+    "inquireCTA": "Varaa kuvaus",
+    "empty": "Ei julkaistuja tekstejä vielä.",
+    "emptyHint": "Tule takaisin pian — tarinoita on tulossa.",
+    "filter": {
+      "all": "Kaikki",
+      "stories": "Tarinat",
+      "tips": "Vinkit",
+      "destinations": "Kohteet",
+      "behind-scenes": "Kulissien takaa"
+    },
+    "meta": {
+      "title": "Blogi | Said Aqqa Photography",
+      "description": "Kulissien takaisia tarinoita, hääkuvausvinkkejä ja kohde-inspiraatiota ylelliseltä valokuvaajalta Said Aqqalta."
     }
   }
 }

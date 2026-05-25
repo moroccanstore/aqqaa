@@ -32,6 +32,46 @@ const schemas = {
       publishDate: { type: 'date', required: true }
     }
   },
+  wedding: {
+    kind: 'collectionType',
+    collectionName: 'weddings',
+    info: { singularName: 'wedding', pluralName: 'weddings', displayName: 'Wedding', description: 'Wedding stories and galleries' },
+    options: { draftAndPublish: true },
+    attributes: {
+      title: { type: 'string', required: true },
+      slug: { type: 'uid', targetField: 'title', required: true },
+      date: { type: 'date' },
+      venue: { type: 'string' },
+      location: { type: 'string' },
+      description: { type: 'text' },
+      featured: { type: 'boolean', default: false },
+      images: { type: 'media', multiple: true, required: false, allowedTypes: ['images'] }
+    }
+  },
+  video: {
+    kind: 'collectionType',
+    collectionName: 'videos',
+    info: { singularName: 'video', pluralName: 'videos', displayName: 'Video Project', description: 'Video portfolio items' },
+    options: { draftAndPublish: true },
+    attributes: {
+      title: { type: 'string', required: true },
+      youtubeId: { type: 'string', required: true },
+      category: { type: 'enumeration', enum: ['wedding', 'commercial', 'project'], required: true },
+      thumbnail: { type: 'string' } // Could be media, but youtube thumbnail URL is fine
+    }
+  },
+  testimonial: {
+    kind: 'collectionType',
+    collectionName: 'testimonials',
+    info: { singularName: 'testimonial', pluralName: 'testimonials', displayName: 'Testimonial', description: 'Client reviews' },
+    options: { draftAndPublish: true },
+    attributes: {
+      name: { type: 'string', required: true },
+      text: { type: 'text', required: true },
+      rating: { type: 'integer', default: 5 }
+    }
+  },
+
   // Single Types
   homepage: {
     kind: 'singleType',
@@ -53,7 +93,9 @@ const schemas = {
     attributes: {
       title: { type: 'string', required: true },
       subtitle: { type: 'string' },
-      description: { type: 'text' }
+      description: { type: 'text' },
+      heroImage: { type: 'media', multiple: false, required: false, allowedTypes: ['images'] },
+      packages: { type: 'json' } // Array of packages
     }
   },
   faq: {
@@ -74,7 +116,69 @@ const schemas = {
     attributes: {
       title: { type: 'string', required: true },
       subtitle: { type: 'string' },
-      description: { type: 'text' }
+      description: { type: 'text' },
+      email: { type: 'string' },
+      phone: { type: 'string' },
+      whatsapp: { type: 'string' },
+      blockedDates: { type: 'json' } // Array of blocked dates strings
+    }
+  },
+  about: {
+    kind: 'singleType',
+    collectionName: 'about',
+    info: { singularName: 'about', pluralName: 'abouts', displayName: 'About Page', description: 'About Page Content' },
+    options: { draftAndPublish: true },
+    attributes: {
+      heroTitle: { type: 'string' },
+      heroSubtitle: { type: 'string' },
+      heroImage: { type: 'media', multiple: false, required: false, allowedTypes: ['images'] },
+      introTitle: { type: 'string' },
+      introHeading: { type: 'string' },
+      introBio: { type: 'text' },
+      introImage: { type: 'media', multiple: false, required: false, allowedTypes: ['images'] },
+      philosophyTitle: { type: 'string' },
+      philosophy: { type: 'text' },
+      stats: { type: 'json' }, // Array of stats {id, value}
+      processGallery: { type: 'media', multiple: true, required: false, allowedTypes: ['images'] }
+    }
+  },
+  privacy: {
+    kind: 'singleType',
+    collectionName: 'privacy',
+    info: { singularName: 'privacy', pluralName: 'privacies', displayName: 'Privacy Policy', description: 'Privacy Policy Content' },
+    options: { draftAndPublish: true },
+    attributes: {
+      title: { type: 'string', required: true },
+      subtitle: { type: 'string' },
+      heroImage: { type: 'media', multiple: false, required: false, allowedTypes: ['images'] },
+      content: { type: 'richtext', required: true }
+    }
+  },
+  terms: {
+    kind: 'singleType',
+    collectionName: 'terms',
+    info: { singularName: 'terms', pluralName: 'terms-of-services', displayName: 'Terms of Service', description: 'Terms of Service Content' },
+    options: { draftAndPublish: true },
+    attributes: {
+      title: { type: 'string', required: true },
+      subtitle: { type: 'string' },
+      heroImage: { type: 'media', multiple: false, required: false, allowedTypes: ['images'] },
+      content: { type: 'richtext', required: true }
+    }
+  },
+  global: {
+    kind: 'singleType',
+    collectionName: 'global',
+    info: { singularName: 'global', pluralName: 'globals', displayName: 'Global Settings', description: 'Site-wide settings and contact info' },
+    options: { draftAndPublish: true },
+    attributes: {
+      address: { type: 'string' },
+      email: { type: 'string' },
+      phone: { type: 'string' },
+      instagramUrl: { type: 'string' },
+      youtubeUrl: { type: 'string' },
+      facebookUrl: { type: 'string' },
+      footerDescription: { type: 'text' }
     }
   }
 };

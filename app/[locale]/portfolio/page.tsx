@@ -2,8 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { RevealOnScroll } from "@/components/AnimationWrappers";
-import { portfolioImages, PortfolioCategory } from "@/lib/data/portfolio";
+import { strapiData } from "@/lib/strapi";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
+import { portfolio } from "@/lib/data/portfolio";
+
+type PortfolioCategory = "portraits" | "products" | "interior" | "food" | "family" | "events" | "landscape";
 
 const categories: { name: string; slug: PortfolioCategory; description: string }[] = [
   { name: "Portraits", slug: "portraits", description: "Soulful portraiture and headshots." },
@@ -22,7 +25,9 @@ export const metadata = {
   description: "Explore our diverse portfolio of professional photography across various categories.",
 };
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  const strapiPortfolioRes = await strapiData.getPortfolio().catch(() => ({ data: [] }));
+  const portfolioImages = strapiPortfolioRes?.data?.length > 0 ? strapiPortfolioRes.data : portfolio;
   return (
     <div className="bg-black pb-32">
       <ParticleHero 
@@ -49,7 +54,7 @@ export default function PortfolioPage() {
                 <Link href={`/portfolio/${cat.slug}`} className="group block relative aspect-square overflow-hidden bg-zinc-900">
                   {coverImage && (
                     <Image
-                      src={getCloudinaryUrl(coverImage.url, { width: 800, quality: "auto" })}
+                      src={getCloudinaryUrl(coverImage.coverImage?.url || coverImage.images?.[0]?.url || "", { width: 800, quality: "auto" })}
                       alt={cat.name}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

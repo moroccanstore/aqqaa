@@ -4,10 +4,11 @@
   "info": {
     "singularName": "testimonial",
     "pluralName": "testimonials",
-    "displayName": "Testimonial"
+    "displayName": "Testimonial",
+    "description": "Client reviews"
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "attributes": {
     "name": {
@@ -18,8 +19,9 @@
       "type": "text",
       "required": true
     },
-    "role": {
-      "type": "string"
+    "rating": {
+      "type": "integer",
+      "default": 5
     }
   }
 }

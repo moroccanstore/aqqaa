@@ -4,7 +4,8 @@
   "info": {
     "singularName": "wedding",
     "pluralName": "weddings",
-    "displayName": "Wedding"
+    "displayName": "Wedding",
+    "description": "Wedding stories and galleries"
   },
   "options": {
     "draftAndPublish": true
@@ -19,27 +20,29 @@
       "targetField": "title",
       "required": true
     },
-    "location": {
-      "type": "string"
-    },
-    "couple": {
-      "type": "string"
-    },
     "date": {
       "type": "date"
     },
-    "story": {
-      "type": "text"
+    "venue": {
+      "type": "string"
     },
-    "images": {
-      "type": "json"
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
     },
     "featured": {
       "type": "boolean",
       "default": false
     },
-    "category": {
-      "type": "string"
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

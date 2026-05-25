@@ -1,10 +1,12 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import { portfolioImages, PortfolioCategory } from "@/lib/data/portfolio";
+import { strapiData } from "@/lib/strapi";
+type PortfolioCategory = "portraits" | "products" | "interior" | "food" | "family" | "events" | "landscape";
 import { MasonryGallery } from "@/components/MasonryGallery";
 import { RevealOnScroll } from "@/components/AnimationWrappers";
 import { ChevronLeft } from "lucide-react";
 import { Link, routing } from "@/navigation";
+import { portfolio } from "@/lib/data/portfolio";
 
 interface PortfolioCategoryPageProps {
   params: {
@@ -33,9 +35,13 @@ export async function generateMetadata({ params }: PortfolioCategoryPageProps) {
   };
 }
 
-export default function PortfolioCategoryPage({ params }: PortfolioCategoryPageProps) {
+export default async function PortfolioCategoryPage({ params }: PortfolioCategoryPageProps) {
   const category = params.slug as PortfolioCategory;
-  const images = portfolioImages.filter((img) => img.category === category);
+  
+  const strapiPortfolioRes = await strapiData.getPortfolio().catch(() => ({ data: [] }));
+  const portfolioImages = strapiPortfolioRes?.data?.length > 0 ? strapiPortfolioRes.data : portfolio;
+  const images = portfolioImages.filter((img: any) => img.category === category)
+    .flatMap((project: any) => project.images || []);
 
   if (images.length === 0 && !["products", "interior", "food", "family", "portraits", "events", "landscape"].includes(params.slug)) {
     notFound();

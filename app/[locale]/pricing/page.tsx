@@ -1,10 +1,9 @@
 import React from "react";
 import { RevealOnScroll } from "@/components/AnimationWrappers";
 import { Check } from "lucide-react";
-import { useTranslations } from 'next-intl';
 
 import { ParticleHero } from "@/components/ParticleHero";
-import { pricingData } from "@/lib/data/pricing";
+
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { Link } from "@/navigation";
@@ -29,7 +28,7 @@ export default async function PricingPage() {
       <ParticleHero 
         title={cmsPricing.title || t('heroTitle')}
         subtitle={cmsPricing.subtitle || t('heroSubtitle')}
-        backgroundImage={getCloudinaryUrl(cmsPricing.heroImage?.url || pricingData.heroImage, { width: 1920, quality: "auto" })}
+        backgroundImage={getCloudinaryUrl(cmsPricing.heroImage?.url || "/hero-cinematic.png", { width: 1920, quality: "auto" })}
         height="half"
         showScrollIndicator={false}
       />
@@ -43,7 +42,7 @@ export default async function PricingPage() {
         </RevealOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1600px] mx-auto">
-           {pricingData.packages.map((pkg: any, index: number) => (
+           {(cmsPricing.packages || []).map((pkg: any, index: number) => (
              <RevealOnScroll 
                key={pkg.id} 
                delay={index * 0.1}

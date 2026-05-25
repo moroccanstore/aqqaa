@@ -1,9 +1,10 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import { videoProjects } from "@/lib/data/videos";
+import { strapiData } from "@/lib/strapi";
 import { RevealOnScroll } from "@/components/AnimationWrappers";
 import { ChevronLeft } from "lucide-react";
 import { Link, routing } from "@/navigation";
+import { videoProjects } from "@/lib/data/videos";
 
 interface VideoDetailPageProps {
   params: {
@@ -14,16 +15,21 @@ interface VideoDetailPageProps {
 
 export async function generateStaticParams() {
   const locales = routing.locales;
+  const strapiVideosRes = await strapiData.getVideos().catch(() => ({ data: [] }));
+  const videos = strapiVideosRes?.data?.length > 0 ? strapiVideosRes.data : videoProjects;
+  
   return locales.flatMap(locale => 
-    videoProjects.map((project) => ({
+    videos.map((project: any) => ({
       locale,
-      slug: project.id,
+      slug: project.youtubeId || project.documentId,
     }))
   );
 }
 
-export default function VideoDetailPage({ params }: VideoDetailPageProps) {
-  const project = videoProjects.find((p) => p.id === params.slug);
+export default async function VideoDetailPage({ params }: VideoDetailPageProps) {
+  const strapiVideosRes = await strapiData.getVideos().catch(() => ({ data: [] }));
+  const videos = strapiVideosRes?.data?.length > 0 ? strapiVideosRes.data : videoProjects;
+  const project = videos.find((p: any) => p.youtubeId === params.slug || p.documentId === params.slug);
 
   if (!project) {
     notFound();
@@ -42,9 +48,9 @@ export default function VideoDetailPage({ params }: VideoDetailPageProps) {
         </RevealOnScroll>
 
         <RevealOnScroll className="relative aspect-video w-full bg-zinc-900 border border-white/10 overflow-hidden">
-           {project.provider === "youtube" ? (
+           {project.youtubeId ? (
              <iframe
-               src={`https://www.youtube.com/embed/${project.id}?autoplay=1&rel=0`}
+               src={`https://www.youtube.com/embed/${project.youtubeId}?autoplay=1&rel=0`}
                title={project.title}
                className="absolute inset-0 w-full h-full"
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

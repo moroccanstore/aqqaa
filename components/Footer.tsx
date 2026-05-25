@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Instagram, Youtube, Facebook, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 
-export const Footer = () => {
+export const Footer = ({ globalSettings }: { globalSettings?: any }) => {
   const t = useTranslations("Footer");
 
   return (
@@ -29,22 +29,23 @@ export const Footer = () => {
               </h2>
             </div>
             <p className="text-zinc-400 font-light max-w-sm leading-relaxed mb-8">
-              {t("description")}
+              {globalSettings?.footerDescription || t("description")}
             </p>
             <div className="flex space-x-6 text-zinc-400">
-              <a href="https://instagram.com/saidaqqaweddings" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-gold transition-colors"><Instagram size={20} /></a>
-              <a href="https://youtube.com/@saidaqqaphotography" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-gold transition-colors"><Youtube size={20} /></a>
-              <a href="https://facebook.com/aqqasaid" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-gold transition-colors"><Facebook size={20} /></a>
+              {globalSettings?.instagramUrl && <a href={globalSettings.instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-gold transition-colors"><Instagram size={20} /></a>}
+              {globalSettings?.youtubeUrl && <a href={globalSettings.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-gold transition-colors"><Youtube size={20} /></a>}
+              {globalSettings?.facebookUrl && <a href={globalSettings.facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-gold transition-colors"><Facebook size={20} /></a>}
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-[10px] tracking-[0.3em] uppercase text-gold mb-8">{t("explore")}</h4>
-            <ul className="space-y-4">
+          <ul className="space-y-4">
               <li><Link href="/weddings" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">{t("weddings")}</Link></li>
               <li><Link href="/portfolio" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">{t("portfolio")}</Link></li>
               <li><Link href="/videos" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">{t("videos")}</Link></li>
+              <li><Link href="/journal" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">{t("journal")}</Link></li>
               <li><Link href="/pricing" className="text-zinc-400 hover:text-white transition-colors text-sm font-light">{t("priceList")}</Link></li>
             </ul>
           </div>
@@ -55,15 +56,15 @@ export const Footer = () => {
             <ul className="space-y-6">
               <li className="flex items-start space-x-4">
                 <Mail size={16} className="text-gold mt-1" />
-                <span className="text-zinc-400 text-sm font-light">saidaqqa@gmail.com</span>
+                <span className="text-zinc-400 text-sm font-light">{globalSettings?.email || "saidaqqa@gmail.com"}</span>
               </li>
               <li className="flex items-start space-x-4">
                 <MapPin size={16} className="text-gold mt-1" />
-                <span className="text-zinc-400 text-sm font-light">Itäviitta 2, 02330 Espoo, Finland</span>
+                <span className="text-zinc-400 text-sm font-light">{globalSettings?.address || "Itäviitta 2, 02330 Espoo, Finland"}</span>
               </li>
               <li className="flex items-start space-x-4">
                 <Phone size={16} className="text-gold mt-1" />
-                <span className="text-zinc-400 text-sm font-light">+358 407 444 838</span>
+                <span className="text-zinc-400 text-sm font-light">{globalSettings?.phone || "+358 407 444 838"}</span>
               </li>
             </ul>
           </div>

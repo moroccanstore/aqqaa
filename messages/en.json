@@ -7,6 +7,7 @@
     "about": "About",
     "pricing": "Pricing",
     "contact": "Contact",
+    "journal": "Journal",
     "photographyVisuals": "Photography & Visuals"
   },
   "Footer": {
@@ -15,6 +16,7 @@
     "weddings": "Weddings",
     "portfolio": "Portfolio",
     "videos": "Videos",
+    "journal": "Journal",
     "priceList": "Investment",
     "contact": "Inquire",
     "rights": "Said Aqqa Photography. All rights reserved.",
@@ -184,6 +186,21 @@
     "philosophy": "I believe in the power of authentic moments. My goal is to be an unobtrusive observer, capturing the raw emotions and the intricate details that make your story unique.",
     "btsTitle": "Behind the Scenes",
     "btsHeading": "My Process",
+    "awards": {
+      "title": "Recognition",
+      "heading": "Honored & Featured",
+      "international": "International Wedding Photography Award",
+      "destination": "Best Destination Wedding Photographer",
+      "couples": "Couples' Choice Award",
+      "editorial": "Editorial Excellence in Portraiture"
+    },
+    "cta": {
+      "label": "Begin Your Story",
+      "heading": "Let's Create Something Timeless",
+      "description": "Every love story deserves to be told with honesty, beauty, and an eye for the eternal.",
+      "inquire": "Inquire for Availability",
+      "portfolio": "View Portfolio"
+    },
     "stats": {
       "experience": "Years Experience",
       "weddings": "Weddings Captured",
@@ -219,16 +236,80 @@
     "latest": "Latest Captured",
     "recognition": "Global Recognition",
     "errorMessage": "Oops! Something went wrong. Please try again or email me directly.",
+    "availability": {
+      "label": "Availability",
+      "booked": "Booked",
+      "available": "Available"
+    },
     "labels": {
       "general": "General Inquiries",
       "call": "Call / WhatsApp",
-      "location": "Location"
+      "location": "Location",
+      "whatsappCta": "Send a WhatsApp message"
     },
     "interests": {
       "wedding": "Wedding Photography",
       "portrait": "Portrait Session",
       "cinema": "Cinematography",
       "other": "Other Project"
+    }
+  },
+  "Weddings": {
+    "heroTitle": "Wedding Stories",
+    "heroSubtitle": "Capturing Love in Finland & Beyond",
+    "heading": "Wedding Stories",
+    "subheading": "A curated collection of timeless love stories captured across Finland and the world.",
+    "viewCollection": "View Collection",
+    "photos": "Photographs",
+    "noResults": "No weddings found for this category.",
+    "filter": {
+      "all": "All Stories",
+      "finland": "Finland",
+      "destination": "Destination",
+      "elopement": "Elopement"
+    },
+    "cta": {
+      "label": "Your Story Awaits",
+      "heading": "Capture Your Love",
+      "button": "Inquire Now"
+    },
+    "meta": {
+      "title": "Wedding Photography Collections | Said Aqqa",
+      "description": "Explore a curated collection of luxury wedding stories captured in Helsinki, Finland, and iconic destinations worldwide."
+    }
+  },
+  "Videos": {
+    "heroTitle": "Visual Stories",
+    "heroSubtitle": "Cinematography & Film",
+    "heading": "Visual Projects",
+    "subheading": "Cinematic wedding films and artistic visual projects.",
+    "filter": {
+      "all": "All Films",
+      "wedding": "Wedding Films",
+      "commercial": "Commercial",
+      "project": "Projects"
+    }
+  },
+  "Journal": {
+    "heroTitle": "The Journal",
+    "heroSubtitle": "Stories, Tips & Inspiration",
+    "heading": "The Journal",
+    "subheading": "Behind-the-scenes stories, photography tips, and wedding inspiration from Said Aqqa.",
+    "readMore": "Read More",
+    "backToJournal": "Back to Journal",
+    "inquireCTA": "Book Your Session",
+    "empty": "No posts published yet.",
+    "emptyHint": "Check back soon — stories are coming.",
+    "filter": {
+      "all": "All",
+      "stories": "Stories",
+      "tips": "Tips",
+      "destinations": "Destinations",
+      "behind-scenes": "Behind the Scenes"
+    },
+    "meta": {
+      "title": "Journal | Said Aqqa Photography",
+      "description": "Behind-the-scenes stories, wedding photography tips, and destination inspiration from luxury photographer Said Aqqa."
     }
   }
 }

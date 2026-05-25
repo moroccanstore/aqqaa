@@ -8,6 +8,10 @@
   --gold: #d4af37;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -81,4 +85,34 @@ body {
 ::selection {
   background: var(--gold);
   color: #000;
+}
+
+/* Accessibility: focus-visible */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Subtle scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* Prose overrides for journal content */
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  font-family: var(--font-playfair), serif;
+  color: white;
+}
+.prose p {
+  color: #a1a1aa; /* zinc-400 */
 }

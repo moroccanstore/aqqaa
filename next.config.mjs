@@ -19,6 +19,19 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'img.youtube.com',
       },
+      {
+        // Strapi local development server
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '1337',
+        pathname: '/uploads/**',
+      },
+      {
+        // Strapi production (Railway / custom domain — update before deploy)
+        protocol: 'https',
+        hostname: '*.railway.app',
+        pathname: '/uploads/**',
+      },
     ],
   },
   async redirects() {
